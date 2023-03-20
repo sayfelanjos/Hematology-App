@@ -1,0 +1,8 @@
+.contracts-background {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+}

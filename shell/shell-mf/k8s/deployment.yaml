@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shell-mf
+  labels:
+    app: shell-mf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shell-mf
+  template:
+    metadata:
+      labels:
+        app: shell-mf
+    spec:
+      containers:
+        - image: shell-mf
+          name: shell-mf
+          imagePullPolicy: Never

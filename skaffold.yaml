@@ -1,0 +1,10 @@
+apiVersion: skaffold/v3
+kind: Config
+metadata:
+  name: hematology-app
+requires:
+  - configs: ["shell-mf"]
+    path: shell/shell-mf/skaffold.yaml
+  - configs: ["supplies-mf"]
+    path: supplies/supplies-mf/skaffold.yaml
+

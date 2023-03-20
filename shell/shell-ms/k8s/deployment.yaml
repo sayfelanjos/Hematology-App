@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shell-ms
+  labels:
+    app: shell-ms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shell-ms
+  template:
+    metadata:
+      labels:
+        app: shell-ms
+    spec:
+      containers:
+        - image: shell-ms
+          name: shell-ms
+          imagePullPolicy: Never

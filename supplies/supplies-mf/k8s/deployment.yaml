@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: supplies-mf
+  labels:
+    app: supplies-mf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: supplies-mf
+  template:
+    metadata:
+      labels:
+        app: supplies-mf
+    spec:
+      containers:
+        - image: supplies-mf
+          name: supplies-mf
+          imagePullPolicy: Never

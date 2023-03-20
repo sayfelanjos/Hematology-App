@@ -1,0 +1,13 @@
+.idea
+.next
+.vscode
+k8s
+next
+node_modules
+.dockerignore
+.eslintrc.json
+.gitignore
+Dockerfile
+package-lock.json
+README.md
+skaffold.yaml

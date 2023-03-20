@@ -1,0 +1,9 @@
+node_modules
+.idea
+.dockerignore
+.gitignore
+docker-compose.yaml
+Dockerfile
+LICENSE
+package-look.json
+README.md

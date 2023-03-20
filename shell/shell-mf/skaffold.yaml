@@ -1,0 +1,60 @@
+apiVersion: skaffold/v3
+kind: Config
+metadata:
+  name: shell-mf
+build:
+  tagPolicy:
+    gitCommit: {}
+  local:
+    push: false
+  artifacts:
+    - image: shell-mf
+      context: .
+      sync:
+        manual:
+          - src: "next-env.d.ts"
+            dest: /shell-mf
+
+          - src: "next.config.js"
+            dest: /shell-mf
+
+          - src: "tsconfig.json"
+            dest: /shell-mf
+
+          - src: "src/app/*.css"
+            dest: /shell-mf/src/app
+            strip: "src/app/"
+
+          - src: "src/app/*.module.css"
+            dest: /shell-mf/src/app
+            strip: "src/app/"
+
+          - src: "src/app/*.tsx"
+            dest: /shell-mf/src/app
+            strip: "src/app/"
+
+          - src: "src/app/**/*.tsx"
+            dest: /shell-mf/src/app
+            strip: "src/app/"
+
+          - src: "src/app/**/*.module.css"
+            dest: /shell-mf/src/app
+            strip: "src/app/"
+
+          - src: "src/components/**/*.tsx"
+            dest: /shell-mf/src/components
+            strip: "src/components/"
+
+          - src: "src/components/**/*.module.css"
+            dest: /shell-mf/src/components
+            strip: "src/components/"
+      docker:
+        dockerfile: Dockerfile
+
+manifests:
+  rawYaml:
+    - k8s/service.yaml
+    - k8s/deployment.yaml
+
+deploy:
+  kubectl: {}

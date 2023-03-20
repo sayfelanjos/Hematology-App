@@ -1,0 +1,8 @@
+.costumers-and-suppliers-background {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: orange;
+  height: 100%;
+  width: 100%;
+}

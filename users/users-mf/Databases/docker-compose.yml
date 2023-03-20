@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  mongodb:
+    image : mongo:latest
+    container_name: HematologyApp
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /home/saymon/data:/data/db
+    ports:
+      - 27018:27018
+    restart: unless-stopped

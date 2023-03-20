@@ -1,0 +1,10 @@
+node_modules
+test
+.dockerignore
+.eslintrc.js
+.eslintrc.json
+.gitignore
+.prettierrc
+Dockerfile
+package-lock.json
+README.md

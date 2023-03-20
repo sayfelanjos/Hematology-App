@@ -1,0 +1,53 @@
+apiVersion: skaffold/v3
+kind: Config
+metadata:
+  name: supplies-mf
+build:
+  tagPolicy:
+    gitCommit: {}
+  local:
+    push: false
+  artifacts:
+    - image: supplies-mf
+      context: .
+      sync:
+        manual:
+          - src: "next-env.d.ts"
+            dest: /supplies-mf
+
+          - src: "tsconfig.json"
+            dest: /supplies-mf
+
+          - src: "src/app/layout.tsx"
+            dest: /supplies-mf/src/app
+            strip: "src/app/"
+
+          - src: "src/app/globals.css"
+            dest: /supplies-mf/src/app
+            strip: "src/app/"
+
+          - src: "src/app/page.module.css"
+            dest: /supplies-mf/src/app
+            strip: "src/app/"
+
+          - src: "src/app/page.tsx"
+            dest: /supplies-mf/src/app
+            strip: "src/app/"
+
+          - src: "src/app/**/*.tsx"
+            dest: /supplies-mf/src/app
+            strip: "src/app/"
+
+          - src: "src/components/**/*.tsx"
+            dest: /supplies-mf/src/components
+            strip: "src/components/"
+      docker:
+        dockerfile: Dockerfile
+
+manifests:
+  rawYaml:
+    - k8s/service.yaml
+    - k8s/deployment.yaml
+
+deploy:
+  kubectl: {}
