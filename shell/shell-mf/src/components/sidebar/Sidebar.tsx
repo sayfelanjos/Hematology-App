@@ -1,19 +1,19 @@
 "use client";
-import React, { useState } from "react";
-import styles from "./Sidebar.module.css";
+import React, { useEffect, useState } from "react";
+import styles from "./Sidebar.module.scss";
 import Image from "next/image";
 import SidebarModules from "@/components/sidebar/sidebar-modules/SidebarModules";
 import SidebarMenuButton from "@/components/sidebar/sidebar-module-button/SidebarModuleButton";
 
 const Sidebar = () => {
-  const [activeButton, setActiveButton] = useState<string>("dashboard"); // Possibles states: enabled, hovered and pressed.
+  const [activeButton, setActiveButton] = useState<string>("dashboard");
 
   const Dashboard: MenuButton[] = [
     {
       id: 1,
       icon: "/Icon=Statistics.svg",
       moduleName: "Estatísticas",
-      pageUrl: "/",
+      pageUrl: "",
       isPressed: activeButton === "dashboard",
       toggleStateFunction: () => setActiveButton("dashboard"),
     },
@@ -58,6 +58,14 @@ const Sidebar = () => {
       pageUrl: "/costumers-and-suppliers",
       isPressed: activeButton === "costumers-and-suppliers",
       toggleStateFunction: () => setActiveButton("costumers-and-suppliers"),
+    },
+    {
+      id: 7,
+      icon: "/Icon=User.svg",
+      moduleName: "Users",
+      pageUrl: "/users",
+      isPressed: activeButton === "users",
+      toggleStateFunction: () => setActiveButton("users"),
     },
   ];
 

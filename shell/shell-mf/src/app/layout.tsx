@@ -1,9 +1,7 @@
 import React from "react";
 // These styles apply to every route in the application
-import "./globals.css";
-import Sidebar from "@/components/sidebar/Sidebar";
-import Navbar from "@/components/navbar/Navbar";
-import styles from "./layout.module.css";
+import "./globals.scss";
+import styles from "./layout.module.scss";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,11 +9,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body>
         <section className={styles["root-background"]}>
           {/* Include shared UI here e.g. a header or sidebar */}
-          <Sidebar></Sidebar>
-          <div className={styles["layout-main-content"]}>
-            <Navbar></Navbar>
-            {children}
-          </div>
+          {children}
         </section>
       </body>
     </html>

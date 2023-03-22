@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./SidebarModuleButton.module.css";
+import styles from "./SidebarModuleButton.module.scss";
 
 const SidebarMenuButton = (props: MenuButton) => {
   return (

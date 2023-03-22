@@ -1,11 +1,14 @@
-import styles from "./page.module.css";
+import { redirect } from "next/navigation";
+import styles from "./page.module.scss";
 
-const Dashboard = () => {
-  return (
-    <div className={styles["dashboard-background"]}>
-      <h1>Dashboard</h1>
-    </div>
-  );
+// async function fetchTeam([app]) {
+//   const res = await fetch("https://...");
+//   if (!res.ok) return undefined;
+//   return res.json();
+// }
+
+const RootPage = () => {
+  return <div className={styles["root-page-background"]}></div>;
 };
 
-export default Dashboard;
+export default RootPage;

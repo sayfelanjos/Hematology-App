@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/app/costumers-and-suppliers/page.module.css";
+import styles from "./page.module.scss";
 
 const SuppliersAndCostumers = () => {
   return (

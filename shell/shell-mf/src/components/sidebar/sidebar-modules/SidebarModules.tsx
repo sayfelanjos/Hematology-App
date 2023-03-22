@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "@/components/sidebar/sidebar-modules/SidebarModules.module.css";
+import styles from "@/components/sidebar/sidebar-modules/SidebarModules.module.scss";
 import SidebarMenuButton from "@/components/sidebar/sidebar-module-button/SidebarModuleButton";
 
 type Props = {
