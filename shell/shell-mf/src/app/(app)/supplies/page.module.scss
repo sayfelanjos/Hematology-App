@@ -2,7 +2,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: green;
+  background-color: #fff;
+  flex-direction: column;
+  padding: 24px;
+  box-sizing: border-box;
   height: 100%;
   width: 100%;
 }

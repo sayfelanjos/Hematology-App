@@ -1,0 +1,10 @@
+.invoices-background {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: yellow;
+  height: 100%;
+  width: 100%;
+}
+
+/*# sourceMappingURL=page.module.css.map */

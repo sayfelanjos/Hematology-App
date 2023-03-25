@@ -1,0 +1,14 @@
+.table-header-container {
+  display: flex;
+  height: 48px;
+  width: 100%;
+}
+
+.table-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #6c6a6a;
+  height: 48px;
+  width: 100%;
+}

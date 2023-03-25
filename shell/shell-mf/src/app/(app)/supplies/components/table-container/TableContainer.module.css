@@ -1,0 +1,10 @@
+.table-container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.5);
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=TableContainer.module.css.map */

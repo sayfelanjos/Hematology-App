@@ -1,0 +1,14 @@
+.table-button {
+  height: 48px;
+  width: 218px;
+  border-radius: 6px;
+  border: none;
+  background-color: #F39B17;
+}
+
+.table-button-content {
+  font-size: 17px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=TableButton.module.css.map */

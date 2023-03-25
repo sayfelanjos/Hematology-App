@@ -21,33 +21,147 @@ build:
           - src: "tsconfig.json"
             dest: /shell-mf
 
-          - src: "src/app/*.css"
-            dest: /shell-mf/src/app
-            strip: "src/app/"
+          - src: "src/**/*.scss"
+            dest: /shell-mf/src
+            strip: "src/"
 
-          - src: "src/app/*.module.css"
-            dest: /shell-mf/src/app
-            strip: "src/app/"
+          - src: "tsconfig.css.map"
+            dest: /shell-mf
 
-          - src: "src/app/*.tsx"
-            dest: /shell-mf/src/app
-            strip: "src/app/"
+          - src: "src/**/*.css"
+            dest: /shell-mf/src
+            strip: "src/"
 
-          - src: "src/app/**/*.tsx"
-            dest: /shell-mf/src/app
-            strip: "src/app/"
+          - src: "src/**/*.module.scss"
+            dest: /shell-mf/src
+            strip: "src/"
 
-          - src: "src/app/**/*.module.css"
-            dest: /shell-mf/src/app
-            strip: "src/app/"
+          - src: "src/**/*.tsx"
+            dest: /shell-mf/src
+            strip: "src/"
 
-          - src: "src/components/**/*.tsx"
-            dest: /shell-mf/src/components
-            strip: "src/components/"
+          - src: "src/**/*.css"
+            dest: /shell-mf/src
+            strip: "src/"
 
-          - src: "src/components/**/*.module.css"
-            dest: /shell-mf/src/components
-            strip: "src/components/"
+          - src: "src/**/*.css.map"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.tsx"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.scss"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.css"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.css.map"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.tsx"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.module.scss"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.css"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.css.map"
+            dest: /shell-mf/src
+            strip: "src/"
+
+
+          - src: "src/**/**/**/**/*.tsx"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.module.scss"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.css"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.css.map"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.tsx"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.module.scss"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.css"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.css.map"
+            dest: /shell-mf/src
+            strip: "src/"
+
+
+          - src: "src/**/**/**/**/**/**/*.tsx"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.module.scss"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.css"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.css.map"
+            dest: /shell-mf/src
+            strip: "src/"
+
+
+          - src: "src/**/**/**/**/**/**/**/*.tsx"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.module.scss"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.css"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.css.map"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.tsx"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.module.scss"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.css"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.css.map"
+            dest: /shell-mf/src
+            strip: "src/"
       docker:
         dockerfile: Dockerfile
 
