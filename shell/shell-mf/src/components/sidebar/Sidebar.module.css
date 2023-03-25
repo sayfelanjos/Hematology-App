@@ -1,0 +1,53 @@
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #464242;
+  width: 275px;
+  height: 100%;
+  max-width: 275px;
+  min-width: 275px;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 36px;
+  gap: 20px;
+  /*background-color: #464242;*/
+  color: #acacac;
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #acacac;
+}
+
+.app-name {
+  font-size: 17px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.wrap-button {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wrap-button:hover {
+  display: flex;
+  flex-direction: row;
+  padding: 12px 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wrap-button > a {
+  width: 100%;
+}
+
+/*# sourceMappingURL=Sidebar.module.css.map */
