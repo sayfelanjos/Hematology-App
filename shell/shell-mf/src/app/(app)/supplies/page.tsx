@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import TableContainer from "./components/table-container/TableContainer";
 import styles from "./page.module.scss";

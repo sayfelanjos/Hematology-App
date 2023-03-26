@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import styles from "./TableCell.module.scss";
-import * as child_process from "child_process";
 
-const TableCell = () => {
+const TableCell = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={styles["table-cell-container"]}>
+      {children}
       <td className={styles["table-cell"]}></td>
     </div>
   );

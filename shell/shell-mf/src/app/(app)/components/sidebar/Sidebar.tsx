@@ -1,24 +1,16 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./Sidebar.module.scss";
+import { sidebarSlice } from "@/app/(app)/components/sidebar/sidebarSlice";
 import Image from "next/image";
 import SidebarModules from "./sidebar-modules/SidebarModules";
 import SidebarModuleButton from "./sidebar-modules/sidebar-module-button/SidebarModuleButton";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
 
 const Sidebar = () => {
-  const [activeButton, setActiveButton] = useState<string>("dashboard");
-
-  useEffect(() => {
-    const buttonState = window.localStorage.getItem("SIDEBAR_BUTTON_STATE");
-    if (buttonState !== null) setActiveButton(JSON.parse(buttonState));
-  }, []);
-
-  useEffect(() => {
-    window.localStorage.setItem(
-      "SIDEBAR_BUTTON_STATE",
-      JSON.stringify(activeButton)
-    );
-  }, [activeButton]);
+  const { setActiveButton } = sidebarSlice.actions;
+  const dispatch = useAppDispatch();
+  const state = useAppSelector((state) => state);
 
   const Dashboard: MenuButton[] = [
     {
@@ -26,8 +18,8 @@ const Sidebar = () => {
       icon: "/Icon=Statistics.svg",
       moduleName: "Estatísticas",
       pageUrl: "",
-      isPressed: activeButton === "dashboard",
-      toggleStateFunction: () => setActiveButton("dashboard"),
+      isPressed: state.sidebar.activeButton === "dashboard",
+      toggleStateFunction: () => dispatch(setActiveButton("dashboard")),
     },
   ];
   const SideBarModules: MenuButton[] = [
@@ -36,48 +28,49 @@ const Sidebar = () => {
       icon: "/Icon=Supplies.svg",
       moduleName: "Insumos",
       pageUrl: "/supplies",
-      isPressed: activeButton === "supplies",
-      toggleStateFunction: () => setActiveButton("supplies"),
+      isPressed: state.sidebar.activeButton === "supplies",
+      toggleStateFunction: () => dispatch(setActiveButton("supplies")),
     },
     {
       id: 3,
       icon: "/Icon=Orders.svg",
       moduleName: "Pedido de Compras",
       pageUrl: "/orders",
-      isPressed: activeButton === "orders",
-      toggleStateFunction: () => setActiveButton("orders"),
+      isPressed: state.sidebar.activeButton === "orders",
+      toggleStateFunction: () => dispatch(setActiveButton("orders")),
     },
     {
       id: 4,
       icon: "/Icon=Invoices.svg",
       moduleName: "Notas Fiscais",
       pageUrl: "/invoices",
-      isPressed: activeButton === "invoices",
-      toggleStateFunction: () => setActiveButton("invoices"),
+      isPressed: state.sidebar.activeButton === "invoices",
+      toggleStateFunction: () => dispatch(setActiveButton("invoices")),
     },
     {
       id: 5,
       icon: "/Icon=Contracts.svg",
       moduleName: "Contratos",
       pageUrl: "/contracts",
-      isPressed: activeButton === "contracts",
-      toggleStateFunction: () => setActiveButton("contracts"),
+      isPressed: state.sidebar.activeButton === "contracts",
+      toggleStateFunction: () => dispatch(setActiveButton("contracts")),
     },
     {
       id: 6,
       icon: "/Icon=Costumers-and-Suppliers.svg",
       moduleName: "Clientes e Fornecedores",
       pageUrl: "/costumers-and-suppliers",
-      isPressed: activeButton === "costumers-and-suppliers",
-      toggleStateFunction: () => setActiveButton("costumers-and-suppliers"),
+      isPressed: state.sidebar.activeButton === "costumers-and-suppliers",
+      toggleStateFunction: () =>
+        dispatch(setActiveButton("costumers-and-suppliers")),
     },
     {
       id: 7,
       icon: "/Icon=User.svg",
       moduleName: "Users",
       pageUrl: "/users",
-      isPressed: activeButton === "users",
-      toggleStateFunction: () => setActiveButton("users"),
+      isPressed: state.sidebar.activeButton === "users",
+      toggleStateFunction: () => dispatch(setActiveButton("users")),
     },
   ];
 

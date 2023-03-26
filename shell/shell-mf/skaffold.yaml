@@ -32,6 +32,10 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
+          - src: "src/**/*.ts"
+            dest: /shell-mf/src
+            strip: "src/"
+
           - src: "src/**/*.module.scss"
             dest: /shell-mf/src
             strip: "src/"

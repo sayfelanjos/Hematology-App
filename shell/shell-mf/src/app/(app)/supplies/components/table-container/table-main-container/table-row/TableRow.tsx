@@ -6,7 +6,9 @@ import TableCell from "@/app/(app)/supplies/components/table-container/table-mai
 function TableRow() {
   return (
     <div className={styles["table-row-container"]}>
-      <TableCell></TableCell>
+      <TableCell>
+        <div></div>
+      </TableCell>
     </div>
   );
 }
