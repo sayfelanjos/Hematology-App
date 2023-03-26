@@ -1,25 +1,26 @@
 "use client";
 import React from "react";
 import styles from "./Sidebar.module.scss";
-import { sidebarSlice } from "@/app/(app)/components/sidebar/sidebarSlice";
 import Image from "next/image";
 import SidebarModules from "./sidebar-modules/SidebarModules";
 import SidebarModuleButton from "./sidebar-modules/sidebar-module-button/SidebarModuleButton";
-import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
-  const { setActiveButton } = sidebarSlice.actions;
-  const dispatch = useAppDispatch();
-  const state = useAppSelector((state) => state);
+  const url: string | null = usePathname();
+  const re: string = "/.*\\/(.*?)/";
+  let urlSlice: RegExpMatchArray | null | string =
+    url != null ? url.match(re) : "/";
 
+  let pathName = urlSlice != null ? urlSlice : "/";
+  console.log(pathName);
   const Dashboard: MenuButton[] = [
     {
       id: 1,
       icon: "/Icon=Statistics.svg",
       moduleName: "Estatísticas",
       pageUrl: "",
-      isPressed: state.sidebar.activeButton === "dashboard",
-      toggleStateFunction: () => dispatch(setActiveButton("dashboard")),
+      isPressed: pathName === "/",
     },
   ];
   const SideBarModules: MenuButton[] = [
@@ -28,49 +29,42 @@ const Sidebar = () => {
       icon: "/Icon=Supplies.svg",
       moduleName: "Insumos",
       pageUrl: "/supplies",
-      isPressed: state.sidebar.activeButton === "supplies",
-      toggleStateFunction: () => dispatch(setActiveButton("supplies")),
+      isPressed: pathName === "/supplies",
     },
     {
       id: 3,
       icon: "/Icon=Orders.svg",
       moduleName: "Pedido de Compras",
       pageUrl: "/orders",
-      isPressed: state.sidebar.activeButton === "orders",
-      toggleStateFunction: () => dispatch(setActiveButton("orders")),
+      isPressed: pathName === "/orders",
     },
     {
       id: 4,
       icon: "/Icon=Invoices.svg",
       moduleName: "Notas Fiscais",
       pageUrl: "/invoices",
-      isPressed: state.sidebar.activeButton === "invoices",
-      toggleStateFunction: () => dispatch(setActiveButton("invoices")),
+      isPressed: pathName === "/invoices",
     },
     {
       id: 5,
       icon: "/Icon=Contracts.svg",
       moduleName: "Contratos",
       pageUrl: "/contracts",
-      isPressed: state.sidebar.activeButton === "contracts",
-      toggleStateFunction: () => dispatch(setActiveButton("contracts")),
+      isPressed: pathName === "/contracts",
     },
     {
       id: 6,
       icon: "/Icon=Costumers-and-Suppliers.svg",
       moduleName: "Clientes e Fornecedores",
       pageUrl: "/costumers-and-suppliers",
-      isPressed: state.sidebar.activeButton === "costumers-and-suppliers",
-      toggleStateFunction: () =>
-        dispatch(setActiveButton("costumers-and-suppliers")),
+      isPressed: pathName === "/costumers-and-suppliers",
     },
     {
       id: 7,
       icon: "/Icon=User.svg",
       moduleName: "Users",
       pageUrl: "/users",
-      isPressed: state.sidebar.activeButton === "users",
-      toggleStateFunction: () => dispatch(setActiveButton("users")),
+      isPressed: pathName === "/users",
     },
   ];
 
@@ -92,7 +86,6 @@ const Sidebar = () => {
           moduleName={Dashboard[0].moduleName}
           pageUrl={Dashboard[0].pageUrl}
           isPressed={Dashboard[0].isPressed}
-          toggleStateFunction={Dashboard[0].toggleStateFunction}
         />
       </div>
       <SidebarModules modules={SideBarModules} domainName={"Aplicações"} />

@@ -22,7 +22,6 @@ const SidebarModules = (props: Props) => {
               moduleName={item.moduleName}
               pageUrl={item.pageUrl}
               isPressed={item.isPressed}
-              toggleStateFunction={item.toggleStateFunction}
             />
           );
         })}

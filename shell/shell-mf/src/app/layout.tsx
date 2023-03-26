@@ -15,7 +15,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       </head>
       <body>
         <Provider store={store}>
-          <PersistGate persistor={persistor} loading={null}>
+          <PersistGate persistor={persistor} loading={"Loading..."}>
             <section className={styles["root-background"]}>
               {/* Include shared UI here e.g. a header or sidebar */}
               {children}

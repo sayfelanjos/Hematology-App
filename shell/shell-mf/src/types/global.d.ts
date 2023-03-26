@@ -12,6 +12,5 @@ declare global {
     moduleName: string;
     pageUrl: string;
     isPressed: boolean;
-    toggleStateFunction: () => void;
   };
 }

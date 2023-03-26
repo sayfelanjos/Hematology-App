@@ -1,12 +1,14 @@
 import { createSlice, createAction, PayloadAction } from "@reduxjs/toolkit";
 
-const setActiveButton = createAction("SET_ACTIVE_BUTTON");
+const setActiveButton = createAction<string, "setActiveButton">(
+  "setActiveButton"
+);
 
-export interface SidebarState {
+type SliceState = {
   activeButton: string;
-}
+};
 
-const initialState: SidebarState = {
+const initialState: SliceState = {
   activeButton: "dashboard",
 };
 
@@ -29,7 +31,7 @@ export const sidebarSlice = createSlice({
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
-    setActiveButton: (state, action: PayloadAction<string>) => {
+    [setActiveButton.type]: (state, action: PayloadAction<string>) => {
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new

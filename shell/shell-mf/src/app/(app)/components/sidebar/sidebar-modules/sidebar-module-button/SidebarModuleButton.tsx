@@ -13,7 +13,6 @@ const SidebarMenuButton = (props: MenuButton) => {
             ? styles["sidebar-module-button-pressed"]
             : styles["sidebar-module-button-enabled"]
         }
-        onClick={props.toggleStateFunction}
         href={props.pageUrl}
       >
         <Image
