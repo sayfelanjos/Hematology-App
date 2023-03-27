@@ -1,8 +1,13 @@
 .table-search-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  height: 122px;
+  height: 100%;
   width: 100%;
+}
+.table-search-dropdown {
+  height: 48px;
+  width: 320px;
+  background-color: #f44336;
 }

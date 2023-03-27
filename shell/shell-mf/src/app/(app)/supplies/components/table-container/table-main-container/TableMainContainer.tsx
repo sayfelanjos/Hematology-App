@@ -10,7 +10,18 @@ function TableMainContainer() {
     // <div className={styles["table-main-container"]}>    </div>
     <table className={styles["table-main-container"]}>
       <TableHeader></TableHeader>
-      <TableRow></TableRow>
+      <tbody>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+        <TableRow></TableRow>
+      </tbody>
     </table>
   );
 }
