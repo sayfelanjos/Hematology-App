@@ -1,0 +1,13 @@
+.dashboard-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #c0c0c0;
+  padding: 24px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=page.module.css.map */
