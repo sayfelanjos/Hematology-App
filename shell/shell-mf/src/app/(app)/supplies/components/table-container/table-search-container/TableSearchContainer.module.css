@@ -1,4 +1,8 @@
 .table-search-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
   height: 122px;
   width: 100%;
 }

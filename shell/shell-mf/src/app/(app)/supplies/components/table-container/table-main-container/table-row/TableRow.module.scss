@@ -1,5 +1,8 @@
 .table-row-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 48px;
   width: 100%;
-  background-color: #f39b17;
 }
