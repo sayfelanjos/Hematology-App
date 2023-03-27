@@ -26,11 +26,11 @@ build:
             dest: /supplies-mf/src/app
             strip: "src/app/"
 
-          - src: "src/app/page.module.css"
+          - src: "src/app/layout.module.css"
             dest: /supplies-mf/src/app
             strip: "src/app/"
 
-          - src: "src/app/page.tsx"
+          - src: "src/app/layout.tsx"
             dest: /supplies-mf/src/app
             strip: "src/app/"
 

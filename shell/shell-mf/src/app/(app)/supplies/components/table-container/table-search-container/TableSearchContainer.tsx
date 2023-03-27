@@ -5,7 +5,8 @@ import styles from "./TableSearchContainer.module.scss";
 function TableSearchContainer() {
   return (
     <div className={styles["table-search-container"]}>
-      <span>Search Container</span>
+      <input className={styles["table-search-input"]} type={"search"}></input>
+      <div className={styles["table-search-dropdown"]}></div>
     </div>
   );
 }
