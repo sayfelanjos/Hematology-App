@@ -5,22 +5,24 @@ import Image from "next/image";
 import SidebarModules from "./sidebar-modules/SidebarModules";
 import SidebarModuleButton from "./sidebar-modules/sidebar-module-button/SidebarModuleButton";
 import { usePathname } from "next/navigation";
+import { string } from "prop-types";
+import { Simulate } from "react-dom/test-utils";
+import input = Simulate.input;
 
 const Sidebar = () => {
   const url: string | null = usePathname();
-  const re: string = "/.*\\/(.*?)/";
-  let urlSlice: RegExpMatchArray | null | string =
-    url != null ? url.match(re) : "/";
-
+  let re = new RegExp(/\/[A-Za-z0-9:._-]*[/]{0}/);
+  let urlSlice: string | null | RegExpMatchArray =
+    url != null ? url.match(re) : "";
   let pathName = urlSlice != null ? urlSlice : "/";
-  console.log(pathName);
+  console.log(pathName[0]);
   const Dashboard: MenuButton[] = [
     {
       id: 1,
       icon: "/Icon=Statistics.svg",
       moduleName: "Estatísticas",
       pageUrl: "",
-      isPressed: pathName === "/",
+      isPressed: pathName[0] === "/",
     },
   ];
   const SideBarModules: MenuButton[] = [
@@ -29,42 +31,42 @@ const Sidebar = () => {
       icon: "/Icon=Supplies.svg",
       moduleName: "Insumos",
       pageUrl: "/supplies",
-      isPressed: pathName === "/supplies",
+      isPressed: pathName[0] === "/supplies",
     },
     {
       id: 3,
       icon: "/Icon=Orders.svg",
       moduleName: "Pedido de Compras",
       pageUrl: "/orders",
-      isPressed: pathName === "/orders",
+      isPressed: pathName[0] === "/orders",
     },
     {
       id: 4,
       icon: "/Icon=Invoices.svg",
       moduleName: "Notas Fiscais",
       pageUrl: "/invoices",
-      isPressed: pathName === "/invoices",
+      isPressed: pathName[0] === "/invoices",
     },
     {
       id: 5,
       icon: "/Icon=Contracts.svg",
       moduleName: "Contratos",
       pageUrl: "/contracts",
-      isPressed: pathName === "/contracts",
+      isPressed: pathName[0] === "/contracts",
     },
     {
       id: 6,
       icon: "/Icon=Costumers-and-Suppliers.svg",
       moduleName: "Clientes e Fornecedores",
       pageUrl: "/costumers-and-suppliers",
-      isPressed: pathName === "/costumers-and-suppliers",
+      isPressed: pathName[0] === "/costumers-and-suppliers",
     },
     {
       id: 7,
       icon: "/Icon=User.svg",
       moduleName: "Users",
       pageUrl: "/users",
-      isPressed: pathName === "/users",
+      isPressed: pathName[0] === "/users",
     },
   ];
 

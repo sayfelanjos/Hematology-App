@@ -8,6 +8,6 @@ RUN npm install -g npm@latest && npm install
 
 COPY . .
 
-EXPOSE 3000 9230
+EXPOSE 3000
 
 CMD ["npm", "run", "dev"]
