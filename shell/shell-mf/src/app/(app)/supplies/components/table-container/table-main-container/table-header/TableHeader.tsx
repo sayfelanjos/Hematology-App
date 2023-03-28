@@ -7,37 +7,16 @@ const TableHeader = () => {
   return (
     <thead className={styles["table-header"]}>
       <tr className={styles["table-header-row"]}>
-        <div>
-          <input type="checkbox" />
-          <label htmlFor=""></label>
-        </div>
-        <TableCell>
-          <span>Código</span>
-        </TableCell>
-        <TableCell>
-          <span>Código do Fabricante</span>
-        </TableCell>
-        <TableCell>
-          <span>Fabricante</span>
-        </TableCell>
-        <TableCell>
-          <span>Unidade</span>
-        </TableCell>
-        <TableCell>
-          <span>Lote</span>
-        </TableCell>
-        <TableCell>
-          <span>Disponível</span>
-        </TableCell>
-        <TableCell>
-          <span>Data de Entrada</span>
-        </TableCell>
-        <TableCell>
-          <span>Data de Validade</span>
-        </TableCell>
-        <TableCell>
-          <span>Condição</span>
-        </TableCell>
+        <input type="checkbox" />
+        <TableCell>Código</TableCell>
+        <TableCell>Código do Fabricante</TableCell>
+        <TableCell>Fabricante</TableCell>
+        <TableCell>Unidade</TableCell>
+        <TableCell>Lote</TableCell>
+        <TableCell>Disponível</TableCell>
+        <TableCell>Data de Entrada</TableCell>
+        <TableCell>Data de Validade</TableCell>
+        <TableCell>Condição</TableCell>
       </tr>
     </thead>
   );

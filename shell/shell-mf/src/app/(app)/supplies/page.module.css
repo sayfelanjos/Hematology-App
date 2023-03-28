@@ -1,6 +1,6 @@
 .supplies-background {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: #c0c0c0;
   flex-direction: column;
   padding: 24px;
@@ -9,4 +9,4 @@
   width: 100%;
 }
 
-/*# sourceMappingURL=layout.module.css.map */
+/*# sourceMappingURL=page.module.css.map */

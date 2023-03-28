@@ -7,7 +7,6 @@ import TableRow from "@/app/(app)/supplies/components/table-container/table-main
 
 function TableMainContainer() {
   return (
-    // <div className={styles["table-main-container"]}>    </div>
     <table className={styles["table-main-container"]}>
       <TableHeader></TableHeader>
       <tbody>

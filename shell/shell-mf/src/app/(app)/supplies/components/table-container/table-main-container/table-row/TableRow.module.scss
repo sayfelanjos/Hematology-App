@@ -2,7 +2,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: #fff;
   align-items: center;
   height: 48px;
   width: 100%;
+
+}
+
+.table-cell-content {
+  font: 17px Inter;
+  color: #464242;
 }
