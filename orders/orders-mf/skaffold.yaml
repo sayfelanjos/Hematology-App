@@ -1,0 +1,168 @@
+apiVersion: skaffold/v3
+kind: Config
+metadata:
+  name: orders-mf
+build:
+  tagPolicy:
+    gitCommit: {}
+  local:
+    push: false
+  artifacts:
+    - image: orders-mf
+      context: .
+      sync:
+        manual:
+          - src: "src/*.module.scss"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/*.module.css"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/*.module.css.map"
+            dest: /invoices-mf/src
+            strip: "src/"
+
+          - src: "src/*.js"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/*.module.scss"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/*.jsx"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/*.css"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/*.css.map"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.jsx"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.scss"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.css"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.css.map"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.jsx"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.module.scss"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.css"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.css.map"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.jsx"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.module.scss"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.css"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.css.map"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.jsx"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.module.scss"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.css"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.css.map"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.jsx"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.module.scss"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.css"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.css.map"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.jsx"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.module.scss"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.css"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.css.map"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.jsx"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.module.scss"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.css"
+            dest: /orders-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.css.map"
+            dest: /orders-mf/src
+            strip: "src/"
+      docker:
+        dockerfile: Dockerfile
+
+manifests:
+  rawYaml:
+    - k8s/ingress-service.yaml
+    - k8s/cluster-ip-service.yaml
+    - k8s/deployment.yaml
+
+deploy:
+  kubectl: {}

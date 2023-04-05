@@ -1,16 +1,16 @@
-import * as path from 'path';
-import * as webpack from 'webpack';
-import webpackNodeExternals from 'webpack-node-externals';
-import WebpackShellPluginNext from 'webpack-shell-plugin-next';
+import * as path from "path";
+import * as webpack from "webpack";
+import webpackNodeExternals from "webpack-node-externals";
+import WebpackShellPluginNext from "webpack-shell-plugin-next";
 
 const config: webpack.Configuration = {
-  entry: './src/app.ts',
+  entry: "./src/(app).ts",
   mode: "development",
-  target: 'node',
+  target: "node",
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'app.js',
-    clean: true
+    path: path.resolve(__dirname, "./dist"),
+    filename: "(app).js",
+    clean: true,
   },
   // watch: true,
   // watchOptions: {
@@ -21,29 +21,27 @@ const config: webpack.Configuration = {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
+        use: "ts-loader",
+        exclude: /node_modules/,
       },
       {
         test: /\.js$/,
-        loader: "source-map-loader"
-      }
-    ]
+        loader: "source-map-loader",
+      },
+    ],
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: [".ts", ".js"],
   },
   plugins: [
     new WebpackShellPluginNext({
-      onBuildEnd:{
-        scripts: [
-          'nodemon ./dist/app.js'
-        ],
+      onBuildEnd: {
+        scripts: ["nodemon ./dist/(app).js"],
         blocking: false,
-        parallel: true
-      }
-    })
-  ]
+        parallel: true,
+      },
+    }),
+  ],
 };
 
 export default config;

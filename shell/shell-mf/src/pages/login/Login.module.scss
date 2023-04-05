@@ -1,0 +1,115 @@
+.login-page-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 525px;
+  width: 475px;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px hsl(0, 0%, 40%, 1);
+  padding: 36px 12px;
+  box-sizing: border-box;
+}
+
+.login-image {
+  height: 100%;
+  width: 100%;
+}
+
+.login-image-container {
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.login-form-forget-header {
+  font-size: 14px;
+}
+
+.login-form-email {
+  width: 395px;
+  height: 48px;
+  border-radius: 6px;
+  background-color: #e9e9e9;
+  border: 0;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.login-form-email::placeholder {
+  font-weight: normal;
+  color: #acacac;
+}
+
+.login-form-password {
+  width: 395px;
+  height: 48px;
+  border-radius: 6px;
+  background-color: #e9e9e9;
+  border: 0;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.login-form-button-enter {
+  background-color: #f39b17;
+  width: 395px;
+  height: 48px;
+  border-radius: 6px;
+  border: 0;
+  /*box-shadow: 0 0 4px #101828;*/
+}
+
+.login-form-button-enter > span {
+  color: #fff;
+}
+
+.login-form-button-google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 395px;
+  height: 48px;
+  border-radius: 6px;
+  border: 0;
+  background-color: #fff;
+  box-shadow: 0 0 4px #101828;
+  gap: 12px;
+}
+
+.login-form-forget-password-container {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+}
+
+.login-form-forget-password-link {
+  font: 17px/1 "Inter Semi Bold";
+  text-decoration: none;
+}
+
+.login-form-button-text {
+  color: #000;
+}
+
+.login-form-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /*background-color: hsl(0, 0%, 40%, 1);*/
+  height: 100%;
+  width: fit-content;
+}

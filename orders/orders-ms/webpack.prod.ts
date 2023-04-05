@@ -1,28 +1,28 @@
-import * as path from 'path';
-import * as webpack from 'webpack';
-import webpackNodeExternals from 'webpack-node-externals';
+import * as path from "path";
+import * as webpack from "webpack";
+import webpackNodeExternals from "webpack-node-externals";
 
 const config: webpack.Configuration = {
-  entry: './src/app.ts',
+  entry: "./src/(app).ts",
   mode: "production",
-  target: 'node',
+  target: "node",
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'app.js'
+    path: path.resolve(__dirname, "./dist"),
+    filename: "(app).js",
   },
   externals: [webpackNodeExternals()],
   module: {
     rules: [
       {
         test: /\.ts$/,
-        loader: 'ts-loader',
-        exclude: /node_modules/
-      }
-    ]
+        loader: "ts-loader",
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
-    extensions: ['.ts', '.js'],
-  }
+    extensions: [".ts", ".js"],
+  },
 };
 
 export default config;

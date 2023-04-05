@@ -12,41 +12,143 @@ build:
       context: .
       sync:
         manual:
-          - src: "next-env.d.ts"
+          - src: "*.d.ts"
             dest: /supplies-mf
 
-          - src: "tsconfig.json"
+          - src: "*.js"
             dest: /supplies-mf
 
-          - src: "src/app/layout.tsx"
-            dest: /supplies-mf/src/app
-            strip: "src/app/"
+          - src: "*.ts"
+            dest: /supplies-mf
 
-          - src: "src/app/globals.css"
-            dest: /supplies-mf/src/app
-            strip: "src/app/"
+          - src: "*.json"
+            dest: /supplies-mf
 
-          - src: "src/app/layout.module.css"
-            dest: /supplies-mf/src/app
-            strip: "src/app/"
+          - src: "src/**/*.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
 
-          - src: "src/app/layout.tsx"
-            dest: /supplies-mf/src/app
-            strip: "src/app/"
+          - src: "src/**/*.module.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
 
-          - src: "src/app/**/*.tsx"
-            dest: /supplies-mf/src/app
-            strip: "src/app/"
+          - src: "src/**/*.module.css"
+            dest: /supplies-mf/src
+            strip: "src/"
 
-          - src: "src/components/**/*.tsx"
-            dest: /supplies-mf/src/components
-            strip: "src/components/"
+          - src: "src/**/*.module.css.map"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/*.tsx"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.module.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.module.css"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.module.css.map"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.tsx"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.module.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.module.css"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.module.css.map"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.tsx"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.module.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.module.css"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.module.css.map"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.tsx"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.module.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.module.css"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.module.css.map"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.tsx"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.module.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.module.css"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.module.css.map"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.tsx"
+            dest: /supplies-mf/src
+            strip: "src/"
       docker:
         dockerfile: Dockerfile
 
 manifests:
   rawYaml:
-    - k8s/service.yaml
+    - k8s/cluster-ip-cluster-ip-service.yaml
     - k8s/deployment.yaml
 
 deploy:

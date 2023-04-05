@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: invoices-mf
+  labels:
+    app: invoices-mf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: invoices-mf
+  template:
+    metadata:
+      labels:
+        app: invoices-mf
+    spec:
+      containers:
+        - image: invoices-mf
+          name: invoices-mf
+          imagePullPolicy: Never

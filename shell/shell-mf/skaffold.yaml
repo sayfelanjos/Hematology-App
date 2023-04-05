@@ -12,27 +12,19 @@ build:
       context: .
       sync:
         manual:
-          - src: "next-env.d.ts"
-            dest: /shell-mf
-
-          - src: "next.config.js"
-            dest: /shell-mf
-
-          - src: "tsconfig.json"
-            dest: /shell-mf
-
-          - src: "src/**/*.scss"
+          - src: "src/*.module.scss"
             dest: /shell-mf/src
             strip: "src/"
 
-          - src: "tsconfig.css.map"
-            dest: /shell-mf
-
-          - src: "src/**/*.css"
+          - src: "src/*.module.css"
             dest: /shell-mf/src
             strip: "src/"
 
-          - src: "src/**/*.ts"
+          - src: "src/*.module.css.map"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/*.js"
             dest: /shell-mf/src
             strip: "src/"
 
@@ -40,7 +32,7 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
-          - src: "src/**/*.tsx"
+          - src: "src/**/*.jsx"
             dest: /shell-mf/src
             strip: "src/"
 
@@ -52,7 +44,7 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
-          - src: "src/**/**/*.tsx"
+          - src: "src/**/**/*.jsx"
             dest: /shell-mf/src
             strip: "src/"
 
@@ -68,7 +60,7 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/*.tsx"
+          - src: "src/**/**/**/*.jsx"
             dest: /shell-mf/src
             strip: "src/"
 
@@ -84,8 +76,7 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
-
-          - src: "src/**/**/**/**/*.tsx"
+          - src: "src/**/**/**/**/*.jsx"
             dest: /shell-mf/src
             strip: "src/"
 
@@ -101,7 +92,7 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/*.tsx"
+          - src: "src/**/**/**/**/**/*.jsx"
             dest: /shell-mf/src
             strip: "src/"
 
@@ -117,8 +108,7 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
-
-          - src: "src/**/**/**/**/**/**/*.tsx"
+          - src: "src/**/**/**/**/**/**/*.jsx"
             dest: /shell-mf/src
             strip: "src/"
 
@@ -134,8 +124,7 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
-
-          - src: "src/**/**/**/**/**/**/**/*.tsx"
+          - src: "src/**/**/**/**/**/**/**/*.jsx"
             dest: /shell-mf/src
             strip: "src/"
 
@@ -151,7 +140,7 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/**/**/**/*.tsx"
+          - src: "src/**/**/**/**/**/**/**/**/*.jsx"
             dest: /shell-mf/src
             strip: "src/"
 
@@ -171,7 +160,8 @@ build:
 
 manifests:
   rawYaml:
-    - k8s/service.yaml
+    - k8s/ingress-service.yaml
+    - k8s/cluster-ip-service.yaml
     - k8s/deployment.yaml
 
 deploy:

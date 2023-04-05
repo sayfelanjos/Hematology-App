@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orders-mf
+  labels:
+    name: orders-mf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orders-mf
+  template:
+    metadata:
+      labels:
+        app: orders-mf
+    spec:
+      containers:
+        - name: orders-mf
+          image: orders-mf
+          imagePullPolicy: Never

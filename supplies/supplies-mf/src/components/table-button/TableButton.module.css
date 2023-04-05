@@ -1,0 +1,18 @@
+.table-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 218px;
+  border-radius: 6px;
+  border: none;
+  background-color: #f39b17;
+}
+
+.table-button-content {
+  font-size: 17px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=TableButton.module.css.map */

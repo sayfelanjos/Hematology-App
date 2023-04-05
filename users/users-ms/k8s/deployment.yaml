@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users-ms
+  labels:
+    app: users-ms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: users-ms
+  template:
+    metadata:
+      labels:
+        app: users-ms
+    spec:
+      containers:
+        - image: users-ms
+          name: users-ms
+          imagePullPolicy: Never
