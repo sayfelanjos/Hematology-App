@@ -1,16 +1,15 @@
-import React from "react";
+import React, { Suspense } from "react";
 import styles from "./Supplies.module.scss";
-// const OrdersModule = React.lazy(() => import("orders/OrdersModule"));
-import SuppliesHeader from "../../components/supplies-header/SuppliesHeader";
-import TableContainer from "../../components/table-container/TableContainer";
+const SuppliesModule = React.lazy(() => import("supplies/SuppliesModule"));
 
-function Supplies() {
+const Supplies = () => {
   return (
     <div className={styles["supplies-background"]}>
-      <SuppliesHeader></SuppliesHeader>
-      <TableContainer></TableContainer>
+      <Suspense>
+        <SuppliesModule />
+      </Suspense>
     </div>
   );
-}
+};
 
 export default Supplies;

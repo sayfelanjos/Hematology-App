@@ -12,19 +12,19 @@ build:
       context: .
       sync:
         manual:
-          - src: "*.d.ts"
-            dest: /supplies-mf
+          - src: "src/*.module.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
 
-          - src: "*.js"
-            dest: /supplies-mf
+          - src: "src/*.module.css"
+            dest: /supplies-mf/src
+            strip: "src/"
 
-          - src: "*.ts"
-            dest: /supplies-mf
+          - src: "src/*.module.css.map"
+            dest: /invoices-mf/src
+            strip: "src/"
 
-          - src: "*.json"
-            dest: /supplies-mf
-
-          - src: "src/**/*.scss"
+          - src: "src/*.js"
             dest: /supplies-mf/src
             strip: "src/"
 
@@ -32,15 +32,19 @@ build:
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/*.module.css"
+          - src: "src/**/*.jsx"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/*.module.css.map"
+          - src: "src/**/*.css"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/*.tsx"
+          - src: "src/**/*.css.map"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.jsx"
             dest: /supplies-mf/src
             strip: "src/"
 
@@ -48,23 +52,15 @@ build:
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/*.module.scss"
+          - src: "src/**/**/*.css"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/*.module.css"
+          - src: "src/**/**/*.css.map"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/*.module.css.map"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/*.tsx"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/*.scss"
+          - src: "src/**/**/**/*.jsx"
             dest: /supplies-mf/src
             strip: "src/"
 
@@ -72,19 +68,15 @@ build:
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/*.module.css"
+          - src: "src/**/**/**/*.css"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/*.module.css.map"
+          - src: "src/**/**/**/*.css.map"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/*.tsx"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/*.scss"
+          - src: "src/**/**/**/**/*.jsx"
             dest: /supplies-mf/src
             strip: "src/"
 
@@ -92,19 +84,15 @@ build:
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/*.module.css"
+          - src: "src/**/**/**/**/*.css"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/*.module.css.map"
+          - src: "src/**/**/**/**/*.css.map"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/*.tsx"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/*.scss"
+          - src: "src/**/**/**/**/**/*.jsx"
             dest: /supplies-mf/src
             strip: "src/"
 
@@ -112,19 +100,15 @@ build:
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/*.module.css"
+          - src: "src/**/**/**/**/**/*.css"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/*.module.css.map"
+          - src: "src/**/**/**/**/**/*.css.map"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/*.tsx"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/*.scss"
+          - src: "src/**/**/**/**/**/**/*.jsx"
             dest: /supplies-mf/src
             strip: "src/"
 
@@ -132,15 +116,43 @@ build:
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/**/*.module.css"
+          - src: "src/**/**/**/**/**/**/*.css"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/**/*.module.css.map"
+          - src: "src/**/**/**/**/**/**/*.css.map"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/**/*.tsx"
+          - src: "src/**/**/**/**/**/**/**/*.jsx"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.module.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.css"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.css.map"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.jsx"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.module.scss"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.css"
+            dest: /supplies-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.css.map"
             dest: /supplies-mf/src
             strip: "src/"
       docker:
@@ -148,7 +160,8 @@ build:
 
 manifests:
   rawYaml:
-    - k8s/cluster-ip-cluster-ip-service.yaml
+    - k8s/ingress-service.yaml
+    - k8s/cluster-ip-service.yaml
     - k8s/deployment.yaml
 
 deploy:

@@ -9,6 +9,5 @@ requires:
     path: invoices/invoices-mf/skaffold.yaml
   - configs: ["orders-mf"]
     path: orders/orders-mf/skaffold.yaml
-#  - configs: ["supplies-mf"]
-#    path: supplies/supplies-mf/skaffold.yaml
-
+  - configs: ["supplies-mf"]
+    path: supplies/supplies-mf/skaffold.yaml
