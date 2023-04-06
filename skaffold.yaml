@@ -3,6 +3,8 @@ kind: Config
 metadata:
   name: hematology-app
 requires:
+  - configs: ["statistics-mf"]
+    path: statistics/statistics-mf/skaffold.yaml
   - configs: ["shell-mf"]
     path: shell/shell-mf/skaffold.yaml
   - configs: ["invoices-mf"]

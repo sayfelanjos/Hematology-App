@@ -1,6 +1,6 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Dashboard from "./pages/dashboard/Dashboard";
+import Statistics from "./pages/statistics/Statistics";
 import CostumersAndSuppliers from "./pages/costumers-and-suppliers/CostumersAndSuppliers";
 import Contracts from "./pages/contracts/Contracts";
 import Invoices from "./pages/invoices/Invoices";
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/contracts", element: <Contracts /> },
       { path: "/costumers-and-suppliers", element: <CostumersAndSuppliers /> },
-      { path: "/", element: <Dashboard /> },
+      { path: "/", element: <Statistics /> },
       { path: "/invoices", element: <Invoices /> },
       { path: "/orders", element: <Orders /> },
       { path: "/supplies", element: <Supplies /> },

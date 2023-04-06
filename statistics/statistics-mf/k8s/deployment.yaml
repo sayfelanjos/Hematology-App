@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: statistics-mf
+  labels:
+    app: statistics-mf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: statistics-mf
+  template:
+    metadata:
+      labels:
+        app: statistics-mf
+    spec:
+      containers:
+        - image: statistics-mf
+          name: statistics-mf
+          imagePullPolicy: Never
