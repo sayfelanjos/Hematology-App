@@ -1,11 +1,13 @@
-FROM django:latest
+FROM node:18.14.2
 
 WORKDIR /users-ms
 
+COPY package.json .
+
+RUN npm install
+
 COPY . .
 
-RUN cd /users-ms
+EXPOSE 80/tcp
 
-EXPOSE 8000/tcp
-
-ENTRYPOINT ["python", "manage.py", "runserver"]
+ENTRYPOINT ["npm", "run", "start"]

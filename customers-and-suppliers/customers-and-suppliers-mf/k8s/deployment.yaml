@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customers-and-suppliers-mf
+  labels:
+    name: customers-and-suppliers-mf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customers-and-suppliers-mf
+  template:
+    metadata:
+      labels:
+        app: customers-and-suppliers-mf
+    spec:
+      containers:
+        - name: customers-and-suppliers-mf
+          image: customers-and-suppliers-mf
+          imagePullPolicy: Never

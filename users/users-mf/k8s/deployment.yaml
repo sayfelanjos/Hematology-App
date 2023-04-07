@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users-mf
+  labels:
+    app: users-mf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: users-mf
+  template:
+    metadata:
+      labels:
+        app: users-mf
+    spec:
+      containers:
+        - image: users-mf
+          name: users-mf
+          imagePullPolicy: Never

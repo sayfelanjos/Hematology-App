@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Statistics from "./pages/statistics/Statistics";
-import CostumersAndSuppliers from "./pages/costumers-and-suppliers/CostumersAndSuppliers";
+import CustomersAndSuppliers from "./pages/customers-and-suppliers/CustomersAndSuppliers";
 import Contracts from "./pages/contracts/Contracts";
 import Invoices from "./pages/invoices/Invoices";
 import Login from "./pages/login/Login";
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { path: "/contracts", element: <Contracts /> },
-      { path: "/costumers-and-suppliers", element: <CostumersAndSuppliers /> },
+      { path: "/costumers-and-suppliers", element: <CustomersAndSuppliers /> },
       { path: "/", element: <Statistics /> },
       { path: "/invoices", element: <Invoices /> },
       { path: "/orders", element: <Orders /> },

@@ -3,7 +3,7 @@ const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 const deps = require("./package.json").dependencies;
 module.exports = {
-  name: "shell",
+  name: "users",
   mode: "development",
   context: path.join(__dirname, "./"),
   entry: "./src/index.js",
@@ -49,8 +49,9 @@ module.exports = {
         use: ["file-loader"],
       },
       {
-        test: /\.svg$/,
-        use: ["@svg/webpack"],
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ["@svgr/webpack"],
       },
     ],
   },
@@ -59,15 +60,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "shell",
+      name: "users",
       filename: "remoteEntry.js",
-      remotes: {
-        orders: `orders@http://orders-mf.info/remoteEntry.js`,
-        invoices: `invoices@http://invoices-mf.info/remoteEntry.js`,
-        supplies: `supplies@http://supplies-mf.info/remoteEntry.js`,
-        statistics: `statistics@http://statistics-mf.info/remoteEntry.js`,
-        customers_and_suppliers: `customers_and_suppliers@http://customers-and-suppliers-mf.info/remoteEntry.js`,
-        users: `users@http://users-mf.info/remoteEntry.js`,
+      exposes: {
+        "./UsersModule": "./src/App",
       },
       shared: {
         ...deps,

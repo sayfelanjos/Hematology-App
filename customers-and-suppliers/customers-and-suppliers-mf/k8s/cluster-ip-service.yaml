@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: customers-and-suppliers-mf
+  labels:
+    app: customers-and-suppliers-mf
+spec:
+  type: ClusterIP
+  ports:
+    - name: customers-and-suppliers-mf
+      protocol: TCP
+      port: 80
+      targetPort: 80
+  selector:
+    app: customers-and-suppliers-mf

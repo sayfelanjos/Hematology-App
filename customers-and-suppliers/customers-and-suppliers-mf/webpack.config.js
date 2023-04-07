@@ -2,17 +2,21 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 const deps = require("./package.json").dependencies;
+
 module.exports = {
-  name: "shell",
-  mode: "development",
+  name: "customers_and_suppliers",
   context: path.join(__dirname, "./"),
   entry: "./src/index.js",
+  mode: "development",
   devServer: {
-    static: { directory: path.join(__dirname, "public") },
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
     historyApiFallback: true,
     compress: true,
     port: 80,
     host: "0.0.0.0",
+    hot: true,
     allowedHosts: "all",
   },
   output: {
@@ -24,13 +28,11 @@ module.exports = {
   module: {
     rules: [
       {
-        exclude: /node_modules/,
         test: /\.jsx?$/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
-          },
+        loader: "babel-loader",
+        exclude: /node_modules/,
+        options: {
+          presets: ["@babel/preset-react"],
         },
       },
       {
@@ -45,34 +47,22 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jp(e*)g|svg|gif)$/,
-        use: ["file-loader"],
-      },
-      {
         test: /\.svg$/,
         use: ["@svg/webpack"],
       },
     ],
   },
-  resolve: {
-    extensions: [".ts", ".js", ".jsx", ".tsx", ".css", ".scss"],
-  },
   plugins: [
     new ModuleFederationPlugin({
-      name: "shell",
+      name: "customers_and_suppliers",
+      library: { type: "var", name: "customers_and_suppliers" },
       filename: "remoteEntry.js",
-      remotes: {
-        orders: `orders@http://orders-mf.info/remoteEntry.js`,
-        invoices: `invoices@http://invoices-mf.info/remoteEntry.js`,
-        supplies: `supplies@http://supplies-mf.info/remoteEntry.js`,
-        statistics: `statistics@http://statistics-mf.info/remoteEntry.js`,
-        customers_and_suppliers: `customers_and_suppliers@http://customers-and-suppliers-mf.info/remoteEntry.js`,
-        users: `users@http://users-mf.info/remoteEntry.js`,
+      exposes: {
+        "./CustomersAndSuppliersModule": "./src/App",
       },
       shared: {
         ...deps,
         react: {
-          eager: true,
           singleton: true,
           requiredVersion: deps.react,
         },
