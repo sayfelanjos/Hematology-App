@@ -1,4 +1,4 @@
-FROM node:18.14.2
+FROM node
 
 WORKDIR /users-ms
 
@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 80/tcp
+EXPOSE 4007/tcp
 
-ENTRYPOINT ["npm", "run", "start"]
+ENTRYPOINT ["npm", "run", "start:dev"]

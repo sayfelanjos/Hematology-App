@@ -6,7 +6,7 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   name: "customers_and_suppliers",
   context: path.join(__dirname, "./"),
-  entry: "./src/index.js",
+  entry: "./src/index.jsx",
   mode: "development",
   devServer: {
     static: {
@@ -14,7 +14,7 @@ module.exports = {
     },
     historyApiFallback: true,
     compress: true,
-    port: 80,
+    port: 3001,
     host: "0.0.0.0",
     hot: true,
     allowedHosts: "all",
@@ -28,9 +28,9 @@ module.exports = {
   module: {
     rules: [
       {
+        exclude: /node_modules\/(?!@sayfelanjos).*/,
         test: /\.jsx?$/,
         loader: "babel-loader",
-        exclude: /node_modules/,
         options: {
           presets: ["@babel/preset-react"],
         },
@@ -58,7 +58,7 @@ module.exports = {
       library: { type: "var", name: "customers_and_suppliers" },
       filename: "remoteEntry.js",
       exposes: {
-        "./CustomersAndSuppliersModule": "./src/App",
+        "./CustomersAndSuppliersModule": "./src/App.jsx",
       },
       shared: {
         ...deps,

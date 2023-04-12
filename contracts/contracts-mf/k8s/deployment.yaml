@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contracts-mf-deployment
+  labels:
+    app: contracts-mf-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: contracts-mf-deployment
+  template:
+    metadata:
+      labels:
+        app: contracts-mf-deployment
+    spec:
+      containers:
+        - name: contracts-mf
+          image: contracts-mf
+          ports:
+            - containerPort: 3006
+          imagePullPolicy: Never

@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 80
+EXPOSE 3002/tcp
 
 CMD ["npm", "run", "start"]

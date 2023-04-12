@@ -1,0 +1,13 @@
+apiVersion: skaffold/v3
+kind: Config
+metadata:
+  name: statistics-db
+manifests:
+  rawYaml:
+    - k8s/service.yaml
+    - k8s/deployment.yaml
+    - k8s/configmap.yaml
+    - k8s/volume.yaml
+    - k8s/persistent-volume-claim.yaml
+deploy:
+  kubectl: {}

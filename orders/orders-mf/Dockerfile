@@ -8,6 +8,6 @@ RUN npm install -g npm@latest && npm install
 
 COPY . .
 
-EXPOSE 80/tcp
+EXPOSE 3004/tcp
 
 CMD ["npm", "run", "start"]

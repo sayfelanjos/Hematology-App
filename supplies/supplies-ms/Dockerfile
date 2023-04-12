@@ -4,10 +4,10 @@ WORKDIR /supplies-ms
 
 COPY package.json /supplies-ms
 
-RUN npm install -g npm@9.6.0 && npm install
+RUN npm install
 
 COPY . /supplies-ms
 
-EXPOSE 4001
+EXPOSE 4002/tcp
 
 CMD ["npm", "run", "start:dev"]

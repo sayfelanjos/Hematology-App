@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: contracts-db-configmap
+  labels:
+    app: contracts-db-configmap
+data:
+  POSTGRES_DB: contracts-db
+  POSTGRES_USER: hematologyapp
+  POSTGRES_PASSWORD: hematologyapp

@@ -1,15 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: users-ms
+  name: users-ms-service
   labels:
-    app: users-ms
+    app: users-ms-service
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
     - protocol: TCP
-      nodePort: 30003
-      port: 8000
-      targetPort: 8000
+      port: 4007
+      targetPort: 4007
   selector:
-    app: users-ms
+    app: users-ms-deployment

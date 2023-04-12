@@ -1,0 +1,173 @@
+apiVersion: skaffold/v3
+kind: Config
+metadata:
+  name: supplies-ms
+build:
+  platforms: ['linux/amd64']
+  tagPolicy:
+    gitCommit: {}
+  local:
+    push: false
+  artifacts:
+    - image: supplies-ms
+      context: .
+      sync:
+        manual:
+          - src: 'src/*.controller.spec.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/*.controller.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/*.module.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/*.service.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/main.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/*.controller.spec.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/*.controller.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/*.module.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/*.service.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/*.controller.spec.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/*.controller.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/*.module.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/*.service.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/*.controller.spec.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/*.controller.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/*.module.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/*.service.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/*.controller.spec.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/*.controller.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/*.module.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/*.service.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/*.controller.spec.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/*.controller.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/*.module.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/*.service.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/*.controller.spec.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/*.controller.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/*.module.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/**/*.service.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/**/*.controller.spec.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/**/*.controller.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/**/*.module.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/**/**/*.service.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/**/**/*.controller.spec.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/**/**/*.controller.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/**/**/*.module.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+
+          - src: 'src/**/**/**/**/**/**/**/**/*.service.ts'
+            dest: /supplies-ms/src
+            strip: 'src/'
+      docker:
+        dockerfile: Dockerfile
+
+manifests:
+  rawYaml:
+    - k8s/ingress.yaml
+    - k8s/service.yaml
+    - k8s/deployment.yaml
+
+deploy:
+  kubectl: {}

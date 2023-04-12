@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: orders-db-configmap
+  labels:
+    app: orders-db-configmap
+data:
+  POSTGRES_DB: orders-db
+  POSTGRES_USER: hematologyapp
+  POSTGRES_PASSWORD: hematologyapp

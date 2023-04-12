@@ -1,20 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: customers-and-suppliers-mf
+  name: customers-and-suppliers-mf-deployment
   labels:
-    name: customers-and-suppliers-mf
+    app: customers-and-suppliers-mf-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: customers-and-suppliers-mf
+      app: customers-and-suppliers-mf-deployment
   template:
     metadata:
       labels:
-        app: customers-and-suppliers-mf
+        app: customers-and-suppliers-mf-deployment
     spec:
       containers:
         - name: customers-and-suppliers-mf
           image: customers-and-suppliers-mf
+          ports:
+            - containerPort: 3001
           imagePullPolicy: Never

@@ -1,69 +1,212 @@
-version: "3"
+version: "3.9"
 services:
-  zookeeper:
-    image: 'bitnami/zookeeper:latest'
-    ports:
-      - '2181:2181'
-    environment:
-      - ALLOW_ANONYMOUS_LOGIN=yes
-
-  kafka:
-    image: 'bitnami/kafka:latest'
-    ports:
-      - '9092:9092'
-    environment:
-      - KAFKA_BROKER_ID=1
-      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092
-      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
-      - ALLOW_PLAINTEXT_LISTENER=yes
-    depends_on:
-      - zookeeper
+  ################################## Micro Frontends ###############################
 
   shell-mf:
-    image: 'nextjs:13.2.3'
+    container_name: shell-mf
+    build: ./shell/shell-mf
     ports:
-      - '3000:3000'
+      - "3000:80"
     volumes:
-      - ./Shell/shell-mf/src:/shell-mf/src
+      - ./shell/shell-mf/src:/shell-mf/src
 
-  shell-ms:
-    image: 'nestjs:9.0.0'
+  customers-and-suppliers-mf:
+    container_name: customers-and-suppliers-mf
+    build: ./customers-and-suppliers/customers-and-suppliers-mf
     ports:
-      - '3001:3001'
+      - "3001:80"
     volumes:
-      - ./Shell/shell-ms/src:/shell-ms/src
+      - ./customers-and-suppliers/customers-and-suppliers-mf/src:/customers-and-suppliers-mf/src
 
   supplies-mf:
-    image: 'nextjs:13.2.3'
+    container_name: suppliers-mf
+    build: ./supplies/supplies-mf
     ports:
-      - '4000:4000'
+      - "3002:80"
     volumes:
-      - ./Supplies/supplies-mf/src:/supplies-mf/src
+      - ./supplies/supplies-mf/src:/supplies-mf/src
+
+  invoices-mf:
+    container_name: invoices-mf
+    build: ./invoices/invoices-mf
+    ports:
+      - "3003:80"
+    volumes:
+      - ./invoices/invoices-mf/src:/invoices-mf/src
+
+  orders-mf:
+    container_name: orders-mf
+    build: ./orders/orders-mf
+    ports:
+      - "3004:80"
+    volumes:
+      - ./orders/orders-mf/src:/orders-mf/src
+
+  statistics-mf:
+    container_name: statistics-mf
+    build: ./statistics/statistics-mf
+    ports:
+      - "3005:80"
+    volumes:
+      - ./statistics/statistics-mf/src:/statistics-mf/src
+
+  contracts-mf:
+    container_name: contracts-mf
+    build: ./contracts/contracts-mf
+    ports:
+      - "3006:80"
+    volumes:
+      - ./contracts/contracts-mf/src:/contracts-mf/src
+
+  users-mf:
+    container_name: users-mf
+    build: ./users/users-mf
+    ports:
+      - "3007:80"
+    volumes:
+      - ./users/users-mf/src:/users-mf/src
+
+  ################################## Micro Services ################################
+
+  shell-ms:
+    container_name: shell-ms
+    build: ./shell/shell-ms
+    ports:
+      - "4000:80"
+    volumes:
+      - ./shell/shell-ms/src:/shell-ms/src
+
+  customers-and-suppliers-ms:
+    container_name: customers-and-suppliers-ms
+    build: ./customers-and-suppliers/customers-and-suppliers-ms
+    ports:
+      - "4001:80"
+    volumes:
+      - ./customers-and-suppliers/customers-and-suppliers-ms/src:/customers-and-suppliers-ms/src
 
   supplies-ms:
-    image: 'nestjs:9.0.0'
+    container_name: suppliers-ms
+    build: ./supplies/supplies-ms
     ports:
-      - '4001:4001'
+      - "4002:80"
     volumes:
-      - ./Supplies/supplies-ms/src:/supplies-ms/src
+      - ./supplies/supplies-ms/src:/supplies-ms/src
 
-  jenkins:
-    image: 'jenkins/jenkins'
+  invoices-ms:
+    container_name: invoices-ms
+    build: ./invoices/invoices-ms
     ports:
-      - '8080:8080'
+      - "4003:80"
+    volumes:
+      - ./invoices/invoices-ms/src:/invoices-ms/src
 
-  Keycloak:
-    image: 'bitnami/keycloak:latest'
+  orders-ms:
+    container_name: orders-ms
+    build: ./orders/orders-ms
     ports:
-      - '8081:8080'
+      - "4004:80"
+    volumes:
+      - ./orders/orders-ms/src:/orders-ms/src
 
-  postgresql:
-    image: 'postgres'
+  statistics-ms:
+    container_name: statistics-ms
+    build: ./statistics/statistics-ms
     ports:
-      - '8082:8080'
+      - "4005:80"
+    volumes:
+      - ./statistics/statistics-ms/src:/statistics-ms/src
 
-  mongodb:
-    image: 'mongo'
+  contracts-ms:
+    container_name: contracts-ms
+    build: ./contracts/contracts-ms
     ports:
-      - '8083:8080'
+      - "4006:80"
+    volumes:
+      - ./contracts/contracts-ms/src:/contracts-ms/src
+
+  users-ms:
+    container_name: users-ms
+    build: ./users/users-ms
+    ports:
+      - "4007:80"
+    volumes:
+      - ./users/users-ms/src:/users-ms/src
+
+  ################################## Databases #####################################
+
+  shell-db:
+    container_name: shell-db
+    image: mongo:latest
+    ports:
+      - "5000:27017"
+
+  customers-and-suppliers-db:
+    container_name: customers-and-suppliers-db
+    image: mongo:latest
+    ports:
+      - "5011:27017"
+
+  supplies-db:
+    container_name: supplies-db
+    image: mongo:latest
+    ports:
+      - "5002:27017"
+
+  invoices-db:
+    container_name: invoices-db
+    image: mongo:latest
+    ports:
+      - "5003:27017"
+
+  orders-db:
+    container_name: orders-db
+    image: mongo:latest
+    ports:
+      - "5004:27017"
+
+  statistics-db:
+    container_name: statistics-db
+    image: mongo:latest
+    ports:
+      - "5005:27017"
+
+  contracts-db:
+    container_name: contracts-db
+    image: mongo:latest
+    ports:
+      - "5006:27017"
+
+  users-db:
+    container_name: users-db
+    image: mongo:latest
+    ports:
+      - "5007:27017"
+
+  ################################## Event Bus #####################################
+
+  #  zookeeper:
+  #    image: "bitnami/zookeeper:latest"
+  #    ports:
+  #      - "2181:2181"
+  #    environment:
+  #      - ALLOW_ANONYMOUS_LOGIN=yes
+
+  #  kafka:
+  #    image: "bitnami/kafka:latest"
+  #    ports:
+  #      - "9092:9092"
+  #    environment:
+  #      - KAFKA_BROKER_ID=1
+  #      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092
+  #      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092
+  #      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+  #      - ALLOW_PLAINTEXT_LISTENER=yes
+  #    depends_on:
+  #      - zookeeper
+
+  ################################## CI/CD #########################################
+
+  #  jenkins:
+  #    image: "jenkins/jenkins"
+  #    ports:
+  #      - "8080:8080"

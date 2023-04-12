@@ -12,7 +12,7 @@ module.exports = {
     static: { directory: path.join(__dirname, "public") },
     historyApiFallback: true,
     compress: true,
-    port: 80,
+    port: 3003,
     host: "0.0.0.0",
     allowedHosts: "all",
   },
@@ -25,7 +25,7 @@ module.exports = {
   module: {
     rules: [
       {
-        exclude: /node_modules/,
+        exclude: /node_modules\/(?!@sayfelanjos).*/,
         test: /\.jsx?$/,
         use: {
           loader: "babel-loader",

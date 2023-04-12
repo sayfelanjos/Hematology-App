@@ -1,13 +1,13 @@
-FROM node:18.14.2
+FROM node
 
 WORKDIR /shell-ms
 
-COPY package.json /shell-ms
+COPY package.json .
 
-RUN npm install -g npm@latest && npm install
+RUN npm install
 
-COPY . /shell-ms
+COPY . .
 
-EXPOSE 3001
+EXPOSE 4000
 
 CMD ["npm", "run", "start:dev"]

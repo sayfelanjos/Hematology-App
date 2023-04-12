@@ -1,4 +1,4 @@
-FROM node:18.14.2
+FROM node
 
 WORKDIR /users-mf
 
@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 80
+EXPOSE 3007/tcp
 
 CMD ["npm", "run", "start"]

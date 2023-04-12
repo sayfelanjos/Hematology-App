@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: statistics-ms-deployment
+  labels:
+    app: statistics-ms-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: statistics-ms-deployment
+  template:
+    metadata:
+      labels:
+        app: statistics-ms-deployment
+    spec:
+      containers:
+        - image: statistics-ms
+          name: statistics-ms
+          ports:
+            - containerPort: 4005
+          imagePullPolicy: Never

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: customers-and-suppliers-db-configmap
+  labels:
+    app: customers-and-suppliers-db-configmap
+data:
+  POSTGRES_DB: customers-and-suppliers-db
+  POSTGRES_USER: hematologyapp
+  POSTGRES_PASSWORD: hematologyapp

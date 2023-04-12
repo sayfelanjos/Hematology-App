@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: statistics-db-service
+  labels:
+    app: statistics-db-service
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      nodePort: 30005
+      port: 5432
+      name: statistics-db
+      targetPort: 5432
+  selector:
+    app: statistics-db-deployment

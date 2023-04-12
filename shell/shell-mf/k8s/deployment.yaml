@@ -1,20 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shell-mf
+  name: shell-mf-deployment
   labels:
-    app: shell-mf
+    name: shell-mf-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: shell-mf
+      name: shell-mf-deployment
   template:
     metadata:
       labels:
-        app: shell-mf
+        name: shell-mf-deployment
     spec:
       containers:
         - image: shell-mf
           name: shell-mf
+          ports:
+            - name: shell-mf
+              containerPort: 3000
           imagePullPolicy: Never

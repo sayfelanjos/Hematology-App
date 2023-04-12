@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: supplies-ms-deployment
+  labels:
+    app: supplies-ms-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: supplies-ms-deployment
+  template:
+    metadata:
+      labels:
+        app: supplies-ms-deployment
+    spec:
+      containers:
+        - image: supplies-ms
+          name: supplies-ms
+          ports:
+            - containerPort: 4002
+          imagePullPolicy: Never

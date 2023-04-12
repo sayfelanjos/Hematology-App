@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: contracts-ms-deployment
+  labels:
+    app: contracts-ms-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: contracts-ms-deployment
+  template:
+    metadata:
+      labels:
+        app: contracts-ms-deployment
+    spec:
+      containers:
+        - image: contracts-ms
+          name: contracts-ms
+          ports:
+            - containerPort: 4006
+          imagePullPolicy: Never

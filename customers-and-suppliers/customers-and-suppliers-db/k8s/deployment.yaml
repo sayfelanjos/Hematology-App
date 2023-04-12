@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customers-and-suppliers-db-deployment
+  labels:
+    app: customers-and-suppliers-db-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customers-and-suppliers-db-deployment
+  template:
+    metadata:
+      labels:
+        app: customers-and-suppliers-db-deployment
+    spec:
+      containers:
+        - name: postgresql
+          image: bitnami/postgresql
+          ports:
+            - containerPort: 5432
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: customers-and-suppliers-db-configmap
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgres-data
+      volumes:
+        - name: postgres-data
+          persistentVolumeClaim:
+            claimName: customers-and-suppliers-db-pvc

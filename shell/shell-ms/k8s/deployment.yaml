@@ -1,20 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shell-ms
+  name: shell-ms-deployment
   labels:
-    app: shell-ms
+    app: shell-ms-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: shell-ms
+      app: shell-ms-deployment
   template:
     metadata:
       labels:
-        app: shell-ms
+        app: shell-ms-deployment
     spec:
       containers:
         - image: shell-ms
           name: shell-ms
+          ports:
+            - containerPort: 4000
           imagePullPolicy: Never

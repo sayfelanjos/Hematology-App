@@ -1,15 +1,12 @@
-import React, { Suspense } from "react";
+import React from "react";
 import styles from "./Orders.module.scss";
 const OrdersModule = React.lazy(() => import("orders/OrdersModule"));
 
 const Orders = () => {
   return (
     <div className={styles["orders-background"]}>
-      <Suspense>
-        <OrdersModule />
-      </Suspense>
+      <OrdersModule />
     </div>
   );
 };
-
 export default Orders;

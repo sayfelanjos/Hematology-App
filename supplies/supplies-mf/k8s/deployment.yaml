@@ -1,20 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: supplies-mf
+  name: supplies-mf-deployment
   labels:
-    app: supplies-mf
+    app: supplies-mf-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: supplies-mf
+      app: supplies-mf-deployment
   template:
     metadata:
       labels:
-        app: supplies-mf
+        app: supplies-mf-deployment
     spec:
       containers:
         - image: supplies-mf
           name: supplies-mf
+          ports:
+            - containerPort: 3002
           imagePullPolicy: Never

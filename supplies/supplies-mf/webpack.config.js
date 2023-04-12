@@ -6,12 +6,12 @@ module.exports = {
   name: "supplies",
   mode: "development",
   context: path.join(__dirname, "./"),
-  entry: "./src/index.js",
+  entry: "./src/index.jsx",
   devServer: {
     static: { directory: path.join(__dirname, "public") },
     historyApiFallback: true,
     compress: true,
-    port: 80,
+    port: 3002,
     host: "0.0.0.0",
     allowedHosts: "all",
   },
@@ -24,7 +24,7 @@ module.exports = {
   module: {
     rules: [
       {
-        exclude: /node_modules/,
+        exclude: /node_modules\/(?!@sayfelanjos).*/,
         test: /\.jsx?$/,
         use: {
           loader: "babel-loader",
@@ -62,7 +62,7 @@ module.exports = {
       name: "supplies",
       filename: "remoteEntry.js",
       exposes: {
-        "./SuppliesModule": "./src/App",
+        "./SuppliesModule": "./src/App.jsx",
       },
       shared: {
         ...deps,

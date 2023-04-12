@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: shell-mf
+                name: shell-mf-service
                 port:
-                  number: 80
+                  number: 3000

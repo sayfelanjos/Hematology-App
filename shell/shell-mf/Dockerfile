@@ -4,10 +4,10 @@ WORKDIR /shell-mf
 
 COPY package.json .
 
-RUN npm install -g npm@latest && npm install
+RUN npm install
 
 COPY . .
 
-EXPOSE 80
+EXPOSE 3000/tcp
 
 CMD ["npm", "run", "start"]

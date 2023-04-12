@@ -2,8 +2,7 @@
   "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
   "parserOptions": {
     "sourceType": "module",
-    "ecmaVersion": 2022,
-    "parser": ["@babel/eslint-parser"]
+    "ecmaVersion": 2022
   },
   "env": {
     "browser": true,

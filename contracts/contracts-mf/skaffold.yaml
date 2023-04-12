@@ -1,0 +1,169 @@
+apiVersion: skaffold/v3
+kind: Config
+metadata:
+  name: contracts-mf
+build:
+  platforms: ["linux/amd64"]
+  tagPolicy:
+    gitCommit: {}
+  local:
+    push: false
+  artifacts:
+    - image: contracts-mf
+      context: .
+      sync:
+        manual:
+          - src: "src/*.module.scss"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/*.module.css"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/*.module.css.map"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/*.js"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/*.module.scss"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/*.jsx"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/*.css"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/*.css.map"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.jsx"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.scss"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.css"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/*.css.map"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.jsx"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.module.scss"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.css"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/*.css.map"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.jsx"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.module.scss"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.css"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/*.css.map"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.jsx"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.module.scss"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.css"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/*.css.map"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.jsx"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.module.scss"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.css"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.css.map"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.jsx"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.module.scss"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.css"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.css.map"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.jsx"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.module.scss"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.css"
+            dest: /contracts-mf/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.css.map"
+            dest: /contracts-mf/src
+            strip: "src/"
+      docker:
+        dockerfile: Dockerfile
+
+manifests:
+  rawYaml:
+    - k8s/ingress.yaml
+    - k8s/service.yaml
+    - k8s/deployment.yaml
+
+deploy:
+  kubectl: {}

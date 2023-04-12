@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: supplies-db-configmap
+  labels:
+    app: supplies-db-configmap
+data:
+  POSTGRES_DB: supplies-db
+  POSTGRES_USER: hematologyapp
+  POSTGRES_PASSWORD: hematologyapp

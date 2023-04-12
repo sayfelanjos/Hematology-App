@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: statistics-ms-service
+  labels:
+    app: statistics-ms-service
+spec:
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 4005
+      targetPort: 4005
+  selector:
+    app: statistics-ms-deployment

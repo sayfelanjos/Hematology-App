@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: contracts-db-service
+  labels:
+    app: contracts-db-service
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      nodePort: 30006
+      port: 5006
+      targetPort: 5432
+  selector:
+    app: contracts-db-deployment

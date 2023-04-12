@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: invoices-ms-deployment
+  labels:
+    app: invoices-ms-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: invoices-ms-deployment
+  template:
+    metadata:
+      labels:
+        app: invoices-ms-deployment
+    spec:
+      containers:
+        - image: invoices-ms
+          name: invoices-ms
+          ports:
+            - containerPort: 5403
+          imagePullPolicy: Never

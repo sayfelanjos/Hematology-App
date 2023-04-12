@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orders-ms-deployment
+  labels:
+    app: orders-ms-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orders-ms-deployment
+  template:
+    metadata:
+      labels:
+        app: orders-ms-deployment
+    spec:
+      containers:
+        - image: orders-ms
+          name: orders-ms
+          ports:
+            - containerPort: 4004
+          imagePullPolicy: Never

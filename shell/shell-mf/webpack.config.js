@@ -1,20 +1,31 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { SourceMapDevToolPlugin } = require("webpack");
 const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 const deps = require("./package.json").dependencies;
+
 module.exports = {
   name: "shell",
   mode: "development",
+  cache: true,
+  target: "web",
   context: path.join(__dirname, "./"),
-  entry: "./src/index.js",
+  entry: "./src/index",
   devServer: {
     static: { directory: path.join(__dirname, "public") },
     historyApiFallback: true,
     compress: true,
-    port: 80,
+    port: 3000,
     host: "0.0.0.0",
     allowedHosts: "all",
+    hot: true,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
+    },
   },
+  devtool: "eval-source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -24,7 +35,13 @@ module.exports = {
   module: {
     rules: [
       {
-        exclude: /node_modules/,
+        exclude: /node_modules\/(?!@sayfelanjos).*/,
+        test: /\.jsx?$/,
+        enforce: "pre",
+        use: ["source-map-loader"],
+      },
+      {
+        exclude: /node_modules\/(?!@sayfelanjos).*/,
         test: /\.jsx?$/,
         use: {
           loader: "babel-loader",
@@ -50,7 +67,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: ["@svg/webpack"],
+        use: ["@svgr/webpack"],
       },
     ],
   },
@@ -68,6 +85,7 @@ module.exports = {
         statistics: `statistics@http://statistics-mf.info/remoteEntry.js`,
         customers_and_suppliers: `customers_and_suppliers@http://customers-and-suppliers-mf.info/remoteEntry.js`,
         users: `users@http://users-mf.info/remoteEntry.js`,
+        contracts: `contracts@http://contracts-mf.info/remoteEntry.js`,
       },
       shared: {
         ...deps,
@@ -85,6 +103,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       chunks: ["main"],
+    }),
+    new SourceMapDevToolPlugin({
+      filename: "[file].map",
     }),
   ],
 };

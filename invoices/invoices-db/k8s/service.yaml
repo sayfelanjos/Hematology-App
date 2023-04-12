@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: invoices-db-service
+  labels:
+    app: invoices-db-service
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      nodePort: 30003
+      port: 5432
+      name: invoices-db
+      targetPort: 5432
+  selector:
+    app: invoices-db-deployment

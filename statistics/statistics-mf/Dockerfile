@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 80/tcp
+EXPOSE 3005/tcp
 
 ENTRYPOINT ["npm", "run", "start"]

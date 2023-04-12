@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users-db-deployment
+  labels:
+    app: users-db-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: users-db-deployment
+  template:
+    metadata:
+      labels:
+        app: users-db-deployment
+    spec:
+      containers:
+        - name: postgresql
+          image: bitnami/postgresql
+          ports:
+            - containerPort: 5432
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: users-db-configmap
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgres-data
+      volumes:
+        - name: postgres-data
+          persistentVolumeClaim:
+            claimName: users-db-pvc

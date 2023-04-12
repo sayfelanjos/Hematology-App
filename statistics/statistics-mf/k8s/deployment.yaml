@@ -1,20 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: statistics-mf
+  name: statistics-mf-deployment
   labels:
-    app: statistics-mf
+    app: statistics-mf-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: statistics-mf
+      app: statistics-mf-deployment
   template:
     metadata:
       labels:
-        app: statistics-mf
+        app: statistics-mf-deployment
     spec:
       containers:
         - image: statistics-mf
           name: statistics-mf
+          ports:
+            - containerPort: 3005
           imagePullPolicy: Never

@@ -11,7 +11,7 @@ const Sidebar = () => {
   const Dashboard = [
     {
       id: 1,
-      icon: "/Icon=Statistics.svg",
+      icon: "/icons/statistics.svg",
       moduleName: "Estatísticas",
       pageUrl: "/",
       isPressed: urlSlice[0] === "/",
@@ -20,42 +20,42 @@ const Sidebar = () => {
   const SideBarModules = [
     {
       id: 2,
-      icon: "/Icon=Supplies.svg",
+      icon: "/icons/supplies.svg",
       moduleName: "Insumos",
       pageUrl: "/supplies",
       isPressed: urlSlice[0] === "/supplies",
     },
     {
       id: 3,
-      icon: "/Icon=Orders.svg",
+      icon: "/icons/orders.svg",
       moduleName: "Pedido de Compras",
       pageUrl: "/orders",
       isPressed: urlSlice[0] === "/orders",
     },
     {
       id: 4,
-      icon: "/Icon=Invoices.svg",
+      icon: "/icons/invoices.svg",
       moduleName: "Notas Fiscais",
       pageUrl: "/invoices",
       isPressed: urlSlice[0] === "/invoices",
     },
     {
       id: 5,
-      icon: "/Icon=Contracts.svg",
+      icon: "/icons/contracts.svg",
       moduleName: "Contratos",
       pageUrl: "/contracts",
       isPressed: urlSlice[0] === "/contracts",
     },
     {
       id: 6,
-      icon: "/Icon=Costumers-and-Suppliers.svg",
+      icon: "/icons/costumers-and-Suppliers.svg",
       moduleName: "Clientes e Fornecedores",
       pageUrl: "/costumers-and-suppliers",
       isPressed: urlSlice[0] === "/costumers-and-suppliers",
     },
     {
       id: 7,
-      icon: "/Icon=User.svg",
+      icon: "/icons/user.svg",
       moduleName: "Users",
       pageUrl: "/users",
       isPressed: urlSlice[0] === "/users",
@@ -65,7 +65,7 @@ const Sidebar = () => {
   return (
     <div className={styles["sidebar-container"]}>
       <div className={styles["sidebar-header"]}>
-        <img src="/Icon=Logo.svg" alt="Sidebar menu icon" width={42} height={42} />
+        <img src="/icons/logo.svg" alt="Sidebar menu icon" width={42} height={42} />
         <h1 className={styles["app-name"]}>Hematologia</h1>
       </div>
       <div className={styles["wrap-button"]}>

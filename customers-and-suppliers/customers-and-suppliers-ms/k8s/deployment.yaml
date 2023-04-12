@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customers-and-suppliers-ms-deployment
+  labels:
+    app: customers-and-suppliers-ms-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customers-and-suppliers-ms-deployment
+  template:
+    metadata:
+      labels:
+        app: customers-and-suppliers-ms-deployment
+    spec:
+      containers:
+        - image: customers-and-suppliers-ms
+          name: customers-and-suppliers-ms
+          ports:
+            - containerPort: 4001
+          imagePullPolicy: Never

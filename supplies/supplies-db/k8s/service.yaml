@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: supplies-db-service
+  labels:
+    app: supplies-db-service
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      nodePort: 30002
+      port: 5432
+      name: supplies-db
+      targetPort: 5432
+  selector:
+    app: supplies-db-deployment

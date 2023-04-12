@@ -3,6 +3,7 @@ kind: Config
 metadata:
   name: shell-mf
 build:
+  platforms: ["linux/amd64"]
   tagPolicy:
     gitCommit: {}
   local:

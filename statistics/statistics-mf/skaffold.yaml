@@ -3,6 +3,7 @@ kind: Config
 metadata:
   name: statistics-mf
 build:
+  platforms: ["linux/amd64"]
   tagPolicy:
     gitCommit: {}
   local:
@@ -160,8 +161,8 @@ build:
 
 manifests:
   rawYaml:
-    - k8s/ingress-service.yaml
-    - k8s/cluster-ip-service.yaml
+    - k8s/ingress.yaml
+    - k8s/service.yaml
     - k8s/deployment.yaml
 
 deploy:

@@ -1,20 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: orders-mf
+  name: orders-mf-deployment
   labels:
-    name: orders-mf
+    app: orders-mf-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: orders-mf
+      app: orders-mf-deployment
   template:
     metadata:
       labels:
-        app: orders-mf
+        app: orders-mf-deployment
     spec:
       containers:
         - name: orders-mf
           image: orders-mf
+          ports:
+            - containerPort: 3004
           imagePullPolicy: Never

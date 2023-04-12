@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: supplies-db-deployment
+  labels:
+    app: supplies-db-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: supplies-db-deployment
+  template:
+    metadata:
+      labels:
+        app: supplies-db-deployment
+    spec:
+      containers:
+        - name: postgresql
+          image: bitnami/postgresql
+          ports:
+            - containerPort: 5432
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: supplies-db-configmap
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgres-data
+      volumes:
+        - name: postgres-data
+          persistentVolumeClaim:
+            claimName: supplies-db-pvc

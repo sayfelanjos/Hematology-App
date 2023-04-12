@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: shell-ms
+  name: shell-ms-service
   labels:
-    app: shell-ms
+    app: shell-ms-service
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
-    - nodePort: 30101
-      port: 3001
-      targetPort: 3001
+    - protocol: TCP
+      port: 4000
+      targetPort: 4000
   selector:
-    app: shell-ms
+    app: shell-ms-deployment

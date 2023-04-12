@@ -5,16 +5,25 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   name: "users",
   mode: "development",
+  cache: true,
+  target: "web",
   context: path.join(__dirname, "./"),
-  entry: "./src/index.js",
+  entry: "./src/index",
   devServer: {
     static: { directory: path.join(__dirname, "public") },
     historyApiFallback: true,
     compress: true,
-    port: 80,
+    port: 3007,
     host: "0.0.0.0",
     allowedHosts: "all",
+    hot: true,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
+    },
   },
+  devtool: "eval-source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -24,7 +33,13 @@ module.exports = {
   module: {
     rules: [
       {
-        exclude: /node_modules/,
+        exclude: /node_modules\/(?!@sayfelanjos).*/,
+        test: /\.jsx?$/,
+        enforce: "pre",
+        use: ["source-map-loader"],
+      },
+      {
+        exclude: /node_modules\/(?!@sayfelanjos).*/,
         test: /\.jsx?$/,
         use: {
           loader: "babel-loader",
@@ -51,7 +66,7 @@ module.exports = {
       {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
-        use: ["@svgr/webpack"],
+        use: ["@svg/webpack"],
       },
     ],
   },

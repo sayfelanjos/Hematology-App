@@ -1,9 +1,13 @@
+.kpt-pipeline
+dist
+k8s
 node_modules
-.idea
+test
 .dockerignore
+.eslintrc.js
 .gitignore
-docker-compose.yaml
+.prettierrc
 Dockerfile
-LICENSE
-package-look.json
+package-lock.json
 README.md
+skaffold.yaml

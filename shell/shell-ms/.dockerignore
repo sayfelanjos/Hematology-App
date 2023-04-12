@@ -5,7 +5,6 @@ node_modules
 .eslintrc.js
 .gitignore
 .prettierrc
-.Dockerfile
-.Dockerfile.dev
+Dockerfile
 package-lock.json
 README.md

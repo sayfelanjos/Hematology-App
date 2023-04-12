@@ -3,6 +3,10 @@ kind: Config
 metadata:
   name: hematology-app
 requires:
+  # Micro Frontends
+
+  - configs: ["contracts-mf"]
+    path: contracts/contracts-mf/skaffold.yaml
   - configs: ["statistics-mf"]
     path: statistics/statistics-mf/skaffold.yaml
   - configs: ["invoices-mf"]
@@ -17,3 +21,39 @@ requires:
     path: users/users-mf/skaffold.yaml
   - configs: ["shell-mf"]
     path: shell/shell-mf/skaffold.yaml
+
+  # Micro Services
+
+  - configs: ["contracts-ms"]
+    path: contracts/contracts-ms/skaffold.yaml
+  - configs: ["statistics-ms"]
+    path: statistics/statistics-ms/skaffold.yaml
+  - configs: ["invoices-ms"]
+    path: invoices/invoices-ms/skaffold.yaml
+  - configs: ["orders-ms"]
+    path: orders/orders-ms/skaffold.yaml
+  - configs: ["supplies-ms"]
+    path: supplies/supplies-ms/skaffold.yaml
+  - configs: ["customers-and-suppliers-ms"]
+    path: customers-and-suppliers/customers-and-suppliers-ms/skaffold.yaml
+  - configs: ["users-ms"]
+    path: users/users-ms/skaffold.yaml
+  - configs: ["shell-ms"]
+    path: shell/shell-ms/skaffold.yaml
+
+  # Databases
+
+  - configs: ["contracts-db"]
+    path: contracts/contracts-db/skaffold.yaml
+  - configs: ["statistics-db"]
+    path: statistics/statistics-db/skaffold.yaml
+  - configs: ["invoices-db"]
+    path: invoices/invoices-db/skaffold.yaml
+  - configs: ["orders-db"]
+    path: orders/orders-db/skaffold.yaml
+  - configs: ["supplies-db"]
+    path: supplies/supplies-db/skaffold.yaml
+  - configs: ["customers-and-suppliers-db"]
+    path: customers-and-suppliers/customers-and-suppliers-db/skaffold.yaml
+  - configs: ["users-db"]
+    path: users/users-db/skaffold.yaml

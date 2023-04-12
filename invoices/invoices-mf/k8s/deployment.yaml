@@ -1,20 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: invoices-mf
+  name: invoices-mf-deployment
   labels:
-    app: invoices-mf
+    app: invoices-mf-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: invoices-mf
+      app: invoices-mf-deployment
   template:
     metadata:
       labels:
-        app: invoices-mf
+        app: invoices-mf-deployment
     spec:
       containers:
         - image: invoices-mf
           name: invoices-mf
+          ports:
+            - containerPort: 3003
           imagePullPolicy: Never

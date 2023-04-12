@@ -6,12 +6,12 @@ const NavBar = () => {
     <div className={styles["navbar-container"]}>
       <div className={styles["navbar-icons-container"]}>
         <img
-          src={"/Icon=sidebar-left-collapse.svg"}
+          src={"/icons/sidebar-left-collapse.svg"}
           alt={"Button to close drawer"}
           height={28}
           width={28}></img>
         <img
-          src={"/Icon=navbar-settings-icon.svg"}
+          src={"/icons/navbar-settings-icon.svg"}
           alt={"Settings Button"}
           height={24}
           width={24}></img>
@@ -19,7 +19,7 @@ const NavBar = () => {
       <div className={styles["navbar-user-photo-container"]}>
         <img
           className={styles["navbar-user-photo"]}
-          src={"/woman-avatar-small.jpg"}
+          src={"/images/woman-avatar-small.jpg"}
           alt={"User Photo"}
           height={48}
           width={48}></img>

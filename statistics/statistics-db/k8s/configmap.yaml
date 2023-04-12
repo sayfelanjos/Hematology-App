@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: statistics-db-configmap
+  labels:
+    app: statistics-db-configmap
+data:
+  POSTGRES_DB: statistics-db
+  POSTGRES_USER: hematologyapp
+  POSTGRES_PASSWORD: hematologyapp

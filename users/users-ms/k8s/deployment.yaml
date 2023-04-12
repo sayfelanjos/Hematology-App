@@ -1,20 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: users-ms
+  name: users-ms-deployment
   labels:
-    app: users-ms
+    app: users-ms-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: users-ms
+      app: users-ms-deployment
   template:
     metadata:
       labels:
-        app: users-ms
+        app: users-ms-deployment
     spec:
       containers:
         - image: users-ms
           name: users-ms
+          ports:
+            - containerPort: 4007
           imagePullPolicy: Never
