@@ -3,7 +3,7 @@ kind: Config
 metadata:
   name: users-ms
 build:
-  platforms: ['linux/amd64']
+  platforms: ["linux/amd64"]
   tagPolicy:
     gitCommit: {}
   local:
@@ -13,153 +13,201 @@ build:
       context: .
       sync:
         manual:
-          - src: 'src/*.controller.spec.ts'
+          - src: "src/app.controller.spec.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/*.controller.ts'
+          - src: "src/app.controller.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/*.module.ts'
+          - src: "src/app.module.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/*.service.ts'
+          - src: "src/app.service.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/main.ts'
+          - src: "src/main.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/*.controller.spec.ts'
+          - src: "src/**/*.controller.spec.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/*.controller.ts'
+          - src: "src/**/*.controller.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/*.module.ts'
+          - src: "src/**/*.entity.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/*.service.ts'
+          - src: "src/**/request.http"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/*.controller.spec.ts'
+          - src: "src/**/*.module.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/*.controller.ts'
+          - src: "src/**/*.service.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/*.module.ts'
+          - src: "src/**/*.interceptor.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/*.service.ts'
+          - src: "src/**/**/*.service.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/*.controller.spec.ts'
+          - src: "src/**/**/*.controller.spec.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/*.controller.ts'
+          - src: "src/**/**/*.controller.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/*.module.ts'
+          - src: "src/**/**/*.dto.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/*.service.ts'
+          - src: "src/**/**/*.entity.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/*.controller.spec.ts'
+          - src: "src/**/**/*.module.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/*.controller.ts'
+          - src: "src/**/**/**/*.service.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/*.module.ts'
+          - src: "src/**/**/**/*.controller.spec.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/*.service.ts'
+          - src: "src/**/**/**/*.controller.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/*.controller.spec.ts'
+          - src: "src/**/**/**/*.entity.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/*.controller.ts'
+          - src: "src/**/**/**/*.module.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/*.module.ts'
+          - src: "src/**/**/**/**/*.service.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/*.service.ts'
+          - src: "src/**/**/**/**/*.controller.spec.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/*.controller.spec.ts'
+          - src: "src/**/**/**/**/*.controller.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/*.controller.ts'
+          - src: "src/**/**/**/**/*.entity.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/*.module.ts'
+          - src: "src/**/**/**/**/*.module.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/**/*.service.ts'
+          - src: "src/**/**/**/**/**/*.service.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/**/*.controller.spec.ts'
+          - src: "src/**/**/**/**/**/*.controller.spec.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/**/*.controller.ts'
+          - src: "src/**/**/**/**/**/*.controller.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/**/*.module.ts'
+          - src: "src/**/**/**/**/**/*.entity.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/**/**/*.service.ts'
+          - src: "src/**/**/**/**/**/*.module.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/**/**/*.controller.spec.ts'
+          - src: "src/**/**/**/**/**/**/*.service.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/**/**/*.controller.ts'
+          - src: "src/**/**/**/**/**/**/*.controller.spec.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/**/**/*.module.ts'
+          - src: "src/**/**/**/**/**/**/*.controller.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
 
-          - src: 'src/**/**/**/**/**/**/**/**/*.service.ts'
+          - src: "src/**/**/**/**/**/**/*.entity.ts"
             dest: /users-ms/src
-            strip: 'src/'
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/*.module.ts"
+            dest: /users-ms/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.service.ts"
+            dest: /users-ms/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.controller.spec.ts"
+            dest: /users-ms/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.controller.ts"
+            dest: /users-ms/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.entity.ts"
+            dest: /users-ms/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/*.module.ts"
+            dest: /users-ms/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.service.ts"
+            dest: /users-ms/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.controller.spec.ts"
+            dest: /users-ms/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.controller.ts"
+            dest: /users-ms/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.entity.ts"
+            dest: /users-ms/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.module.ts"
+            dest: /users-ms/src
+            strip: "src/"
+
+          - src: "src/**/**/**/**/**/**/**/**/*.service.ts"
+            dest: /users-ms/src
+            strip: "src/"
       docker:
         dockerfile: Dockerfile
 

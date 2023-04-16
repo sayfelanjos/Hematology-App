@@ -11,6 +11,7 @@ module.exports = {
   entry: "./src/index",
   devServer: {
     static: { directory: path.join(__dirname, "public") },
+    webSocketServer: false,
     historyApiFallback: true,
     compress: true,
     port: 3007,

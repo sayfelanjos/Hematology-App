@@ -1,16 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: users-db-service
+  name: users-db-node-port-service
   labels:
-    app: users-db-service
+    app: users-db-node-port-service
 spec:
   type: NodePort
   ports:
     - protocol: TCP
       nodePort: 30007
       port: 5432
-      name: users-db
       targetPort: 5432
   selector:
     app: users-db-deployment

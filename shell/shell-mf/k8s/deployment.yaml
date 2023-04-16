@@ -18,6 +18,5 @@ spec:
         - image: shell-mf
           name: shell-mf
           ports:
-            - name: shell-mf
-              containerPort: 3000
+            - containerPort: 3000
           imagePullPolicy: Never

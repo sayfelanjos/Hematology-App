@@ -6,10 +6,10 @@ metadata:
     type: local
     app: users-db-volume
 spec:
-  storageClassName: manual
+  #  storageClassName: Will choose the default option automatically
   capacity:
     storage: 1Gi
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   hostPath:
-    path: "/data/postgresql"
+    path: "/data/users-db"

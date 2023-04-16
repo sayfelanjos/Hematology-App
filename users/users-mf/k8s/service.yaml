@@ -6,6 +6,7 @@ spec:
   type: ClusterIP
   ports:
     - protocol: TCP
+      name: users-mf-service
       port: 3007
       targetPort: 3007
   selector:

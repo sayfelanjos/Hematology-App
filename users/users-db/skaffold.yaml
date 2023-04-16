@@ -4,10 +4,11 @@ metadata:
   name: users-db
 manifests:
   rawYaml:
-    - k8s/service.yaml
+    - k8s/cluster-ip-service.yaml
+    - k8s/node-port-service.yaml
     - k8s/deployment.yaml
     - k8s/configmap.yaml
-    - k8s/volume.yaml
+    - k8s/persistent-volume.yaml
     - k8s/persistent-volume-claim.yaml
 deploy:
   kubectl: {}

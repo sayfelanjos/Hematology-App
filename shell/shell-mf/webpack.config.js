@@ -13,6 +13,7 @@ module.exports = {
   entry: "./src/index",
   devServer: {
     static: { directory: path.join(__dirname, "public") },
+    webSocketServer: false,
     historyApiFallback: true,
     compress: true,
     port: 3000,
@@ -67,7 +68,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        use: ["@svgr/webpack"],
+        use: ["@svg/webpack"],
       },
     ],
   },

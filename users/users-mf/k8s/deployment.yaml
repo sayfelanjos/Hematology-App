@@ -18,6 +18,5 @@ spec:
         - image: users-mf
           name: users-mf
           ports:
-            - name: users-mf
-              containerPort: 3007
+            - containerPort: 3007
           imagePullPolicy: Never

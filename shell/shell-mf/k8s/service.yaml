@@ -3,11 +3,12 @@ kind: Service
 metadata:
   name: shell-mf-service
   labels:
-    app: shell-mf
+    app: shell-mf-service
 spec:
   type: ClusterIP
   ports:
     - protocol: TCP
+      name: shell-mf-service
       port: 3000
       targetPort: 3000
   selector:

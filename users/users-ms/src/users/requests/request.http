@@ -1,0 +1,17 @@
+### Signup a new user
+POST http://users-ms.info/auth/signup
+content-type: application/json
+
+{
+  "email": "vitinho@outlook.com.br",
+  "password": "1akjsdlkfjask3"
+}
+
+### Signin a user
+POST http://users-ms.info/auth/signin
+content-type: application/json
+
+{
+"email": "vitinho@outlook.com.br",
+"password": "1akjsdlkfjask3"
+}
