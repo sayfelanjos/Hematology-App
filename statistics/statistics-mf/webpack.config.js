@@ -10,6 +10,7 @@ module.exports = {
   devServer: {
     static: { directory: path.join(__dirname, "public") },
     historyApiFallback: true,
+    webSocketServer: false,
     compress: true,
     port: 3005,
     host: "0.0.0.0",

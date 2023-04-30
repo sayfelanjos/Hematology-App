@@ -87,6 +87,7 @@ module.exports = {
         customers_and_suppliers: `customers_and_suppliers@http://customers-and-suppliers-mf.info/remoteEntry.js`,
         users: `users@http://users-mf.info/remoteEntry.js`,
         contracts: `contracts@http://contracts-mf.info/remoteEntry.js`,
+        store: `store@http://store.info/remoteEntry.js`,
       },
       shared: {
         ...deps,

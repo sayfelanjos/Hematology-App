@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: store-deployment
+  labels:
+    name: store-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: store-deployment
+  template:
+    metadata:
+      labels:
+        name: store-deployment
+    spec:
+      containers:
+        - image: store
+          name: store
+          ports:
+            - containerPort: 3008
+          imagePullPolicy: Never

@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: shell-mf-service
+                name: shell-mf-cluster-ip-service
                 port:
                   number: 3000

@@ -17,15 +17,11 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
-          - src: "src/*.module.css"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/*.module.css.map"
-            dest: /shell-mf/src
-            strip: "src/"
-
           - src: "src/*.js"
+            dest: /shell-mf/src
+            strip: "src/"
+
+          - src: "src/*.jsx"
             dest: /shell-mf/src
             strip: "src/"
 
@@ -33,15 +29,15 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
+          - src: "src/**/*.js"
+            dest: /shell-mf/src
+            strip: "src/"
+
           - src: "src/**/*.jsx"
             dest: /shell-mf/src
             strip: "src/"
 
-          - src: "src/**/*.css"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/*.css.map"
+          - src: "src/**/**/*.js"
             dest: /shell-mf/src
             strip: "src/"
 
@@ -49,15 +45,7 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
-          - src: "src/**/**/*.scss"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/*.css"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/*.css.map"
+          - src: "src/**/**/*.module.scss"
             dest: /shell-mf/src
             strip: "src/"
 
@@ -69,101 +57,15 @@ build:
             dest: /shell-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/*.css"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/*.css.map"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/*.jsx"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/*.module.scss"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/*.css"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/*.css.map"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/*.jsx"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/*.module.scss"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/*.css"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/*.css.map"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/*.jsx"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/*.module.scss"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/*.css"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/*.css.map"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/*.jsx"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/*.module.scss"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/*.css"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/*.css.map"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/**/*.jsx"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/**/*.module.scss"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/**/*.css"
-            dest: /shell-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/**/*.css.map"
-            dest: /shell-mf/src
-            strip: "src/"
       docker:
         dockerfile: Dockerfile
 
 manifests:
   rawYaml:
-    - k8s/ingress.yaml
-    - k8s/service.yaml
     - k8s/deployment.yaml
+    - k8s/cluster-ip-service.yaml
+    - k8s/node-port-service.yaml
+    - k8s/ingress.yaml
 
 deploy:
   kubectl: {}

@@ -29,6 +29,10 @@ build:
             dest: /orders-mf/src
             strip: "src/"
 
+          - src: "src/*.jsx"
+            dest: /orders-mf/src
+            strip: "src/"
+
           - src: "src/**/*.module.scss"
             dest: /orders-mf/src
             strip: "src/"

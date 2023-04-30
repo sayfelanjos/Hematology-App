@@ -1,13 +1,15 @@
 import React from "react";
-import "./App.module.scss";
+import componentStyles from "./App.module.scss";
+import PageNotFoundImage from "../public/6867596_28791.jpg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hey there!!!</h1>
-        <h1>I am Orders Micro Frontend!</h1>
-      </header>
+    <div className={componentStyles["orders-container"]}>
+      <img
+        className={componentStyles["orders-page-not-found-image"]}
+        src={PageNotFoundImage}
+        alt="Not Found Page Image"
+      />
     </div>
   );
 }

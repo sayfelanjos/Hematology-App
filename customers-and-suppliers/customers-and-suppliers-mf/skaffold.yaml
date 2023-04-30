@@ -29,19 +29,15 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+          - src: "src/*.jsx"
+            dest: /customers-and-suppliers-mf/src
+            strip: "src/"
+
           - src: "src/**/*.module.scss"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
           - src: "src/**/*.jsx"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
-          - src: "src/**/*.css"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
-          - src: "src/**/*.css.map"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
@@ -53,27 +49,11 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
-          - src: "src/**/**/*.css"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/*.css.map"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
           - src: "src/**/**/**/*.jsx"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
           - src: "src/**/**/**/*.module.scss"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/*.css"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/*.css.map"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
@@ -85,27 +65,11 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/*.css"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/*.css.map"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
           - src: "src/**/**/**/**/**/*.jsx"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
           - src: "src/**/**/**/**/**/*.module.scss"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/*.css"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/*.css.map"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
@@ -117,14 +81,6 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/**/*.css"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/*.css.map"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
           - src: "src/**/**/**/**/**/**/**/*.jsx"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -133,27 +89,11 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/**/**/*.css"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/*.css.map"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
           - src: "src/**/**/**/**/**/**/**/**/*.jsx"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
           - src: "src/**/**/**/**/**/**/**/**/*.module.scss"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/**/*.css"
-            dest: /customers-and-suppliers-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/**/*.css.map"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
       docker:

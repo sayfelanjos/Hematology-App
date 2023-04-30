@@ -166,7 +166,7 @@ build:
 manifests:
   rawYaml:
     - k8s/ingress.yaml
-    - k8s/service.yaml
+    - k8s/cluster-ip-service.yaml
     - k8s/deployment.yaml
 
 deploy:

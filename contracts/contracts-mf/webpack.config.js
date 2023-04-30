@@ -13,6 +13,7 @@ module.exports = {
       directory: path.join(__dirname, "public"),
     },
     historyApiFallback: true,
+    webSocketServer: false,
     compress: true,
     port: 3006,
     host: "0.0.0.0",
@@ -45,6 +46,10 @@ module.exports = {
           // Compiles Sass to CSS
           "sass-loader",
         ],
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
+        use: ["file-loader"],
       },
       {
         test: /\.svg$/,

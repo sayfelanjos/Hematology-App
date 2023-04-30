@@ -1,11 +1,11 @@
 import React from "react";
-import AppHeader from "@sayfelanjos/hematology-app/libs/AppHeader";
-import TableContainer from "@sayfelanjos/hematology-app/libs/TableContainer";
-import styles from "./App.module.scss";
+import AppHeader from "./components/AppHeader";
+import TableContainer from "./components/TableContainer";
+import componentStyles from "./App.module.scss";
 
 function App() {
   return (
-    <div className={styles["supplies-background"]}>
+    <div className={componentStyles["supplies-container"]}>
       <AppHeader />
       <TableContainer />
     </div>

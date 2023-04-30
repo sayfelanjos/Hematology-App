@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  justify-items: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
   height: 100%;
   width: 100%;
 }
@@ -10,6 +13,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  justify-items: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
   height: 100%;
   width: 100%;
 }

@@ -1,10 +1,12 @@
 .statistics-background {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  background-color: #c0c0c0;
-  padding: 24px;
-  box-sizing: border-box;
   height: 100%;
   width: 100%;
+}
+.page-not-found-image {
+  height: 80vh;
+  width: 60vw;
 }

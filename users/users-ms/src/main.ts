@@ -13,7 +13,7 @@ async function bootstrap() {
   });
   app.use(
     cookieSession({
-      keys: ["asdfasdf"],
+      keys: ["asdfasdfajdkljflkasdj"],
     }),
   );
   app.useGlobalPipes(

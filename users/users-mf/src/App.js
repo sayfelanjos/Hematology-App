@@ -1,14 +1,16 @@
 import React from "react";
-import TableContainer from "@sayfelanjos/hematology-app/libs/TableContainer";
-import AppHeader from "@sayfelanjos/hematology-app/libs/AppHeader";
-import "./App.module.scss";
+import componentStyles from "./App.module.scss";
+import PageNotFoundImage from "../public/10172655_8349.jpg";
 
 function App() {
   return (
-    <>
-      <AppHeader />
-      <TableContainer />
-    </>
+    <div className={componentStyles["users-container"]}>
+      <img
+        className={componentStyles["users-page-not-found-image"]}
+        src={PageNotFoundImage}
+        alt="Page Not Found"
+      />
+    </div>
   );
 }
 

@@ -10,6 +10,7 @@ module.exports = {
   devServer: {
     static: { directory: path.join(__dirname, "public") },
     historyApiFallback: true,
+    webSocketServer: false,
     compress: true,
     port: 3002,
     host: "0.0.0.0",
@@ -63,6 +64,9 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         "./SuppliesModule": "./src/App.jsx",
+      },
+      remotes: {
+        store: `store@http://store.info/remoteEntry.js`,
       },
       shared: {
         ...deps,

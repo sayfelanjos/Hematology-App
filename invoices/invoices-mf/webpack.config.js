@@ -7,10 +7,11 @@ module.exports = {
   name: "invoices",
   mode: "development",
   context: path.join(__dirname, "./"),
-  entry: "./src/index.js",
+  entry: "./src/index.jsx",
   devServer: {
     static: { directory: path.join(__dirname, "public") },
     historyApiFallback: true,
+    webSocketServer: false,
     compress: true,
     port: 3003,
     host: "0.0.0.0",

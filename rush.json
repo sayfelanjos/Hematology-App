@@ -367,6 +367,12 @@
         "projectFolder": "users/users-ms",
         "reviewCategory": "production",
         "tags": ["1.0.0", "micro-services" ]
+      },
+      {
+        "packageName": "store",
+        "projectFolder": "store",
+        "reviewCategory": "production",
+        "tags": ["1.0.0", "micro-services" ]
       }
     ]
 }

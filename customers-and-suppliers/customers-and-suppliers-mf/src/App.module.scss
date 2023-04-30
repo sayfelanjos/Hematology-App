@@ -1,52 +1,13 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-image: url("../public/csm_Hematology_HORIBA_Medical_902e8126da.jpg");
-  /*background-color: #282c34;*/
-  min-height: 100vh;
+.customers-and-suppliers-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.label {
-  color: red;
-
-}
-
-.input-form {
-  color: red;
-  border-bottom-color: red;
-  lighting-color: red;
-  caret-color: red;
-  accent-color: red;
+.customers-and-suppliers-page-not-found-image {
+  height: 70vh;
+  width: 40vw;
 }

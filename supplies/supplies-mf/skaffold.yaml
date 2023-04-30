@@ -17,15 +17,11 @@ build:
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/*.module.css"
+          - src: "src/*.js"
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/*.module.css.map"
-            dest: /invoices-mf/src
-            strip: "src/"
-
-          - src: "src/*.js"
+          - src: "src/*.jsx"
             dest: /supplies-mf/src
             strip: "src/"
 
@@ -37,14 +33,6 @@ build:
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/*.css"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/*.css.map"
-            dest: /supplies-mf/src
-            strip: "src/"
-
           - src: "src/**/**/*.jsx"
             dest: /supplies-mf/src
             strip: "src/"
@@ -53,107 +41,11 @@ build:
             dest: /supplies-mf/src
             strip: "src/"
 
-          - src: "src/**/**/*.css"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/*.css.map"
-            dest: /supplies-mf/src
-            strip: "src/"
-
           - src: "src/**/**/**/*.jsx"
             dest: /supplies-mf/src
             strip: "src/"
 
           - src: "src/**/**/**/*.module.scss"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/*.css"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/*.css.map"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/*.jsx"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/*.module.scss"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/*.css"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/*.css.map"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/*.jsx"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/*.module.scss"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/*.css"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/*.css.map"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/*.jsx"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/*.module.scss"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/*.css"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/*.css.map"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/*.jsx"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/*.module.scss"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/*.css"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/*.css.map"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/**/*.jsx"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/**/*.module.scss"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/**/*.css"
-            dest: /supplies-mf/src
-            strip: "src/"
-
-          - src: "src/**/**/**/**/**/**/**/**/*.css.map"
             dest: /supplies-mf/src
             strip: "src/"
       docker:

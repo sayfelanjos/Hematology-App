@@ -56,3 +56,7 @@ requires:
   #    path: customers-and-suppliers/customers-and-suppliers-db/skaffold.yaml
   - configs: ["users-db"]
     path: users/users-db/skaffold.yaml
+
+  # State Management
+  - configs: ["store"]
+    path: store/skaffold.yaml

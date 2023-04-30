@@ -1,22 +1,37 @@
 import React from "react";
-import styles from "./SidebarModuleButton.module.scss";
+import componentStyles from "./SidebarModuleButton.module.scss";
+import fontStyles from "../../styles/fonts/_fonts.modules.scss";
+import themeColors from "../../styles/themes/_themes.module.scss";
 import { Link } from "react-router-dom";
+import { useAppStore } from "../../store/store";
+import { useThemeStore } from "store/store";
 
-const SidebarMenuButton = (props) => {
+const SidebarModuleButton = (props) => {
+  const isOpen = useAppStore((state) => state.sidebarIsOpen);
+  const { theme } = useThemeStore();
   return (
     <>
       <Link
-        className={
+        className={`${
           props.isPressed
-            ? styles["sidebar-module-button-pressed"]
-            : styles["sidebar-module-button-enabled"]
-        }
+            ? `${componentStyles["module-button"]} ${
+                themeColors[`${theme.color}-theme-button-pressed`]
+              }`
+            : `${componentStyles["module-button"]} ${themeColors[`${theme.color}-theme-button`]}`
+        }`}
         to={props.pageUrl}>
-        <img src={props.icon} alt="Sidebar menu icon" width={36} height={36} />
-        {props.moduleName}
+        {props.children}
+        {isOpen && (
+          <span
+            className={`${componentStyles["module-button-text"]} ${
+              fontStyles["semi-bold-normal-monospace-17"]
+            } ${themeColors[`${theme.color}-theme-button-text-color`]}`}>
+            {props.moduleName}
+          </span>
+        )}
       </Link>
     </>
   );
 };
 
-export default SidebarMenuButton;
+export default SidebarModuleButton;

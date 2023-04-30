@@ -1,10 +1,9 @@
-.costumers-and-suppliers-background {
+.customers-and-suppliers-background {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #c0c0c0;
   height: 100%;
   width: 100%;
 }
 
-/*# sourceMappingURL=root-layout.module.css.map */
+/*# sourceMappingURL=CustomersAndSuppliers.module.css.map */

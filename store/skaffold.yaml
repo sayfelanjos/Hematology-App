@@ -1,0 +1,33 @@
+apiVersion: skaffold/v3
+kind: Config
+metadata:
+  name: store
+build:
+  platforms: ["linux/amd64"]
+  tagPolicy:
+    gitCommit: {}
+  local:
+    push: false
+  artifacts:
+    - image: store
+      context: .
+      sync:
+        manual:
+          - src: "src/*.store.js"
+            dest: /store/src
+            strip: "src/"
+
+          - src: "src/reducers/*.js"
+            dest: /store/src
+            strip: "src/"
+      docker:
+        dockerfile: Dockerfile
+
+manifests:
+  rawYaml:
+    - k8s/deployment.yaml
+    - k8s/cluster-ip-service.yaml
+    - k8s/ingress.yaml
+
+deploy:
+  kubectl: {}

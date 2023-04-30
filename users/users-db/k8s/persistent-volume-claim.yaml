@@ -3,9 +3,10 @@ kind: PersistentVolumeClaim
 metadata:
   name: users-db-pvc
 spec:
-  #  storageClassName: Will choose the default option automatically
-  accessModes:
-    - ReadWriteOnce
+  storageClassName: ""
+  volumeName: users-db-pv
   resources:
     requests:
       storage: 1Gi
+  accessModes:
+    - ReadWriteMany
