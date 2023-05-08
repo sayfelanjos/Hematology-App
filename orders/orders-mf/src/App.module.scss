@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .App {
   display: flex;
   flex-direction: column;
@@ -40,4 +41,20 @@
   to {
     transform: rotate(360deg);
   }
+=======
+.orders-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.orders-page-not-found-image {
+  display: block;
+  height: 80%;
+  width: 60%;
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
 }

@@ -166,7 +166,11 @@ build:
 manifests:
   rawYaml:
     - k8s/ingress.yaml
+<<<<<<< HEAD
     - k8s/service.yaml
+=======
+    - k8s/cluster-ip-service.yaml
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
     - k8s/deployment.yaml
 
 deploy:

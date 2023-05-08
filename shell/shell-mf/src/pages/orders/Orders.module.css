@@ -1,10 +1,23 @@
+<<<<<<< HEAD
 .orders-background {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #c0c0c0;
+=======
+.orders-micro-frontend-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 12px;
+  box-sizing: border-box;
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
   height: 100%;
   width: 100%;
 }
 
+<<<<<<< HEAD
 /*# sourceMappingURL=root-layout.module.css.map */
+=======
+/*# sourceMappingURL=Orders.module.css.map */
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)

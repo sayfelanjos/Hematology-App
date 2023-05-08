@@ -4,7 +4,10 @@
   justify-content: space-between;
   height: 60px;
   width: 100%;
+<<<<<<< HEAD
   background-color: #464242;
+=======
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
   padding: 12px;
   box-sizing: border-box;
   gap: 12px;
@@ -30,7 +33,41 @@
 .navbar-user-photo {
   border-radius: 50%;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
 .navbar-user-name {
   font: 17/24px;
   color: #acacac;
 }
+<<<<<<< HEAD
+=======
+
+.sidebar-toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+
+  &:hover {
+    transform: rotate(0.5turn);
+  }
+}
+
+.sidebar-toggle-button-icon {
+  height: 100%;
+  width: 100%;
+}
+.navbar-config-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)

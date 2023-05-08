@@ -18,9 +18,39 @@
    */
   "rushVersion": "5.97.0",
 
-   "npmVersion": "6.14.15",
+  /**
+   * The next field selects which package manager should be installed and determines its version.
+   * Rush installs its own local copy of the package manager to ensure that your build process
+   * is fully isolated from whatever tools are present in the local environment.
+   *
+   * Specify one of: "pnpmVersion", "npmVersion", or "yarnVersion".  See the Rush documentation
+   * for details about these alternatives.
+   */
+//  "pnpmVersion": "6.7.1",
 
+   "npmVersion": "9.6.6",
+  // "yarnVersion": "1.9.4",
+
+  /**
+   * Older releases of the Node.js engine may be missing features required by your system.
+   * Other releases may have bugs.  In particular, the "latest" version will not be a
+   * Long Term Support (LTS) version and is likely to have regressions.
+   *
+   * Specify a SemVer range to ensure developers use a Node.js version that is appropriate
+   * for your repo.
+   *
+   * LTS schedule: https://nodejs.org/en/about/releases/
+   * LTS versions: https://nodejs.org/en/download/releases/
+   */
   "nodeSupportedVersionRange": ">=14.15.0 <15.0.0 || >=16.13.0 <17.0.0 || >=18.15.0 <19.0.0",
+
+  /**
+   * If the version check above fails, Rush will display a message showing the current
+   * node version and the supported version range. You can use this setting to provide
+   * additional instructions that will display below the warning, if there's a specific
+   * tool or script you'd like the user to use to get in line with the expected version.
+   */
+  // "nodeSupportedVersionInstructions": "Run 'nvs use' to switch to the expected node version.",
 
   /**
    * Odd-numbered major versions of Node.js are experimental.  Even-numbered releases
@@ -46,7 +76,7 @@
    * version. In those cases, you will need to add an entry to the "allowedAlternativeVersions"
    * section of the common-versions.json.
    */
-   "ensureConsistentVersions": false,
+  // "ensureConsistentVersions": true,
 
   /**
    * Large monorepos can become intimidating for newcomers if project folder paths don't follow
@@ -71,8 +101,8 @@
    * To remove these restrictions, you could set projectFolderMinDepth=1
    * and set projectFolderMaxDepth to a large number.
    */
-   "projectFolderMinDepth": 1,
-   "projectFolderMaxDepth": 10,
+  // "projectFolderMinDepth": 2,
+  // "projectFolderMaxDepth": 2,
 
   /**
    * Today the npmjs.com registry enforces fairly strict naming rules for packages, but in the early
@@ -85,7 +115,7 @@
    *
    * The default value is false.
    */
-   "allowMostlyStandardPackageNames": true,
+  // "allowMostlyStandardPackageNames": true,
 
   /**
    * This feature helps you to review and approve new packages before they are introduced
@@ -193,19 +223,19 @@
      * your PR branch, and in this situation "rush change" will also automatically invoke "git fetch"
      * to retrieve the latest activity for the remote main branch.
      */
-     "url": "https://github.com/sayfelanjos/Hematology-App.git",
+    // "url": "https://github.com/microsoft/rush-example",
 
     /**
      * The default branch name. This tells "rush change" which remote branch to compare against.
      * The default value is "main"
      */
-     "defaultBranch": "development",
+    // "defaultBranch": "main",
 
     /**
      * The default remote. This tells "rush change" which remote to compare against if the remote URL is
      * not set or if a remote matching the provided remote URL is not found.
      */
-     "defaultRemote": "origin"
+    // "defaultRemote": "origin"
   },
 
   /**
@@ -266,107 +296,215 @@
     // }
   ],
 
-   "allowedProjectTags": [ "micro-frontends", "micro-services", "1.0.0" ],
+  /**
+   * Rush can collect anonymous telemetry about everyday developer activity such as
+   * success/failure of installs, builds, and other operations.  You can use this to identify
+   * problems with your toolchain or Rush itself.  THIS TELEMETRY IS NOT SHARED WITH MICROSOFT.
+   * It is written into JSON files in the common/temp folder.  It's up to you to write scripts
+   * that read these JSON files and do something with them.  These scripts are typically registered
+   * in the "eventHooks" section.
+   */
+  // "telemetryEnabled": false,
 
-  "projects":
-    [
-      {
-        "packageName": "shell-mf",
-        "projectFolder": "shell/shell-mf",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-frontends" ]
-      },
+  /**
+   * Allows creation of hotfix changes. This feature is experimental so it is disabled by default.
+   * If this is set, 'rush change' only allows a 'hotfix' change type to be specified. This change type
+   * will be used when publishing subsequent changes from the monorepo.
+   */
+  // "hotfixChangeEnabled": false,
 
-      {
-        "packageName": "contracts-mf",
-        "projectFolder": "contracts/contracts-mf",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-frontends" ]
-      },
-      {
-        "packageName": "customers-and-suppliers-mf",
-        "projectFolder": "customers-and-suppliers/customers-and-suppliers-mf",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-frontends" ]
-      },
-      {
-        "packageName": "invoices-mf",
-        "projectFolder": "invoices/invoices-mf",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-frontends" ]
-      },
-      {
-        "packageName": "orders-mf",
-        "projectFolder": "orders/orders-mf",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-frontends" ]
-      },
-      {
-        "packageName": "statistics-mf",
-        "projectFolder": "statistics/statistics-mf",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-frontends" ]
-      },
-      {
-        "packageName": "supplies-mf",
-        "projectFolder": "supplies/supplies-mf",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-frontends" ]
-      },
-      {
-        "packageName": "users-mf",
-        "projectFolder": "users/users-mf",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-frontends" ]
-      },
-      {
-        "packageName": "shell-ms",
-        "projectFolder": "shell/shell-ms",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-services" ]
-      },
+  /**
+    * This is an optional, but recommended, list of allowed tags that can be applied to Rush projects
+    * using the "tags" setting in this file.  This list is useful for preventing mistakes such as misspelling,
+    * and it also provides a centralized place to document your tags.  If "allowedProjectTags" list is
+    * not specified, then any valid tag is allowed.  A tag name must be one or more words
+    * separated by hyphens or slashes, where a word may contain lowercase ASCII letters, digits,
+    * ".", and "@" characters.
+    */
+  // "allowedProjectTags": [ "tools", "frontend-team", "1.0.0-release" ],
 
-      {
-        "packageName": "contracts-ms",
-        "projectFolder": "contracts/contracts-ms",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-services" ]
-      },
-      {
-        "packageName": "customers-and-suppliers-ms",
-        "projectFolder": "customers-and-suppliers/customers-and-suppliers-ms",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-services" ]
-      },
-      {
-        "packageName": "invoices-ms",
-        "projectFolder": "invoices/invoices-ms",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-services" ]
-      },
-      {
-        "packageName": "orders-ms",
-        "projectFolder": "orders/orders-ms",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-services" ]
-      },
-      {
-        "packageName": "statistics-ms",
-        "projectFolder": "statistics/statistics-ms",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-services" ]
-      },
-      {
-        "packageName": "supplies-ms",
-        "projectFolder": "supplies/supplies-ms",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-services" ]
-      },
-      {
-        "packageName": "users-ms",
-        "projectFolder": "users/users-ms",
-        "reviewCategory": "production",
-        "tags": ["1.0.0", "micro-services" ]
-      }
-    ]
+  /**
+   * (Required) This is the inventory of projects to be managed by Rush.
+   *
+   * Rush does not automatically scan for projects using wildcards, for a few reasons:
+   * 1. Depth-first scans are expensive, particularly when tools need to repeatedly collect the list.
+   * 2. On a caching CI machine, scans can accidentally pick up files left behind from a previous build.
+   * 3. It's useful to have a centralized inventory of all projects and their important metadata.
+   */
+  "projects": [
+    // {
+    //   /**
+    //    * The NPM package name of the project (must match package.json)
+    //    */
+    //   "packageName": "my-app",
+    // 
+    //   /**
+    //    * The path to the project folder, relative to the rush.json config file.
+    //    */
+    //   "projectFolder": "apps/my-app",
+    // 
+    //   /**
+    //    * An optional category for usage in the "browser-approved-packages.json"
+    //    * and "nonbrowser-approved-packages.json" files.  The value must be one of the
+    //    * strings from the "reviewCategories" defined above.
+    //    */
+    //   "reviewCategory": "production",
+    // 
+    //   /**
+    //    * A list of Rush project names that are to be installed from NPM
+    //    * instead of linking to the local project.
+    //    *
+    //    * If a project's package.json specifies a dependency that is another Rush project
+    //    * in the monorepo workspace, normally Rush will locally link its folder instead of
+    //    * installing from NPM.  If you are using PNPM workspaces, this is indicated by
+    //    * a SemVer range such as "workspace:^1.2.3".  To prevent mistakes, Rush reports
+    //    * an error if the "workspace:" protocol is missing.
+    //    *
+    //    * Locally linking ensures that regressions are caught as early as possible and is
+    //    * a key benefit of monorepos.  However there are occasional situations where
+    //    * installing from NPM is needed.  A classic example is a cyclic dependency.
+    //    * Imagine three Rush projects: "my-toolchain" depends on "my-tester", which depends
+    //    * on "my-library".  Suppose that we add "my-toolchain" to the "devDependencies"
+    //    * of "my-library" so it can be built by our toolchain.  This cycle creates
+    //    * a problem -- Rush can't build a project using a not-yet-built dependency.
+    //    * We can solve it by adding "my-toolchain" to the "decoupledLocalDependencies"
+    //    * of "my-library", so it builds using the last published release.  Choose carefully
+    //    * which package to decouple; some choices are much easier to manage than others.
+    //    *
+    //    * (In older Rush releases, this setting was called "cyclicDependencyProjects".)
+    //    */
+    //   "decoupledLocalDependencies": [
+    //     // "my-toolchain"
+    //   ],
+    // 
+    //   /**
+    //    * If true, then this project will be ignored by the "rush check" command.
+    //    * The default value is false.
+    //    */
+    //   // "skipRushCheck": false,
+    // 
+    //   /**
+    //    * A flag indicating that changes to this project will be published to npm, which affects
+    //    * the Rush change and publish workflows. The default value is false.
+    //    * NOTE: "versionPolicyName" and "shouldPublish" are alternatives; you cannot specify them both.
+    //    */
+    //   // "shouldPublish": false,
+    // 
+    //   /**
+    //    * Facilitates postprocessing of a project's files prior to publishing.
+    //    *
+    //    * If specified, the "publishFolder" is the relative path to a subfolder of the project folder.
+    //    * The "rush publish" command will publish the subfolder instead of the project folder.  The subfolder
+    //    * must contain its own package.json file, which is typically a build output.
+    //    */
+    //   // "publishFolder": "temp/publish",
+    // 
+    //   /**
+    //    * An optional version policy associated with the project.  Version policies are defined
+    //    * in "version-policies.json" file.  See the "rush publish" documentation for more info.
+    //    * NOTE: "versionPolicyName" and "shouldPublish" are alternatives; you cannot specify them both.
+    //    */
+    //   // "versionPolicyName": "",
+    // 
+    //   /**
+    //    * An optional set of custom tags that can be used to select this project.  For example,
+    //    * adding "my-custom-tag" will allow this project to be selected by the
+    //    * command "rush list --only tag:my-custom-tag".  The tag name must be one or more words
+    //    * separated by hyphens or slashes, where a word may contain lowercase ASCII letters, digits,
+    //    * ".", and "@" characters.
+    //    */
+    //   // "tags": [ "1.0.0-release", "frontend-team" ]
+    // },
+    //
+    {
+      "packageName": "contracts-mf",
+      "projectFolder": "contracts/contracts-mf",
+      "reviewCategory": "production",
+      "tags": [ "frontend-team" ]
+    },
+//    {
+//      "packageName": "contracts-ms",
+//      "projectFolder": "contracts/contracts-ms",
+//      "reviewCategory": "production",
+//      "tags": [ "backend-team" ]
+//    },
+    {
+      "packageName": "customers-and-suppliers-mf",
+      "projectFolder": "customers-and-suppliers/customers-and-suppliers-mf",
+      "reviewCategory": "production",
+      "tags": [ "frontend-team" ]
+    },
+//    {
+//      "packageName": "customers-and-suppliers-ms",
+//      "projectFolder": "customers-and-suppliers/customers-and-suppliers-ms",
+//      "reviewCategory": "production",
+//      "tags": [ "backend-team" ]
+//    },
+    {
+      "packageName": "invoices-mf",
+      "projectFolder": "invoices/invoices-mf",
+      "reviewCategory": "production",
+      "tags": [ "frontend-team" ]
+    },
+//    {
+//      "packageName": "invoices-ms",
+//      "projectFolder": "invoices/invoices-ms",
+//      "reviewCategory": "production",
+//      "tags": [ "backend-team" ]
+//    },
+    {
+      "packageName": "orders-mf",
+      "projectFolder": "orders/orders-mf",
+      "reviewCategory": "production",
+      "tags": [ "frontend-team" ]
+    },
+//    {
+//      "packageName": "orders-ms",
+//      "projectFolder": "orders/orders-ms",
+//      "reviewCategory": "production",
+//      "tags": [ "backend-team" ]
+//    },
+    {
+      "packageName": "statistics-mf",
+      "projectFolder": "statistics/statistics-mf",
+      "reviewCategory": "production",
+      "tags": [ "frontend-team" ]
+    },
+//    {
+//      "packageName": "statistics-ms",
+//      "projectFolder": "statistics/statistics-ms",
+//      "reviewCategory": "production",
+//      "tags": [ "backend-team" ]
+//    },
+    {
+      "packageName": "supplies-mf",
+      "projectFolder": "supplies/supplies-mf",
+      "reviewCategory": "production",
+      "tags": [ "frontend-team" ]
+    },
+//    {
+//      "packageName": "supplies-ms",
+//      "projectFolder": "supplies/supplies-ms",
+//      "reviewCategory": "production",
+//      "tags": [ "backend-team" ]
+//    },
+    {
+      "packageName": "users-mf",
+      "projectFolder": "users/users-mf",
+      "reviewCategory": "production",
+      "tags": [ "frontend-team" ]
+    },
+//    {
+//      "packageName": "users-ms",
+//      "projectFolder": "users/users-ms",
+//      "reviewCategory": "production",
+//      "tags": [ "backend-team" ]
+//    },
+     {
+       "packageName": "store",
+       "projectFolder": "store",
+       "reviewCategory": "production",
+       "tags": [ "frontend-team" ]
+     }
+  ]
 }

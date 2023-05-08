@@ -7,4 +7,11 @@
   border-spacing: 0;
 }
 
+.table-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
 /*# sourceMappingURL=TableMainContainer.module.css.map */

@@ -10,21 +10,40 @@ module.exports = {
   devServer: {
     static: { directory: path.join(__dirname, "public") },
     historyApiFallback: true,
+<<<<<<< HEAD
+=======
+    webSocketServer: false,
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
     compress: true,
     port: 3002,
     host: "0.0.0.0",
     allowedHosts: "all",
+<<<<<<< HEAD
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
     publicPath: "auto",
+=======
+    hot: true,
+  },
+  devtool: "eval-source-map",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "http://supplies-mf.info/",
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
     clean: true,
   },
   module: {
     rules: [
       {
+<<<<<<< HEAD
         exclude: /node_modules\/(?!@sayfelanjos).*/,
+=======
+        // exclude: /node_modules\/(?!@sayfelanjos).*/,
+        exclude: /node_modules/,
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
         test: /\.jsx?$/,
         use: {
           loader: "babel-loader",
@@ -62,7 +81,14 @@ module.exports = {
       name: "supplies",
       filename: "remoteEntry.js",
       exposes: {
+<<<<<<< HEAD
         "./SuppliesModule": "./src/App.jsx",
+=======
+        "./SuppliesModule": "./src/App",
+      },
+      remotes: {
+        store: `store@http://store.info/remoteEntry.js`,
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
       },
       shared: {
         ...deps,

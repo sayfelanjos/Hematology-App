@@ -1,0 +1,57 @@
+.configuration-bar-container {
+  height: 100%;
+  width: 275px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.config-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-of-close-container {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  align-items: center;
+  height: 60px;
+  width: 275px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+.button-of-close {
+  z-index: 1;
+  background-color: hsl(270deg 60% 50% / 0%);
+  border: 0;
+  cursor: pointer;
+}
+
+.configuration-bar-header-name {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.configuration-bar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+.layout-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

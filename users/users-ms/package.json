@@ -1,10 +1,17 @@
 {
   "name": "users-ms",
+<<<<<<< HEAD
   "version": "0.0.1",
   "description": "",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
+=======
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "private": true,
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -24,7 +31,11 @@
     "@nestjs/common": "^9.4.0",
     "@nestjs/core": "^9.4.0",
     "@nestjs/platform-express": "^9.4.0",
+<<<<<<< HEAD
     "reflect-metadata": "~0.1.13",
+=======
+    "reflect-metadata": "^0.1.13",
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
     "rimraf": "^5.0.0",
     "rxjs": "^7.8.0",
     "@nestjs/typeorm": "^9.0.1",
@@ -57,7 +68,11 @@
     "ts-node": "^10.9.1",
     "tsconfig-paths": "4.2.0",
     "typescript": "^5.0.4",
+<<<<<<< HEAD
     "@nestjs/typeorm": "~9.0.1"
+=======
+    "@nestjs/typeorm": "^9.0.1"
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
   },
   "jest": {
     "moduleFileExtensions": [

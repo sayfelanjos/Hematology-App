@@ -29,6 +29,13 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+<<<<<<< HEAD
+=======
+          - src: "src/*.jsx"
+            dest: /customers-and-suppliers-mf/src
+            strip: "src/"
+
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
           - src: "src/**/*.module.scss"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -37,6 +44,7 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+<<<<<<< HEAD
           - src: "src/**/*.css"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -45,6 +53,8 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+=======
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
           - src: "src/**/**/*.jsx"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -53,6 +63,7 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+<<<<<<< HEAD
           - src: "src/**/**/*.css"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -61,6 +72,8 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+=======
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
           - src: "src/**/**/**/*.jsx"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -69,6 +82,7 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+<<<<<<< HEAD
           - src: "src/**/**/**/*.css"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -77,6 +91,8 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+=======
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
           - src: "src/**/**/**/**/*.jsx"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -85,6 +101,7 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+<<<<<<< HEAD
           - src: "src/**/**/**/**/*.css"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -93,6 +110,8 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+=======
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
           - src: "src/**/**/**/**/**/*.jsx"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -101,6 +120,7 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+<<<<<<< HEAD
           - src: "src/**/**/**/**/**/*.css"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -109,6 +129,8 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+=======
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
           - src: "src/**/**/**/**/**/**/*.jsx"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -117,6 +139,7 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+<<<<<<< HEAD
           - src: "src/**/**/**/**/**/**/*.css"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -125,6 +148,8 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+=======
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
           - src: "src/**/**/**/**/**/**/**/*.jsx"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -133,6 +158,7 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+<<<<<<< HEAD
           - src: "src/**/**/**/**/**/**/**/*.css"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -141,6 +167,8 @@ build:
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
 
+=======
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
           - src: "src/**/**/**/**/**/**/**/**/*.jsx"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
@@ -148,6 +176,7 @@ build:
           - src: "src/**/**/**/**/**/**/**/**/*.module.scss"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
+<<<<<<< HEAD
 
           - src: "src/**/**/**/**/**/**/**/**/*.css"
             dest: /customers-and-suppliers-mf/src
@@ -156,6 +185,8 @@ build:
           - src: "src/**/**/**/**/**/**/**/**/*.css.map"
             dest: /customers-and-suppliers-mf/src
             strip: "src/"
+=======
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
       docker:
         dockerfile: Dockerfile
 

@@ -9,8 +9,19 @@ module.exports = {
   context: path.join(__dirname, "./"),
   entry: "./src/index.js",
   devServer: {
+<<<<<<< HEAD
     static: { directory: path.join(__dirname, "public") },
     historyApiFallback: true,
+=======
+    bonjour: true,
+    client: {
+      progress: true,
+      // logging: "info",
+    },
+    static: { directory: path.join(__dirname, "public") },
+    historyApiFallback: true,
+    webSocketServer: false,
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
     compress: true,
     port: 3003,
     host: "0.0.0.0",
@@ -19,6 +30,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+<<<<<<< HEAD
     publicPath: "auto",
     clean: true,
   },
@@ -26,6 +38,16 @@ module.exports = {
     rules: [
       {
         exclude: /node_modules\/(?!@sayfelanjos).*/,
+=======
+    publicPath: "http://invoices-mf.info/",
+    clean: true,
+  },
+  devtool: "eval-source-map",
+  module: {
+    rules: [
+      {
+        exclude: /node_modules/,
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
         test: /\.jsx?$/,
         use: {
           loader: "babel-loader",
@@ -43,6 +65,10 @@ module.exports = {
           "css-loader",
           // Compiles Sass to CSS
           "sass-loader",
+<<<<<<< HEAD
+=======
+          "postcss-loader",
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
         ],
       },
       {

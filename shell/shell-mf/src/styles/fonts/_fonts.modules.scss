@@ -1,0 +1,53 @@
+@use "sass:map";
+$font-sizes: (
+  "10": 10px,
+  "12": 12px,
+  "14": 14px,
+  "17": 17px,
+  "20": 20px,
+  "24": 24px,
+  "29": 29px,
+  "35": 35px,
+  "42": 42x,
+);
+$font-families: (
+  "Roboto" sans-serif,
+  "Inter" sans-serif,
+  "Open Sans" sans-serif,
+  "Montserrat" sans-serif,
+  "Lato" monospace,
+  "Lato" monospace,
+  "Lato" monospace,
+  "Lato" monospace,
+  "Lato" cursive,
+  "Lato" cursive,
+  "Lato" cursive,
+  "Lato" cursive
+);
+$font-weights: (
+  "regular": 400,
+  "semi-bold": 500,
+  "bold": 700,
+);
+$font-styles: (
+  "normal": normal,
+  "italic": italic,
+  "oblique": oblique,
+);
+
+@each $font-size, $font-size-value in $font-sizes {
+  @each $font-family, $generic-font-family in $font-families {
+    @each $font-weight, $font-weight-value in $font-weights {
+      @each $font-style, $font-style-value in $font-styles {
+        .#{$font-weight}-#{$font-style}-#{$generic-font-family}-#{$font-size} {
+          font-size: $font-size-value;
+          font-family: $font-family, $generic-font-family;
+          font-weight: $font-weight-value;
+          font-style: $font-size-value;
+          text-decoration: none;
+          text-transform: none;
+        }
+      }
+    }
+  }
+}

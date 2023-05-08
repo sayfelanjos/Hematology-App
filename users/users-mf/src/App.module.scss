@@ -1,8 +1,21 @@
 .users-container {
   display: flex;
+<<<<<<< HEAD
   flex-direction: column;
   justify-content: flex-start;
+=======
+  flex-direction: row;
+  justify-content: center;
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
   align-items: center;
   height: 100%;
   width: 100%;
 }
+<<<<<<< HEAD
+=======
+
+.users-page-not-found-image {
+  height: 80vh;
+  width: 60vw;
+}
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)

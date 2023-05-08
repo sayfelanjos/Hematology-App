@@ -9,6 +9,7 @@
 .sidebar-modules-header {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   margin-block-start: 0;
   margin-block-end: 0;
   font: 17px/21px "Inter Semi Bold";

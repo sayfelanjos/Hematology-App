@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .root-layout-container {
   display: flex;
   flex-direction: row;
@@ -12,4 +13,22 @@
   justify-content: flex-start;
   height: 100%;
   width: 100%;
+=======
+.root-layout {
+  display: flex;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100%;
+  &-container {
+    @extend .root-layout;
+    flex-direction: row;
+  }
+  &-main {
+    @extend .root-layout;
+    flex-direction: column;
+  }
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
 }

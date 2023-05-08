@@ -13,6 +13,7 @@ build:
       context: .
       sync:
         manual:
+<<<<<<< HEAD
           - src: "src/*.module.scss"
             dest: /supplies-mf/src
             strip: "src/"
@@ -154,6 +155,9 @@ build:
             strip: "src/"
 
           - src: "src/**/**/**/**/**/**/**/**/*.css.map"
+=======
+          - src: "src/**"
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
             dest: /supplies-mf/src
             strip: "src/"
       docker:

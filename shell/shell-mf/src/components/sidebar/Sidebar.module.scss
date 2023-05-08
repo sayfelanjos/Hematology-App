@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+<<<<<<< HEAD
   background-color: #464242;
   width: 275px;
   height: 100%;
@@ -49,3 +50,42 @@
 .wrap-button > a {
   width: 100%;
 }
+=======
+  padding-right: 1px;
+  box-sizing: border-box;
+  width: 275px;
+  height: 100%;
+  &-closed {
+    @extend .sidebar-container;
+    width: 72px;
+  }
+}
+
+.sidebar-modules {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 0;
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* width */
+.sidebar-modules::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+.sidebar-modules::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-clip: content-box;
+  margin-block: 2px;
+}
+
+/* Handle */
+.sidebar-modules::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)

@@ -1,10 +1,17 @@
-.costumers-and-suppliers-background {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #c0c0c0;
-  height: 100%;
-  width: 100%;
-}
+/* Error: expected "{".
+ *   ,
+ * 6 |   background-color: #c0c0c0;
+ *   |                            ^
+ *   '
+ *   CustomersAndSuppliers.module.scss 6:28  root stylesheet */
 
-/*# sourceMappingURL=root-layout.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a   \2577 \a 6 \2502    background-color: #c0c0c0;\a   \2502                             ^\a   \2575 \a   CustomersAndSuppliers.module.scss 6:28  root stylesheet';
+}

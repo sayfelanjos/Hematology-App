@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .App {
   text-align: center;
 }
@@ -50,3 +51,18 @@
   caret-color: red;
   accent-color: red;
 }
+=======
+.customers-and-suppliers-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.customers-and-suppliers-page-not-found-image {
+  height: 70vh;
+  width: 40vw;
+}
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)

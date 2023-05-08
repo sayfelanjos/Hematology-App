@@ -13,7 +13,11 @@ async function bootstrap() {
   });
   app.use(
     cookieSession({
+<<<<<<< HEAD
       keys: ["asdfasdf"],
+=======
+      keys: ["asdfasdfajdkljflkasdj"],
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
     }),
   );
   app.useGlobalPipes(

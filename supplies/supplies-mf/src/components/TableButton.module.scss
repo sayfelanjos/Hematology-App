@@ -1,0 +1,15 @@
+.table-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 218px;
+  border-radius: 6px;
+  border: none;
+}
+
+.table-button-content {
+  color: #101828;
+  font-size: 17px;
+}

@@ -1,0 +1,24 @@
+.table-search-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0 60px;
+  box-sizing: border-box;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.table-search-dropdown {
+  border-radius: 6px;
+  height: 48px;
+  width: 320px;
+  border: 1px solid #acacac;
+}
+
+.table-search-input {
+  border-radius: 6px;
+  height: 48px;
+  width: 632px;
+  border: 1px solid #acacac;
+}

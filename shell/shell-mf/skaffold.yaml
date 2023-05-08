@@ -13,6 +13,7 @@ build:
       context: .
       sync:
         manual:
+<<<<<<< HEAD
           - src: "src/*.module.scss"
             dest: /shell-mf/src
             strip: "src/"
@@ -154,6 +155,9 @@ build:
             strip: "src/"
 
           - src: "src/**/**/**/**/**/**/**/**/*.css.map"
+=======
+          - src: "src/**"
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
             dest: /shell-mf/src
             strip: "src/"
       docker:
@@ -161,9 +165,16 @@ build:
 
 manifests:
   rawYaml:
+<<<<<<< HEAD
     - k8s/ingress.yaml
     - k8s/service.yaml
     - k8s/deployment.yaml
+=======
+    - k8s/deployment.yaml
+    - k8s/cluster-ip-service.yaml
+    - k8s/node-port-service.yaml
+    - k8s/ingress.yaml
+>>>>>>> b4e4f22 (Sync routes across Micro Frontends)
 
 deploy:
   kubectl: {}
