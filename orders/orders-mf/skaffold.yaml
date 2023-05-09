@@ -29,13 +29,10 @@ build:
             dest: /orders-mf/src
             strip: "src/"
 
-<<<<<<< HEAD
-=======
           - src: "src/*.jsx"
             dest: /orders-mf/src
             strip: "src/"
 
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
           - src: "src/**/*.module.scss"
             dest: /orders-mf/src
             strip: "src/"

@@ -1,10 +1,6 @@
 import React from "react";
 import styles from "./Login.module.scss";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-=======
 import { Link } from "@tanstack/react-location";
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
 
 const Login = () => {
   return (
@@ -13,11 +9,7 @@ const Login = () => {
         <img
           className={styles["login-image"]}
           src={"/laboratory_01.jpeg"}
-<<<<<<< HEAD
-          alt="Login Supplies Image"
-=======
           alt="Login SearchSupply Image"
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
         />
       </div>
       <div className={styles["login-form-container"]}>

@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import styles from "./SidebarModuleButton.module.scss";
-import { Link } from "react-router-dom";
-
-const SidebarMenuButton = (props) => {
-  return (
-    <>
-      <Link
-        className={
-          props.isPressed
-            ? styles["sidebar-module-button-pressed"]
-            : styles["sidebar-module-button-enabled"]
-        }
-        to={props.pageUrl}>
-        <img src={props.icon} alt="Sidebar menu icon" width={36} height={36} />
-        {props.moduleName}
-      </Link>
-    </>
-  );
-};
-
-export default SidebarMenuButton;
-=======
 import React, { useState } from "react";
 import componentStyles from "./SidebarModuleButton.module.scss";
 import fontStyles from "../../styles/fonts/_fonts.modules.scss";
@@ -64,4 +40,3 @@ const SidebarModuleButton = (props) => {
 };
 
 export default SidebarModuleButton;
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)

@@ -13,10 +13,7 @@ module.exports = {
       directory: path.join(__dirname, "public"),
     },
     historyApiFallback: true,
-<<<<<<< HEAD
-=======
     webSocketServer: false,
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
     compress: true,
     port: 3001,
     host: "0.0.0.0",
@@ -51,13 +48,10 @@ module.exports = {
         ],
       },
       {
-<<<<<<< HEAD
-=======
         test: /\.(png|jp(e*)g|svg|gif)$/,
         use: ["file-loader"],
       },
       {
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
         test: /\.svg$/,
         use: ["@svg/webpack"],
       },

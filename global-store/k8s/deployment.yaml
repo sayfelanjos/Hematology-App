@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: store-deployment
+  name: global-store-deployment
   labels:
-    name: store-deployment
+    name: global-store-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: store-deployment
+      name: global-store-deployment
   template:
     metadata:
       labels:
-        name: store-deployment
+        name: global-store-deployment
     spec:
       containers:
-        - image: store
-          name: store
+        - image: global-store
+          name: global-store
           ports:
             - containerPort: 3008
           imagePullPolicy: Never

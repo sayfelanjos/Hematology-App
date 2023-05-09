@@ -10,10 +10,7 @@ module.exports = {
   devServer: {
     static: { directory: path.join(__dirname, "public") },
     historyApiFallback: true,
-<<<<<<< HEAD
-=======
     webSocketServer: false,
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
     compress: true,
     port: 3005,
     host: "0.0.0.0",

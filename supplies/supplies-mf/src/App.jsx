@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import AppHeader from "@sayfelanjos/hematology-app/libs/AppHeader";
-import TableContainer from "@sayfelanjos/hematology-app/libs/TableContainer";
-import styles from "./App.module.scss";
-
-function App() {
-  return (
-    <div className={styles["supplies-background"]}>
-      <AppHeader />
-      <TableContainer />
-    </div>
-  );
-=======
 import React, { useEffect } from "react";
 import { ReactLocation, Router, createMemoryHistory } from "@tanstack/react-location";
 import SearchSupply from "./pages/search-supply/search-supply";
@@ -52,7 +38,6 @@ const memoryHistory = createMemoryHistory({
 const location = new ReactLocation({
   history: memoryHistory,
 });
-let currentPath = location.current.pathname;
 
 function App() {
   const { route, updateRoute } = useRouteStore((state) => state.route);
@@ -71,7 +56,6 @@ function App() {
   }, [route.pathname]);
 
   return <Router location={location} routes={routes}></Router>;
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
 }
 
 export default App;

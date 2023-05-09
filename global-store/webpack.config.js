@@ -4,10 +4,12 @@ const path = require("path");
 const deps = require("./package.json").dependencies;
 
 module.exports = (_, argv) => ({
+  name: "store",
+  mode: "development",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "auto",
+    publicPath: "http://store.info/",
     clean: true,
   },
 

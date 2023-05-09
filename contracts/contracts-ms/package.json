@@ -1,10 +1,6 @@
 {
   "name": "contracts-ms",
-<<<<<<< HEAD
-  "version": "0.0.1",
-=======
   "version": "1.0.0",
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
   "description": "",
   "author": "",
   "private": true,

@@ -30,32 +30,20 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-<<<<<<< HEAD
-    publicPath: "auto",
-=======
     publicPath: "http://shell-mf.info/",
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
     clean: true,
   },
   module: {
     rules: [
       {
-<<<<<<< HEAD
-        exclude: /node_modules\/(?!@sayfelanjos).*/,
-=======
         // exclude: /node_modules\/(?!@sayfelanjos).*/,
         exclude: /node_modules/,
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
         test: /\.jsx?$/,
         enforce: "pre",
         use: ["source-map-loader"],
       },
       {
-<<<<<<< HEAD
-        exclude: /node_modules\/(?!@sayfelanjos).*/,
-=======
         exclude: /node_modules/,
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
         test: /\.jsx?$/,
         use: {
           loader: "babel-loader",
@@ -100,10 +88,7 @@ module.exports = {
         customers_and_suppliers: `customers_and_suppliers@http://customers-and-suppliers-mf.info/remoteEntry.js`,
         users: `users@http://users-mf.info/remoteEntry.js`,
         contracts: `contracts@http://contracts-mf.info/remoteEntry.js`,
-<<<<<<< HEAD
-=======
         store: `store@http://store.info/remoteEntry.js`,
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
       },
       shared: {
         ...deps,

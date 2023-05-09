@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"version":3,"sourceRoot":"","sources":["page.module.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;EACA;EACA","file":"page.module.css"}
-=======
 {"version":3,"sourceRoot":"","sources":["Users.module.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA","file":"Users.module.css"}
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)

@@ -6,25 +6,15 @@
     "**/*.scss"
   ],
   "dependencies": {
-<<<<<<< HEAD
-    "@sayfelanjos/hematology-app": "^1.0.1",
-=======
     "@tanstack/react-location": "^3.7.4",
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-    "react-router-dom": "^6.10.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^3.3.1"
-=======
     "react-scripts": "^5.0.1",
     "web-vitals": "^3.3.1",
     "zustand": "^4.3.7"
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
   },
   "scripts": {
     "start": "webpack server",
@@ -67,15 +57,10 @@
     "sass-loader": "^13.2.2",
     "source-map-loader": "^4.0.1",
     "style-loader": "^3.3.2",
-<<<<<<< HEAD
-    "webpack": "^5.77.0",
-    "webpack-cli": "^5.0.1",
-=======
     "stylelint": "^15.5.0",
     "stylelint-config-standard-scss": "^8.0.0",
     "webpack": "^5.81.0",
     "webpack-cli": "^5.0.2",
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
     "webpack-dev-server": "^4.13.2"
   }
 }

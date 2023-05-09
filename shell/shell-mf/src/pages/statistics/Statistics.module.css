@@ -1,17 +1,11 @@
-/* Error: expected "{".
- *   ,
- * 6 |   background-color: #c0c0c0;
- *   |                            ^
- *   '
- *   Statistics.module.scss 6:28  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a   \2577 \a 6 \2502    background-color: #c0c0c0;\a   \2502                             ^\a   \2575 \a   Statistics.module.scss 6:28  root stylesheet';
+.statistics-background {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
 }
+
+/*# sourceMappingURL=Statistics.module.css.map */

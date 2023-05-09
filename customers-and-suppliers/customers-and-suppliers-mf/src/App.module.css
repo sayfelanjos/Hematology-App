@@ -1,17 +1,15 @@
-/* Error: expected "{".
- *    ,
- * 68 | >>>>>>> b4e4f22 (Sync routes across Micro Frontends)
- *    |                                                     ^
- *    '
- *   App.module.scss 68:53  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 68 \2502  >>>>>>> b4e4f22 (Sync routes across Micro Frontends)\a    \2502                                                      ^\a    \2575 \a   App.module.scss 68:53  root stylesheet';
+.customers-and-suppliers-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
+
+.customers-and-suppliers-page-not-found-image {
+  height: 70vh;
+  width: 40vw;
+}
+
+/*# sourceMappingURL=App.module.css.map */

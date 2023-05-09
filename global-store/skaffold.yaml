@@ -1,7 +1,7 @@
 apiVersion: skaffold/v3
 kind: Config
 metadata:
-  name: store
+  name: global-store
 build:
   platforms: ["linux/amd64"]
   tagPolicy:
@@ -9,16 +9,12 @@ build:
   local:
     push: false
   artifacts:
-    - image: store
+    - image: global-store
       context: .
       sync:
         manual:
-          - src: "src/*.store.js"
-            dest: /store/src
-            strip: "src/"
-
-          - src: "src/reducers/*.js"
-            dest: /store/src
+          - src: "src/**"
+            dest: /global-store/src
             strip: "src/"
       docker:
         dockerfile: Dockerfile

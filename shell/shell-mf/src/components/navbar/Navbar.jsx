@@ -1,29 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
-import styles from "./Navbar.module.scss";
-
-const NavBar = () => {
-  return (
-    <div className={styles["navbar-container"]}>
-      <div className={styles["navbar-icons-container"]}>
-        <img
-          src={"/icons/sidebar-left-collapse.svg"}
-          alt={"Button to close drawer"}
-          height={28}
-          width={28}></img>
-        <img
-          src={"/icons/navbar-settings-icon.svg"}
-          alt={"Settings Button"}
-          height={24}
-          width={24}></img>
-      </div>
-      <div className={styles["navbar-user-photo-container"]}>
-        <img
-          className={styles["navbar-user-photo"]}
-=======
 import componentStyles from "./Navbar.module.scss";
 import themeColors from "../../styles/themes/_themes.module.scss";
-import { useAppStore } from "../../store/store";
+import { useAppStore } from "../../app-store/app-store";
 import { useThemeStore } from "store/store";
 import { useSidebarStore } from "store/store";
 
@@ -85,7 +63,6 @@ const NavBar = () => {
       <div className={componentStyles["navbar-user-photo-container"]}>
         <img
           className={componentStyles["navbar-user-photo"]}
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
           src={"/images/woman-avatar-small.jpg"}
           alt={"User Photo"}
           height={48}

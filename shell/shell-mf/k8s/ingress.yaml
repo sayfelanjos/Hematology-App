@@ -13,10 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-<<<<<<< HEAD
-                name: shell-mf-service
-=======
                 name: shell-mf-cluster-ip-service
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
                 port:
                   number: 3000

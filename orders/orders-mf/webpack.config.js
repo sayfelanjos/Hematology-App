@@ -5,22 +5,15 @@ const deps = require("./package.json").dependencies;
 
 module.exports = {
   name: "orders",
-  context: path.join(__dirname, "./"),
-<<<<<<< HEAD
-  entry: "./src/index",
-=======
-  entry: "./src/index.jsx",
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
   mode: "development",
+  context: path.join(__dirname, "./"),
+  entry: "./src/index.jsx",
   devServer: {
     static: {
       directory: path.join(__dirname, "public"),
     },
     historyApiFallback: true,
-<<<<<<< HEAD
-=======
     webSocketServer: false,
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
     compress: true,
     port: 3004,
     host: "0.0.0.0",
@@ -55,13 +48,10 @@ module.exports = {
         ],
       },
       {
-<<<<<<< HEAD
-=======
         test: /\.(png|jp(e*)g|svg|gif)$/,
         use: ["file-loader"],
       },
       {
->>>>>>> b4e4f22 (Sync routes across Micro Frontends)
         test: /\.svg$/,
         use: ["@svg/webpack"],
       },
