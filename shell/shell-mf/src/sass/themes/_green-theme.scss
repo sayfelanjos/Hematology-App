@@ -1,0 +1,101 @@
+@import "../abstracts/variables";
+/* green theme */
+.green-theme {
+  background-color: $secondary-green-60;
+}
+#green-theme-statistics-icon {
+  fill: $secondary-purple-60;
+}
+#green-theme-supplies-icon {
+  fill: $secondary-purple-60;
+}
+#green-theme-orders-icon {
+  fill: $secondary-purple-60;
+}
+#green-theme-invoices-icon {
+  fill: $secondary-purple-60;
+}
+#green-theme-contracts-icon {
+  fill: $secondary-purple-60;
+}
+#green-theme-customers-and-suppliers-icon {
+  stroke: $secondary-purple-60;
+}
+#green-theme-users-icon {
+  stroke: $secondary-purple-60;
+}
+.green-theme-sidebar-subheader-text-color {
+  color: $secondary-purple-60;
+}
+.green-theme-button-text-color {
+  color: $secondary-purple-60;
+}
+.green-theme-button-pressed {
+  box-shadow: inset -2px -2px 12px rgb(0, 0, 0);
+  background-color: $secondary-green-70;
+  border-top: 1px solid $secondary-purple-60;
+  border-radius: 10px;
+}
+.green-theme-button:hover {
+  box-shadow: inset 0 -2px 12px black;
+  background-color: $secondary-green-40;
+  border-radius: 10px;
+}
+.green-main-container-color-background {
+  background-color: $white;
+}
+.green-theme-sidebar-toggle-button {
+  background-color: hsl(270deg 60% 50% / 0%);
+}
+.green-theme-navbar-config-button {
+  background-color: hsl(270deg 60% 50% / 0%);
+}
+#green-theme-navbar-buttons-colors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: $secondary-purple-60;
+  &:hover {
+    border-radius: 50%;
+    box-shadow: 3px 3px 16px $secondary-green-100;
+  }
+}
+.green-theme-sidebar-toggle-button {
+  background-color: hsl(270deg 60% 50% / 0%);
+}
+.green-theme-navbar-config-button {
+  background-color: hsl(270deg 60% 50% / 0%);
+}
+#green-theme-configuration-bar-button-of-close {
+  fill: $secondary-purple-60;
+  &:hover {
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px $secondary-green-100;
+  }
+}
+.green-theme-configuration-bar-config-name-color {
+  color: $secondary-purple-60;
+}
+.green-theme-configuration-bar-header-container {
+  border-bottom: 1px solid $secondary-purple-60;
+}
+.green-theme-configuration-bar-layout-color-button {
+  align-items: center;
+  border-radius: 6px;
+  height: 45px;
+  width: 52px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: hsl(270deg 60% 50% / 0%);
+  cursor: pointer;
+  &:hover {
+    background-color: hsl(270deg 60% 50% / 0%);
+    box-shadow: 2px 2px 10px $secondary-green-100;
+  }
+}
+
+/* Handle on hover */
+.green-theme-sidebar-domain-section::-webkit-scrollbar-thumb:hover {
+  background: $tertiary-gray-100;
+}

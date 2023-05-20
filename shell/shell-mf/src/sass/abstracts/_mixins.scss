@@ -1,0 +1,7 @@
+@mixin page-main-content-block {
+  display: block;
+  max-height: calc(100vh - 60px);
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+};

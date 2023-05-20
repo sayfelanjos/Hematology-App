@@ -1,5 +1,5 @@
 import React from "react";
-import styleComponents from "./SidebarButton.module.scss";
+import styleComponents from "./SidebarButton.scss";
 import { useNavigate } from "@tanstack/react-location";
 
 const SidebarButton = (props) => {

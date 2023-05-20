@@ -13,7 +13,7 @@ build:
       context: .
       sync:
         manual:
-          - src: "src/*.module.scss"
+          - src: "src/*.scss"
             dest: /orders-mf/src
             strip: "src/"
 
@@ -33,7 +33,7 @@ build:
             dest: /orders-mf/src
             strip: "src/"
 
-          - src: "src/**/*.module.scss"
+          - src: "src/**/*.scss"
             dest: /orders-mf/src
             strip: "src/"
 
@@ -53,7 +53,7 @@ build:
             dest: /orders-mf/src
             strip: "src/"
 
-          - src: "src/**/**/*.scss"
+          - src: "src/**/**/*scss"
             dest: /orders-mf/src
             strip: "src/"
 
@@ -69,7 +69,7 @@ build:
             dest: /orders-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/*.module.scss"
+          - src: "src/**/**/**/*.scss"
             dest: /orders-mf/src
             strip: "src/"
 
@@ -85,7 +85,7 @@ build:
             dest: /orders-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/*.module.scss"
+          - src: "src/**/**/**/**/*.scss"
             dest: /orders-mf/src
             strip: "src/"
 
@@ -101,7 +101,7 @@ build:
             dest: /orders-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/*.module.scss"
+          - src: "src/**/**/**/**/**/*.scss"
             dest: /orders-mf/src
             strip: "src/"
 
@@ -117,7 +117,7 @@ build:
             dest: /orders-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/**/*.module.scss"
+          - src: "src/**/**/**/**/**/**/*.scss"
             dest: /orders-mf/src
             strip: "src/"
 
@@ -133,7 +133,7 @@ build:
             dest: /orders-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/**/**/*.module.scss"
+          - src: "src/**/**/**/**/**/**/**/*.scss"
             dest: /orders-mf/src
             strip: "src/"
 
@@ -149,7 +149,7 @@ build:
             dest: /orders-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/**/**/**/*.module.scss"
+          - src: "src/**/**/**/**/**/**/**/**/*.scss"
             dest: /orders-mf/src
             strip: "src/"
 

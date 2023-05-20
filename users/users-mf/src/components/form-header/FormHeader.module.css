@@ -1,0 +1,11 @@
+.form-header {
+  display: flex;
+  flex-basis: 100%;
+  padding: 20px;
+  border-bottom: 1px solid gray;
+}
+.form-header__text {
+  font-size: 1.4rem;
+}
+
+/*# sourceMappingURL=FormHeader.module.css.map */

@@ -1,0 +1,21 @@
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-clip: content-box;
+    margin-block: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #f39b17;
+    border-radius: 10px;
+  }
+}

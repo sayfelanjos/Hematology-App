@@ -1,7 +1,7 @@
 import React from "react";
-import componentStyles from "./SectionDomain.module.scss";
-import fontStyles from "../../styles/fonts/_fonts.modules.scss";
-import themeColors from "../../styles/themes/_themes.module.scss";
+import "./SectionDomain.scss";
+import "../../sass/base/_typography.scss";
+import "../../sass/themes/_themes.scss";
 import { useThemeStore } from "store/store";
 
 const SectionDomain = (props) => {
@@ -9,9 +9,9 @@ const SectionDomain = (props) => {
 
   return (
     <h6
-      className={`${componentStyles["sidebar-domain-section"]} ${
-        fontStyles["semi-bold-normal-monospace-17"]
-      } ${themeColors[`${theme.color}-theme-sidebar-subheader-text-color`]}`}>
+      className={`sidebar-domain-section
+        semi-bold-normal-monospace-17
+      ${theme.color}-theme-sidebar-subheader-text-color`}>
       {props.domainName}
     </h6>
   );

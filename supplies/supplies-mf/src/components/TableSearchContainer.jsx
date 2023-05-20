@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./TableSearchContainer.module.scss";
+import styles from "./TableSearchContainer.scss";
 
 function TableSearchContainer() {
   return (

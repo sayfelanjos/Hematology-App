@@ -1,0 +1,97 @@
+@import "../abstracts/variables";
+/* Gray theme */
+.gray-theme {
+  background-color: $tertiary-gray-100;
+}
+#gray-theme-statistics-icon {
+  fill: $tertiary-gray-40;
+}
+#gray-theme-supplies-icon {
+  fill: $tertiary-gray-40;
+}
+#gray-theme-orders-icon {
+  fill: $tertiary-gray-40;
+}
+#gray-theme-invoices-icon {
+  fill: $tertiary-gray-40;
+}
+#gray-theme-contracts-icon {
+  fill: $tertiary-gray-40;
+}
+#gray-theme-customers-and-suppliers-icon {
+  stroke: $tertiary-gray-40;
+}
+#gray-theme-users-icon {
+  stroke: $tertiary-gray-40;
+}
+.gray-theme-sidebar-subheader-text-color {
+  color: $tertiary-gray-40;
+}
+.gray-theme-button-text-color {
+  color: $tertiary-gray-40;
+}
+.gray-theme-button-pressed {
+  box-shadow: inset -2px -2px 12px rgb(0, 0, 0);
+  background-color: $tertiary-gray-70;
+  border-top: 1px solid $white;
+  border-radius: 10px;
+}
+.gray-theme-button:hover {
+  box-shadow: inset 0 -2px 12px black;
+  background-color: $tertiary-gray-40;
+  border-radius: 10px;
+}
+.gray-main-container-color-background {
+  background-color: $white;
+}
+.gray-theme-sidebar-toggle-button {
+  background-color: hsl(270deg 60% 50% / 0%);
+}
+.gray-theme-navbar-config-button {
+  background-color: hsl(270deg 60% 50% / 0%);
+}
+#gray-theme-navbar-buttons-colors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: $tertiary-gray-40;
+  background-color: hsl(270deg 60% 50% / 0%);
+  &:hover {
+    border-radius: 50%;
+    box-shadow: 3px 3px 16px $tertiary-gray-100;
+  }
+}
+#gray-theme-configuration-bar-button-of-close {
+  fill: $tertiary-gray-40;
+  &:hover {
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px $tertiary-gray-100;
+  }
+}
+.gray-theme-configuration-bar-config-name-color {
+  color: $tertiary-gray-40;
+}
+.gray-theme-configuration-bar-header-container {
+  border-bottom: 1px solid $tertiary-gray-40;
+}
+.gray-theme-configuration-bar-layout-color-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  height: 45px;
+  width: 52px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: hsl(270deg 60% 50% / 0%);
+  cursor: pointer;
+  &:hover {
+    box-shadow: 2px 2px 10px $tertiary-gray-100;
+  }
+}
+
+/* Handle on hover */
+.gray-theme-sidebar-domain-section::-webkit-scrollbar-thumb:hover {
+  background: $tertiary-gray-100;
+}

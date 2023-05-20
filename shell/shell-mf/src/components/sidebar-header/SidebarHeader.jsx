@@ -1,8 +1,8 @@
 import React from "react";
-import componentStyles from "./SidebarHeader.module.scss";
-import themeColors from "../../styles/themes/_themes.module.scss";
-import LogoIcon from "../icons/LogoIcon";
-import fontStyles from "../../styles/fonts/_fonts.modules.scss";
+import "./SidebarHeader.scss";
+import "../../sass/themes/_themes.scss";
+import LogoIcon from "../../icons/LogoIcon";
+import "../../sass/base/_typography.scss";
 import { useThemeStore } from "store/store";
 
 const SidebarHeader = () => {
@@ -10,14 +10,13 @@ const SidebarHeader = () => {
 
   return (
     <div
-      className={`${componentStyles["sidebar-header"]} ${
-        themeColors[`${theme.color}-theme-sidebar-header-container`]
-      }`}>
+      className={`sidebar-header 
+        ${theme.color}-theme-sidebar-header-container
+      `}>
       <LogoIcon />
       <h1
-        className={`${componentStyles["app.name"]} ${
-          themeColors[`${theme.color}-theme-app-name`]
-        } ${fontStyles["semi-bold-normal-monospace-24"]}`}>
+        className={`app.name ${theme.color}-theme-app-name
+         semi-bold-normal-monospace-24`}>
         Hematologia
       </h1>
     </div>

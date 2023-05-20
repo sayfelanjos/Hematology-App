@@ -1,0 +1,23 @@
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.background::-webkit-scrollbar {
+  width: 8px;
+}
+.background::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-clip: content-box;
+  margin-block: 2px;
+}
+.background::-webkit-scrollbar-thumb {
+  background-color: #f39b17;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=RootLayout.module.css.map */

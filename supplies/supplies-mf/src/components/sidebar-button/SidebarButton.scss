@@ -1,0 +1,11 @@
+@use "../../styles/colors/_colors.modulesscss" as *;
+
+.sidebar-button {
+  display: block;
+  border-radius: 10px;
+  height: 48px;
+  width: 245px;
+  &:hover {
+    background-color: $primary-blue-30;
+  }
+}

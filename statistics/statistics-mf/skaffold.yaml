@@ -13,7 +13,7 @@ build:
       context: .
       sync:
         manual:
-          - src: "src/*.module.scss"
+          - src: "src/*.scss"
             dest: /statistics-mf/src
             strip: "src/"
 
@@ -29,7 +29,7 @@ build:
             dest: /statistics-mf/src
             strip: "src/"
 
-          - src: "src/**/*.module.scss"
+          - src: "src/**/*.scss"
             dest: /statistics-mf/src
             strip: "src/"
 
@@ -49,7 +49,7 @@ build:
             dest: /statistics-mf/src
             strip: "src/"
 
-          - src: "src/**/**/*.scss"
+          - src: "src/**/**/*scss"
             dest: /statistics-mf/src
             strip: "src/"
 
@@ -65,7 +65,7 @@ build:
             dest: /statistics-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/*.module.scss"
+          - src: "src/**/**/**/*.scss"
             dest: /statistics-mf/src
             strip: "src/"
 
@@ -81,7 +81,7 @@ build:
             dest: /statistics-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/*.module.scss"
+          - src: "src/**/**/**/**/*.scss"
             dest: /statistics-mf/src
             strip: "src/"
 
@@ -97,7 +97,7 @@ build:
             dest: /statistics-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/*.module.scss"
+          - src: "src/**/**/**/**/**/*.scss"
             dest: /statistics-mf/src
             strip: "src/"
 
@@ -113,7 +113,7 @@ build:
             dest: /statistics-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/**/*.module.scss"
+          - src: "src/**/**/**/**/**/**/*.scss"
             dest: /statistics-mf/src
             strip: "src/"
 
@@ -129,7 +129,7 @@ build:
             dest: /statistics-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/**/**/*.module.scss"
+          - src: "src/**/**/**/**/**/**/**/*.scss"
             dest: /statistics-mf/src
             strip: "src/"
 
@@ -145,7 +145,7 @@ build:
             dest: /statistics-mf/src
             strip: "src/"
 
-          - src: "src/**/**/**/**/**/**/**/**/*.module.scss"
+          - src: "src/**/**/**/**/**/**/**/**/*.scss"
             dest: /statistics-mf/src
             strip: "src/"
 

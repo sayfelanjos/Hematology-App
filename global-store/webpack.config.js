@@ -14,7 +14,7 @@ module.exports = (_, argv) => ({
   },
 
   resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js", ".json", ".css", ".scss"],
+    extensions: [".tsx", ".ts", ".jsx", ".js", ".json", ".css", "scss"],
   },
 
   devServer: {

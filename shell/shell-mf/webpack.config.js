@@ -13,8 +13,8 @@ module.exports = {
   entry: "./src/index",
   devServer: {
     static: { directory: path.join(__dirname, "public") },
-    webSocketServer: false,
     historyApiFallback: true,
+    webSocketServer: false,
     compress: true,
     port: 3000,
     host: "0.0.0.0",
@@ -56,11 +56,26 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          { loader: "style-loader" },
           // Translates CSS into CommonJS
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                mode: "local",
+                auto: true,
+                // exportGlobals: true,
+                localIdentName: "[local]--[hash:base64:5]",
+                localIdentContext: path.resolve(__dirname, "src"),
+                // localIdentHashSalt: "my-custom-hash",
+                // namedExport: true,
+                // exportLocalsConvention: "camelCase",
+                // exportOnlyLocals: false,
+              },
+            },
+          },
           // Compiles Sass to CSS
-          "sass-loader",
+          { loader: "sass-loader" },
         ],
       },
       {
@@ -74,7 +89,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".ts", ".js", ".jsx", ".tsx", ".css", ".scss"],
+    extensions: [".ts", ".js", ".jsx", ".tsx", ".css", "scss"],
   },
   plugins: [
     new ModuleFederationPlugin({

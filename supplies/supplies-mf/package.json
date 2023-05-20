@@ -4,7 +4,7 @@
   "main": "index.jsx",
   "private": true,
   "eslintIgnore": [
-    "**/*.scss"
+    "**/*scss"
   ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

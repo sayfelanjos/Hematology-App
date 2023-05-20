@@ -1,0 +1,34 @@
+.sidebar, .sidebar--closed {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 1px;
+  box-sizing: border-box;
+  flex-basis: 275px;
+}
+.sidebar--closed {
+  flex-basis: 72px;
+}
+.sidebar__modules {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 0;
+  max-height: calc(100vh - 60px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.sidebar__modules::-webkit-scrollbar {
+  width: 8px;
+}
+.sidebar__modules::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-clip: content-box;
+  margin-block: 2px;
+}
+.sidebar__modules::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=Sidebar.css.map */

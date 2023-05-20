@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./TableHeader.module.scss";
+import styles from "./TableHeader.scss";
 import TableCell from "./TableCell";
 
 const TableHeader = () => {

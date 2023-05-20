@@ -24,22 +24,22 @@ requires:
 
   # Micro Services
 
-  - configs: ["contracts-ms"]
-    path: contracts/contracts-ms/skaffold.yaml
-  - configs: ["statistics-ms"]
-    path: statistics/statistics-ms/skaffold.yaml
-  - configs: ["invoices-ms"]
-    path: invoices/invoices-ms/skaffold.yaml
-  - configs: ["orders-ms"]
-    path: orders/orders-ms/skaffold.yaml
-  - configs: ["supplies-ms"]
-    path: supplies/supplies-ms/skaffold.yaml
-  - configs: ["customers-and-suppliers-ms"]
-    path: customers-and-suppliers/customers-and-suppliers-ms/skaffold.yaml
-  - configs: ["users-ms"]
-    path: users/users-ms/skaffold.yaml
-  - configs: ["shell-ms"]
-    path: shell/shell-ms/skaffold.yaml
+  #  - configs: ["contracts-ms"]
+  #    path: contracts/contracts-ms/skaffold.yaml
+  #  - configs: ["statistics-ms"]
+  #    path: statistics/statistics-ms/skaffold.yaml
+  #  - configs: ["invoices-ms"]
+  #    path: invoices/invoices-ms/skaffold.yaml
+  #  - configs: ["orders-ms"]
+  #    path: orders/orders-ms/skaffold.yaml
+  #  - configs: ["supplies-ms"]
+  #    path: supplies/supplies-ms/skaffold.yaml
+  #  - configs: ["customers-and-suppliers-ms"]
+  #    path: customers-and-suppliers/customers-and-suppliers-ms/skaffold.yaml
+  #  - configs: ["users-ms"]
+  #    path: users/users-ms/skaffold.yaml
+  #  - configs: ["shell-ms"]
+  #    path: shell/shell-ms/skaffold.yaml
 
   # Databases
   #  - configs: ["contracts-db"]
@@ -54,8 +54,8 @@ requires:
   #    path: supplies/supplies-db/skaffold.yaml
   #  - configs: ["customers-and-suppliers-db"]
   #    path: customers-and-suppliers/customers-and-suppliers-db/skaffold.yaml
-  - configs: ["users-db"]
-    path: users/users-db/skaffold.yaml
+  #  - configs: ["users-db"]
+  #    path: users/users-db/skaffold.yaml
 
   # State Management
   - configs: ["global-store"]

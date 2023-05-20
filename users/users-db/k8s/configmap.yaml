@@ -5,8 +5,8 @@ metadata:
   labels:
     app: users-db-configmap
 data:
-  POSTGRES_DB: users-db
-  POSTGRES_HOST: users-db-cluster-ip-service
+  POSTGRES_DB: "users-db"
+  POSTGRES_HOST: "users-db-cluster-ip-service"
   POSTGRES_PORT: "5432"
-  POSTGRES_USER: hematologyapp
-  POSTGRES_PASSWORD: hematologyapp
+  POSTGRES_USER: "hematologyapp"
+  POSTGRES_PASSWORD: "hematologyapp"

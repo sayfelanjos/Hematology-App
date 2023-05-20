@@ -1,16 +1,14 @@
 import React, { Suspense } from "react";
-import styles from "./Orders.module.scss";
-import themeColors from "../../styles/themes/_themes.module.scss";
+import Wrapper from "../../components/wrapper/wrapper";
 const OrdersModule = React.lazy(() => import("orders/OrdersModule"));
 
 const Orders = () => {
   return (
-    <div
-      className={`${styles["orders-micro-frontend-container"]} ${themeColors["blue-theme-main-container-color-background"]}`}>
+    <Wrapper>
       <Suspense>
         <OrdersModule />
       </Suspense>
-    </div>
+    </Wrapper>
   );
 };
 export default Orders;

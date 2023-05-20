@@ -6,8 +6,10 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   name: "orders",
   mode: "development",
+  cache: true,
+  target: "web",
   context: path.join(__dirname, "./"),
-  entry: "./src/index.jsx",
+  entry: "./src/index",
   devServer: {
     static: {
       directory: path.join(__dirname, "public"),
@@ -19,7 +21,13 @@ module.exports = {
     host: "0.0.0.0",
     hot: true,
     allowedHosts: "all",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
+    },
   },
+  devtool: "eval-source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -40,11 +48,26 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          { loader: "style-loader" },
           // Translates CSS into CommonJS
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                mode: "local",
+                auto: true,
+                // exportGlobals: true,
+                localIdentName: "[local]--[hash:base64:5]",
+                localIdentContext: path.resolve(__dirname, "src"),
+                // localIdentHashSalt: "my-custom-hash",
+                // namedExport: true,
+                // exportLocalsConvention: "camelCase",
+                // exportOnlyLocals: false,
+              },
+            },
+          },
           // Compiles Sass to CSS
-          "sass-loader",
+          { loader: "sass-loader" },
         ],
       },
       {
@@ -63,7 +86,7 @@ module.exports = {
       library: { type: "var", name: "orders" },
       filename: "remoteEntry.js",
       exposes: {
-        "./OrdersModule": "./src/App.jsx",
+        "./OrdersModule": "./src/App.js",
       },
       shared: {
         ...deps,

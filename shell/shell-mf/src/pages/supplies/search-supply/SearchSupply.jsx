@@ -1,16 +1,14 @@
 import React, { Suspense } from "react";
-import styles from "./SearchSupply.module.scss";
-import themeColors from "../../../styles/themes/_themes.module.scss";
+import Wrapper from "../../../components/wrapper/wrapper";
 const SuppliesModule = React.lazy(() => import("supplies/SuppliesModule"));
 
 const SearchSupply = () => {
   return (
-    <div
-      className={`${styles["supplies-background"]} ${themeColors["blue-main-container-color-background"]}`}>
+    <Wrapper>
       <Suspense>
         <SuppliesModule />
       </Suspense>
-    </div>
+    </Wrapper>
   );
 };
 

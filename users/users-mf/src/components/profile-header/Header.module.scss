@@ -1,0 +1,25 @@
+.users-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+  padding: 24px;
+  box-shadow: 0 1px 5px #434d6f;
+  border-radius: 8px;
+  min-height: 124px;
+  width: 100%;
+  &__header-breadcrumb {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    box-sizing: border-box;
+    height: fit-content;
+    width: 100%;
+    margin: 6px;
+  }
+
+  &__module-name {
+    font-family: 24/17px Inter;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./TablePaginationContainer.module.scss";
+import styles from "./TablePaginationContainer.scss";
 
 function TablePaginationContainer() {
   return <div className={styles["table-pagination-container"]}></div>;

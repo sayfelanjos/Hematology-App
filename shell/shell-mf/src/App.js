@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactLocation, Router, createBrowserHistory, Outlet } from "@tanstack/react-location";
-import RootLayout from "./components/root-layout/RootLayout";
+import RootLayout from "./layout/RootLayout";
 import Statistics from "./pages/statistics/Statistics";
 import CustomersAndSuppliers from "./pages/customers-and-suppliers/CustomersAndSuppliers";
 import Contracts from "./pages/contracts/Contracts";

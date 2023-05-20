@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  width: 100em;
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px #434d6f;
+}
+.form__row {
+  display: flex;
+  padding: 2rem;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+.form__input {
+  width: 385px;
+  height: 42px;
+}
+
+/*# sourceMappingURL=PersonalInformationForm.module.css.map */

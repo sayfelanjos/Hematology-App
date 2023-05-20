@@ -5,9 +5,9 @@ const deps = require("./package.json").dependencies;
 
 module.exports = {
   name: "customers_and_suppliers",
-  context: path.join(__dirname, "./"),
-  entry: "./src/index.jsx",
   mode: "development",
+  context: path.join(__dirname, "./"),
+  entry: "./src/index",
   devServer: {
     static: {
       directory: path.join(__dirname, "public"),
@@ -20,16 +20,18 @@ module.exports = {
     hot: true,
     allowedHosts: "all",
   },
+  devtool: "eval-source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "auto",
+    publicPath: "http://customers-and-suppliers-mf.info/",
     clean: true,
   },
   module: {
     rules: [
       {
-        exclude: /node_modules\/(?!@sayfelanjos).*/,
+        // exclude: /node_modules\/(?!@sayfelanjos).*/,
+        exclude: /node_modules/,
         test: /\.jsx?$/,
         loader: "babel-loader",
         options: {
@@ -40,11 +42,26 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          { loader: "style-loader" },
           // Translates CSS into CommonJS
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                mode: "local",
+                auto: true,
+                // exportGlobals: true,
+                localIdentName: "[local]--[hash:base64:5]",
+                localIdentContext: path.resolve(__dirname, "src"),
+                // localIdentHashSalt: "my-custom-hash",
+                // namedExport: true,
+                // exportLocalsConvention: "camelCase",
+                // exportOnlyLocals: false,
+              },
+            },
+          },
           // Compiles Sass to CSS
-          "sass-loader",
+          { loader: "sass-loader" },
         ],
       },
       {
@@ -60,10 +77,9 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "customers_and_suppliers",
-      library: { type: "var", name: "customers_and_suppliers" },
       filename: "remoteEntry.js",
       exposes: {
-        "./CustomersAndSuppliersModule": "./src/App.jsx",
+        "./CustomersAndSuppliersModule": "./src/App",
       },
       shared: {
         ...deps,

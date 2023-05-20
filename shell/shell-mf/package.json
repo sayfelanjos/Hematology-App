@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "eslintIgnore": [
-    "**/*.scss"
+    "**/*scss"
   ],
   "dependencies": {
     "@tanstack/react-location": "^3.7.4",

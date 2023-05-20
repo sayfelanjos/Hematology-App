@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import componentStyles from "./SidebarModuleButton.module.scss";
-import fontStyles from "../../styles/fonts/_fonts.modules.scss";
-import themeColors from "../../styles/themes/_themes.module.scss";
+import "./SidebarModuleButton.scss";
+import "../../sass/base/_typography.scss";
+import "../../sass/themes/_themes.scss";
 import { Link } from "@tanstack/react-location";
 import { useThemeStore, useSidebarStore } from "store/store";
 
@@ -15,22 +15,19 @@ const SidebarModuleButton = (props) => {
   };
 
   return (
-    <div className={componentStyles["module-button-container"]} onClick={whenClicked}>
+    <div className="module-button-container" onClick={whenClicked}>
       <Link
         className={`${
           state
-            ? `${componentStyles["module-button"]} ${
-                themeColors[`${theme.color}-theme-button-pressed`]
-              }`
-            : `${componentStyles["module-button"]} ${themeColors[`${theme.color}-theme-button`]}`
+            ? `module-button ${theme.color}-theme-button-pressed`
+            : `module-button ${theme.color}-theme-button`
         }`}
         to={props.pageUrl}>
         {props.children}
         {sidebar.isOpen && (
           <span
-            className={`${componentStyles["module-button-text"]} ${
-              fontStyles["semi-bold-normal-monospace-17"]
-            } ${themeColors[`${theme.color}-theme-button-text-color`]}`}>
+            className={`module-button-text semi-bold-normal-monospace-17
+            ${theme.color}-theme-button-text-color`}>
             {props.moduleName}
           </span>
         )}

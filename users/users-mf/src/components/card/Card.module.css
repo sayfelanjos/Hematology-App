@@ -1,0 +1,75 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px #434d6f;
+  padding: 12px;
+  height: 640px;
+  width: 295px;
+  position: relative;
+}
+.card__three-dots-button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1.2rem;
+  height: fit-content;
+  width: 100%;
+}
+.card__three-dots-button {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.card__user-photo-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card__user-photo {
+  height: 126px;
+  width: 126px;
+  border-radius: 50%;
+}
+.card__user-name {
+  font-size: 1.6rem;
+}
+.card__social-medias-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.2rem;
+}
+.card__menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 6.2rem;
+  justify-content: flex-end;
+  align-items: center;
+  width: 26.5rem;
+}
+.card__menu-item, .card__menu-item-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 3.8rem;
+  border-radius: 8px;
+}
+.card__menu-item-link {
+  font-size: 1.6rem;
+  padding: 0.8rem;
+  text-decoration: none;
+  color: inherit;
+}
+.card__menu-item-link:hover {
+  background-color: cornflowerblue;
+}
+
+/*# sourceMappingURL=Card.module.css.map */

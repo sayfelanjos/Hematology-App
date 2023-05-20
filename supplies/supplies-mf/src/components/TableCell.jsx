@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./TableCell.module.scss";
+import styles from "./TableCell.scss";
 
 const TableCell = ({ children }) => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./TableButtonContainer.module.scss";
+import styles from "./TableButtonContainer.scss";
 import TableButton from "./TableButton";
 
 function TableButtonContainer() {

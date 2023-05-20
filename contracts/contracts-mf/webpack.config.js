@@ -6,7 +6,7 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   name: "contracts",
   context: path.join(__dirname, "./"),
-  entry: "./src/index.jsx",
+  entry: "./src/index.js",
   mode: "development",
   devServer: {
     static: {
@@ -40,11 +40,26 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          { loader: "style-loader" },
           // Translates CSS into CommonJS
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                mode: "local",
+                auto: true,
+                // exportGlobals: true,
+                localIdentName: "[local]--[hash:base64:5]",
+                localIdentContext: path.resolve(__dirname, "src"),
+                // localIdentHashSalt: "my-custom-hash",
+                // namedExport: true,
+                // exportLocalsConvention: "camelCase",
+                // exportOnlyLocals: false,
+              },
+            },
+          },
           // Compiles Sass to CSS
-          "sass-loader",
+          { loader: "sass-loader" },
         ],
       },
       {
@@ -63,7 +78,7 @@ module.exports = {
       library: { type: "var", name: "contracts" },
       filename: "remoteEntry.js",
       exposes: {
-        "./ContractsModule": "./src/App.jsx",
+        "./ContractsModule": "./src/App.js",
       },
       shared: {
         ...deps,

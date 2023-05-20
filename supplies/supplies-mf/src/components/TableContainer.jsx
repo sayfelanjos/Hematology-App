@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./TableContainer.module.scss";
+import styles from "./TableContainer.scss";
 import TableButtonContainer from "./TableButtonContainer";
 import TableSearchContainer from "./TableSearchContainer";
 import TableRowsContainer from "./TableRowsContainer";

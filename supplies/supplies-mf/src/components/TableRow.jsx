@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./TableRow.module.scss";
+import styles from "./TableRow.scss";
 import TableCell from "./TableCell";
 
 function TableRow() {

@@ -1,0 +1,42 @@
+@import "../../sass/abstracts/variables";
+
+.sidebar-dropdown-menu {
+  display: block;
+  margin: 12px 4px 12px 12px;
+}
+
+.sidebar-dropdown-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding-inline-start: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 10px;
+}
+
+.sidebar-dropdown-list-item {
+  display: block;
+  border-radius: 10px;
+  height: 48px;
+  width: 100%;
+  &:hover {
+    background-color: $primary-blue-30;
+  }
+}
+
+.sidebar-dropdown-list-item-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px;
+  box-sizing: border-box;
+  gap: 10px;
+  height: 100%;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./TableRowsContainer.module.scss";
+import styles from "./TableRowsContainer.scss";
 import TableHeader from "./TableHeader";
 import TableRow from "./TableRow";
 

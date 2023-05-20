@@ -1,6 +1,6 @@
 import React from "react";
-import componentStyles from "./TableButton.module.scss";
-import themeColors from "../styles/themes/_themes.module.scss";
+import componentStyles from "./TableButton.scss";
+import themeColors from "../styles/themes/_themes.scss";
 import { useThemeStore } from "store/store";
 
 const TableButton = () => {

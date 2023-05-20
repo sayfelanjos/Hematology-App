@@ -1,0 +1,101 @@
+@use "../colors/colors" as *;
+/* Cyan theme */
+.cyan-theme-navbar-container {
+  background-color: $secondary-cyan-60;
+}
+#cyan-theme-statistics-icon {
+  fill: $tertiary-gray-100;
+}
+#cyan-theme-supplies-icon {
+  fill: $tertiary-gray-100;
+}
+#cyan-theme-orders-icon {
+  fill: $tertiary-gray-100;
+}
+#cyan-theme-invoices-icon {
+  fill: $tertiary-gray-100;
+}
+#cyan-theme-contracts-icon {
+  fill: $tertiary-gray-100;
+}
+#cyan-theme-customers-and-suppliers-icon {
+  stroke: $tertiary-gray-100;
+}
+#cyan-theme-users-icon {
+  stroke: $tertiary-gray-100;
+}
+#cyan-theme-logo {
+  fill: $tertiary-gray-100;
+}
+.cyan-theme-app-name {
+  color: $tertiary-gray-100;
+}
+.cyan-theme-sidebar-header-container {
+  border-bottom: 1px solid $tertiary-gray-100;
+}
+.cyan-theme-sidebar-container {
+  background-color: $secondary-cyan-60;
+  box-shadow: 0 1px 5px hsl(0, 0%, 0%, 50%);
+}
+.cyan-theme-sidebar-subheader-text-color {
+  color: $tertiary-gray-100;
+}
+.cyan-theme-button-text-color {
+  color: $tertiary-gray-100;
+}
+.cyan-theme-button-pressed {
+  box-shadow: inset -2px -2px 12px rgb(0, 0, 0);
+  background-color: $secondary-cyan-70;
+  border-top: 1px solid $tertiary-gray-100;
+  border-radius: 10px;
+}
+.cyan-theme-button:hover {
+  box-shadow: inset 0 -2px 12px black;
+  background-color: $secondary-cyan-40;
+  border-radius: 10px;
+}
+.cyan-main-container-color-background {
+  background-color: $tertiary-gray-100;
+}
+.cyan-theme-sidebar-toggle-button {
+  background-color: hsl(270deg 60% 50% / 0%);
+}
+.cyan-theme-navbar-config-button {
+  background-color: hsl(270deg 60% 50% / 0%);
+}
+#cyan-theme-navbar-buttons-colors {
+  fill: $tertiary-gray-100;
+}
+.cyan-theme-configbar-container {
+  background-color: $secondary-cyan-60;
+  box-shadow: 0 -1px 5px hsl(0, 0%, 0%, 50%);
+}
+#cyan-theme-configbar-button-of-close {
+  fill: $tertiary-gray-100;
+  &:hover {
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px $secondary-cyan-100;
+  }
+}
+.cyan-theme-configbar-config-name-color {
+  color: $tertiary-gray-100;
+}
+.cyan-theme-configbar-header-container {
+  border-bottom: 1px solid $tertiary-gray-100;
+}
+.cyan-theme-configbar-layout-color-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  height: 45px;
+  width: 52px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: hsl(270deg 60% 50% / 0%);
+  cursor: pointer;
+  &:hover {
+    box-shadow: 2px 2px 10px $secondary-cyan-100;
+  }
+}

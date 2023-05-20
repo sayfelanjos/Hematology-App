@@ -1,0 +1,33 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 1px;
+  box-sizing: border-box;
+  flex-basis: 275px;
+  &--closed {
+    @extend .sidebar;
+    flex-basis: 72px;
+  }
+  &__modules {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 0;
+    max-height: calc(100vh - 60px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-clip: content-box;
+      margin-block: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+    }
+  }
+}

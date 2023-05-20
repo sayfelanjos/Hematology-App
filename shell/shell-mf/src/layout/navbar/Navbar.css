@@ -1,0 +1,65 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  gap: 12px;
+}
+
+.navbar-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.navbar-user-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 126px;
+}
+
+.navbar-user-photo {
+  border-radius: 50%;
+}
+
+.navbar-user-name {
+  font: 17/24px;
+  color: #acacac;
+}
+
+.sidebar-toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.sidebar-toggle-button:hover {
+  transform: rotate(0.5turn);
+}
+
+.sidebar-toggle-button-icon {
+  height: 100%;
+  width: 100%;
+}
+
+.navbar-config-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=Navbar.css.map */

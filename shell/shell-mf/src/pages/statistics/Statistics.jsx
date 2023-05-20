@@ -1,16 +1,14 @@
 import React, { Suspense } from "react";
-import styles from "./Statistics.module.scss";
-import themeColors from "../../styles/themes/_themes.module.scss";
+import Wrapper from "../../components/wrapper/wrapper";
 const StatisticsModule = React.lazy(() => import("statistics/StatisticsModule"));
 
 const Statistics = () => {
   return (
-    <div
-      className={`${styles["statistics-background"]} ${themeColors["blue-main-container-color-background"]}`}>
+    <Wrapper>
       <Suspense>
         <StatisticsModule />
       </Suspense>
-    </div>
+    </Wrapper>
   );
 };
 

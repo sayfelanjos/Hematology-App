@@ -1,0 +1,13 @@
+.user-profile {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: flex-start;
+  &__main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+  }
+}

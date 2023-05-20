@@ -1,0 +1,137 @@
+.text-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45rem;
+  height: 9.6rem;
+  &__placeholder {
+    position: absolute;
+    left: 1.2rem;
+    top: calc(50% + 1rem);
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+  }
+  &__widget {
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 1.2rem;
+    border-radius: 0.3rem;
+    width: 45rem;
+    height: 4.3rem;
+    outline: none;
+    font-size: 1.4rem;
+
+    &:focus,
+    &:valid {
+      + .text-input__placeholder {
+        top: 1rem;
+        font-size: 1rem;
+        color: #222;
+      }
+    }
+
+    &:focus::placeholder {
+      color: transparent;
+    }
+
+    &::placeholder {
+      color: #222;
+      transition: color 0.3s ease;
+    }
+  }
+  &__label {
+    font-size: 1.4rem;
+    position: relative;
+    padding-top: 2rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    --field-padding: 1.2rem;
+    &.one { // second option
+      & input {
+        background: none;
+        border: 0.2rem solid #ddd;
+        transition: border-color 0.3s ease;
+        &:valid,
+        &:focus {
+          border-color: #222;
+          transition-delay: 0.1s;
+        }
+      }
+    }
+    &.two input { // third option
+      border-radius: 0.3rem 0.3rem 0 0;
+      background: linear-gradient(90deg, #222, #222) center bottom/0 0.2rem no-repeat,
+        linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.2rem no-repeat,
+        linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+      transition: background-size 0.3s ease;
+
+      &:valid,
+      &:focus {
+        background-size: 100% 0.2rem, 100% 0.2rem, 100%;
+      }
+    }
+    &.three { // fourth option
+      --draw-duration: 0.3s;
+      --draw-color: #222;
+      --draw-line-width: 0.2rem;
+      --draw-easing: ease;
+
+      & .text-input__border {
+        width: 100%;
+        height: calc(100% - 2rem);
+        position: absolute;
+        left: 0;
+        top: 2rem;
+        border-radius: 0.3rem;
+        &::before,
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 0;
+          height: 0;
+          position: absolute;
+          border-radius: 0.3rem;
+        }
+        &::before {
+          left: 0;
+          bottom: 0;
+          border-right: 0 solid var(--draw-color);
+          border-bottom: 0 solid var(--draw-color);
+        }
+        &::after {
+          right: 0;
+          top: 0;
+          border-left: 0 solid var(--draw-color);
+          border-top: 0 solid var(--draw-color);
+        }
+      }
+      & input {
+        &:valid,
+        &:focus {
+          ~ .text-input__border {
+            &::before,
+            &::after {
+              width: 100%;
+              height: 100%;
+              border-width: var(--draw-line-width);
+            }
+            &::before {
+              transition: width var(--draw-duration) var(--draw-easing),
+                height var(--draw-duration) var(--draw-easing) var(--draw-duration);
+            }
+            &:after {
+              transition: 0s linear calc(var(--draw-duration) * 2),
+                width var(--draw-duration) var(--draw-easing) calc(var(--draw-duration) * 2),
+                height var(--draw-duration) var(--draw-easing) calc(var(--draw-duration) * 3);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import componentStyles from "../../App.module.scss";
+import componentStyles from "../../App.scss";
 import AppHeader from "../../components/AppHeader";
 import TableContainer from "../../components/TableContainer";
 

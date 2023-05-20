@@ -1,0 +1,113 @@
+.text-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45rem;
+  height: 9.6rem;
+}
+.text-input__placeholder {
+  position: absolute;
+  left: 1.2rem;
+  top: calc(50% + 1rem);
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+.text-input__widget {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f2f2f2;
+  padding: 1.2rem;
+  border-radius: 0.3rem;
+  width: 45rem;
+  height: 4.3rem;
+  outline: none;
+  font-size: 1.4rem;
+}
+.text-input__widget:focus + .text-input__placeholder, .text-input__widget:valid + .text-input__placeholder {
+  top: 1rem;
+  font-size: 1rem;
+  color: #222;
+}
+.text-input__widget:focus::placeholder {
+  color: transparent;
+}
+.text-input__widget::placeholder {
+  color: #222;
+  transition: color 0.3s ease;
+}
+.text-input__label {
+  font-size: 1.4rem;
+  position: relative;
+  padding-top: 2rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  --field-padding: 1.2rem;
+}
+.text-input__label.one input {
+  background: none;
+  border: 0.2rem solid #ddd;
+  transition: border-color 0.3s ease;
+}
+.text-input__label.one input:valid, .text-input__label.one input:focus {
+  border-color: #222;
+  transition-delay: 0.1s;
+}
+.text-input__label.two input {
+  border-radius: 0.3rem 0.3rem 0 0;
+  background: linear-gradient(90deg, #222, #222) center bottom/0 0.2rem no-repeat, linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.2rem no-repeat, linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+  transition: background-size 0.3s ease;
+}
+.text-input__label.two input:valid, .text-input__label.two input:focus {
+  background-size: 100% 0.2rem, 100% 0.2rem, 100%;
+}
+.text-input__label.three {
+  --draw-duration: 0.3s;
+  --draw-color: #222;
+  --draw-line-width: 0.2rem;
+  --draw-easing: ease;
+}
+.text-input__label.three .text-input__border {
+  width: 100%;
+  height: calc(100% - 2rem);
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  border-radius: 0.3rem;
+}
+.text-input__label.three .text-input__border::before, .text-input__label.three .text-input__border::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-radius: 0.3rem;
+}
+.text-input__label.three .text-input__border::before {
+  left: 0;
+  bottom: 0;
+  border-right: 0 solid var(--draw-color);
+  border-bottom: 0 solid var(--draw-color);
+}
+.text-input__label.three .text-input__border::after {
+  right: 0;
+  top: 0;
+  border-left: 0 solid var(--draw-color);
+  border-top: 0 solid var(--draw-color);
+}
+.text-input__label.three input:valid ~ .text-input__border::before, .text-input__label.three input:valid ~ .text-input__border::after, .text-input__label.three input:focus ~ .text-input__border::before, .text-input__label.three input:focus ~ .text-input__border::after {
+  width: 100%;
+  height: 100%;
+  border-width: var(--draw-line-width);
+}
+.text-input__label.three input:valid ~ .text-input__border::before, .text-input__label.three input:focus ~ .text-input__border::before {
+  transition: width var(--draw-duration) var(--draw-easing), height var(--draw-duration) var(--draw-easing) var(--draw-duration);
+}
+.text-input__label.three input:valid ~ .text-input__border:after, .text-input__label.three input:focus ~ .text-input__border:after {
+  transition: 0s linear calc(var(--draw-duration) * 2), width var(--draw-duration) var(--draw-easing) calc(var(--draw-duration) * 2), height var(--draw-duration) var(--draw-easing) calc(var(--draw-duration) * 3);
+}
+
+/*# sourceMappingURL=TextInput.module.css.map */

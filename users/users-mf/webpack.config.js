@@ -28,41 +28,57 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "auto",
+    publicPath: "http://users-mf.info/",
     clean: true,
   },
   module: {
     rules: [
       {
-        exclude: /node_modules\/(?!@sayfelanjos).*/,
+        // exclude: /node_modules\/(?!@sayfelanjos).*/,
+        exclude: /node_modules/,
         test: /\.jsx?$/,
         enforce: "pre",
-        use: ["source-map-loader"],
-      },
-      {
-        exclude: /node_modules\/(?!@sayfelanjos).*/,
-        test: /\.jsx?$/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env", "@babel/preset-react"],
+            },
           },
-        },
+          {
+            loader: "source-map-loader",
+          },
+        ],
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          { loader: "style-loader" },
           // Translates CSS into CommonJS
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                mode: "local",
+                auto: true,
+                // exportGlobals: true,
+                localIdentName: "[local]--[hash:base64:5]",
+                localIdentContext: path.resolve(__dirname, "src"),
+                // localIdentHashSalt: "my-custom-hash",
+                // namedExport: true,
+                // exportLocalsConvention: "camelCase",
+                // exportOnlyLocals: false,
+              },
+            },
+          },
           // Compiles Sass to CSS
-          "sass-loader",
+          { loader: "sass-loader" },
         ],
       },
       {
-        test: /\.(png|jp(e*)g|svg|gif)$/,
-        use: ["file-loader"],
+        test: /\.(png|jpeg|jpg|svg|gif)$/,
+        type: "asset/resource",
       },
       {
         test: /\.svg$/i,
@@ -72,7 +88,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".ts", ".js", ".jsx", ".tsx", ".css", ".scss"],
+    extensions: [".ts", ".js", ".jsx", ".tsx", ".css", "scss"],
   },
   plugins: [
     new ModuleFederationPlugin({
@@ -80,6 +96,9 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         "./UsersModule": "./src/App",
+      },
+      remotes: {
+        store: `store@http://store.info/remoteEntry.js`,
       },
       shared: {
         ...deps,

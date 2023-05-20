@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "./SidebarModules.module.scss";
+import "./SidebarModules.scss";
 import SidebarModuleButton from "../sidebar-module-button/SidebarModuleButton";
 
 const SidebarModules = (props) => {
   return (
-    <div className={styles["sidebar-modules"]}>
-      <h1 className={styles["sidebar-modules-header"]}>{props.domainName}</h1>
-      <ul className={styles["sidebar-modules-buttons"]}>
+    <div className="sidebar-modules">
+      <h1 className="sidebar-modules-header">{props.domainName}</h1>
+      <ul className="sidebar-modules-buttons">
         {props.modules.map((item) => {
           return (
             <SidebarModuleButton

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./WidgetNumber.module.scss";
+import styles from "./WidgetNumber.scss";
 
 const WidgetNumber = () => {
   return (
